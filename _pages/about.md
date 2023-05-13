@@ -27,9 +27,6 @@ social: true  # includes social icons at the bottom of the page
 <b>Bioengineering MRes - Imperial College London</b>
 
 ---
-!!!
-  Tuberculosis, the second leading infectious cause of death after COVID-19, caused 1.5 million fatalities in 2020. Despite the existence of treatment regimens, the World Health Organisation (WHO) reported that 16% of new TB cases and 48% of previously treated TB cases exhibit signs of drug resistance. Adding to the challenge, studies have revealed that individuals can be infected with multiple distinct strains of Mycobacterium tuberculosis simultaneously. Nonetheless, research on profiling mixed-strain infections and strain-specific drug resistance remains limited.
----
 
 I am eager to apply my expertise in machine learning and algorithms to the critical area of tuberculosis (TB) drug resistance and transmission prediction analysis. With a strong background in computer science and a keen interest in the field of healthcare, I have developed a comprehensive understanding of the technical aspects of machine learning and data analysis, as well as an in-depth understanding of the challenges facing the healthcare industry today.
 
