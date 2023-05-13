@@ -11,3 +11,9 @@ As a participant in the reception dinner for the Newton Fund project, I had the 
 The discussions during the dinner were enlightening, and I gained valuable insights into the challenges and opportunities faced by researchers and innovators in partner countries. I was inspired by the commitment and enthusiasm of the attendees, and the innovative solutions they had developed to tackle complex issues. This experience reinforced my belief in the power of international collaboration and knowledge exchange, and the potential of research and innovation to drive positive change on a global scale.
 
 Overall, attending the reception dinner for the Newton Fund project was a memorable and enriching experience, which broadened my perspective and encouraged me to think more deeply about the role of research and innovation in sustainable development.
+
+{% include figure.html path="assets/img/newton1.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+
+{% include figure.html path="assets/img/newton2.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
+
+{% include figure.html path="assets/img/newton3.jpg" class="img-fluid rounded z-depth-1" zoomable=true %}
