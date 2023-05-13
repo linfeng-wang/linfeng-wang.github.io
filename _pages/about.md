@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: <a href='#'>LSHTM-Genomic Lab</a> | <a href='https://www.linkedin.com/in/w15/'>LinkedIn</a>
+subtitle: <a href='https://pathogenseq.lshtm.ac.uk/'>LSHTM-Genomic Lab</a> | <a href='https://www.linkedin.com/in/w15/'>LinkedIn</a>
 
 profile:
   align: right
