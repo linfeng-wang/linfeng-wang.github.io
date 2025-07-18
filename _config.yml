@@ -3,13 +3,13 @@
 #
 
 # Name of your site (displayed in the header)
-name: Your Name
+name: Linfeng Wang
 
 # Short bio or description (displayed in the header)
-description: Web Developer from Somewhere
+description: PhD bridging artificial intelligence, bioinformatics, and healthcare
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
-avatar: https://raw.githubusercontent.com/barryclark/jekyll-now/master/images/jekyll-logo.png
+avatar: https://avatars.githubusercontent.com/u/52597300?v=4
 
 #
 # Flags below are optional
@@ -18,15 +18,17 @@ avatar: https://raw.githubusercontent.com/barryclark/jekyll-now/master/images/je
 # Includes an icon in the footer for each username you enter
 footer-links:
   dribbble:
-  email:
+  email: wanglinfeng1115@gmail.com
   facebook:
   flickr:
-  github: barryclark/jekyll-now
+  github: https://github.com/linfeng-wang
   instagram:
-  linkedin:
+  linkedin: https://www.linkedin.com/in/w15/
+  Google Scholar: https://scholar.google.com/citations?user=ZUOMRG0AAAAJ&hl=en
+  ResearchGate: https://www.researchgate.net/profile/Linfeng-Wang-3?ev=hdr_xprf
   pinterest:
   rss: # just type anything here for a working RSS icon
-  twitter: jekyllrb
+  twitter: 
   stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
   youtube: # channel/<your_long_string> or user/<user-name>
   googleplus: # anything in your profile username that comes after plus.google.com/
@@ -41,7 +43,7 @@ google_analytics:
 
 # Your website URL (e.g. http://barryclark.github.io or http://www.barryclark.co)
 # Used for Sitemap.xml and your RSS feed
-url:
+url: http://linfeng-wang.github.io
 
 # If you're hosting your site at a Project repository on GitHub pages
 # (http://yourusername.github.io/repository-name)
