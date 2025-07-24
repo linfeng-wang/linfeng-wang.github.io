@@ -17,7 +17,6 @@ Designed a generative pipeline that produced 94 novel non-toxic peptide candidat
 
 Performed comparative motif and structural divergence analysis to ensure novelty and function of generated peptides, with full reproducibility provided via public code.
 
-
 <br>
 
 
@@ -25,12 +24,7 @@ Performed comparative motif and structural divergence analysis to ensure novelty
 
   <div>
     <img src="/assets/img/amp1.png" alt="TOAST Image 1" style="width: 320px; margin: 1em; border-radius: 4px;">
-    <p style="color: #ccc; font-size: 0.95rem; margin-top: -0.5em;">Amplicon Design Tool Interface</p>
-  </div>
-
-  <div>
-    <img src="/assets/img/amp2.png" alt="TOAST Image 2" style="width: 320px; margin: 1em; border-radius: 4px;">
-    <p style="color: #ccc; font-size: 0.95rem; margin-top: -0.5em;">Primer Coverage Distribution</p>
+    <p style="color: #ccc; font-size: 0.95rem; margin-top: -0.5em;">Generated protein structure prediction and visualization</p>
   </div>
 
 </div>
