@@ -19,7 +19,6 @@ Performed comparative motif and structural divergence analysis to ensure novelty
 
 <br>
 
-
 <div style="display: flex; justify-content: center; gap: 2em; margin-top: 2em; text-align: center; flex-wrap: nowrap;">
 
   <div>
