@@ -2,10 +2,10 @@
 layout: page
 title: Projects
 permalink: /projects/
-description: Collection personal coding projects either work related or for my own learning
+description: Collection of projects 
 nav: true
 nav_order: 2
-display_categories: [work, fun]
+# display_categories: [work, fun]
 horizontal: false
 ---
 

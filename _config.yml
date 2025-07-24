@@ -396,3 +396,14 @@ mdb:
 medium_zoom:
   version: "1.0.8"
   integrity: "sha256-7PhEpEWEW0XXQ0k6kQrPKwuoIomz8R8IYyuU1Qew4P8="
+
+kramdown:
+  input: GFM
+
+nav:
+  - title: About
+    url: /about/
+  - title: CV
+    url: /cv/
+  - title: Post
+    url: /blog/

@@ -2,75 +2,445 @@
 layout: default
 ---
 
-<!-- about.html -->
-      <div class="post">
-        <header class="post-header">
-          <h1 class="post-title">
-           {% if site.title == "blank" -%}<span class="font-weight-bold">{{ site.first_name }}</span> {{ site.middle_name }} {{ site.last_name }}{%- else -%}{{ site.title }}{%- endif %}
-          </h1>
-          <p class="desc">{{ page.subtitle }}</p>
-        </header>
+<style>
+  body {
+    background-color: #111;
+    color: #eee;
+  }
 
-        <article>
-          {% if page.profile -%}
-          <div class="profile float-{%- if page.profile.align == 'left' -%}left{%- else -%}right{%- endif -%}">
-            {%- if page.profile.image %}
-              {%- assign profile_image_path = page.profile.image | prepend: 'assets/img/' -%}
+  .about-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 80px auto 40px;
+    padding: 0 20px;
+  }
 
-              {% if page.profile.image_circular %}
-                {%- assign profile_image_class = "img-fluid z-depth-1 rounded-circle" -%}
-              {% else %}
-                {%- assign profile_image_class = "img-fluid z-depth-1 rounded" -%}
-              {% endif %}
+  .profile-image {
+    width: 300px;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
 
-              {% include figure.html
-              path=profile_image_path
-              class=profile_image_class
-              alt=page.profile.image -%}
-            {% endif -%}
-            {%- if page.profile.address %}
-            <div class="address">
-              {{ page.profile.address }}
-            </div>
-            {%- endif %}
-          </div>
-          {%- endif %}
+  .about-text {
+    max-width: 500px;
+  }
 
-          <div class="clearfix">
-            {{ content }}
-          </div>
+  .about-text h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 0.4em;
+  }
 
-          <!-- News -->
-          {% if page.news and site.announcements.enabled -%}
-            <h2><a href="{{ '/news/' | relative_url }}" style="color: inherit;">news</a></h2>
-            {%- include news.html limit=true %}
-          {%- endif %}
+  .about-text h1 span {
+    font-weight: 300;
+  }
 
-          <!-- Latest posts -->
-          {% if page.latest_posts -%}
-            <h2><a href="{{ '/blog/' | relative_url }}" style="color: inherit;">latest posts</a></h2>
-            {%- include latest_posts.html %}
-          {%- endif %}
+  .about-text p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5em;
+    color: #ccc;
+  }
 
-          <!-- Selected papers -->
-          {% if page.selected_papers -%}
-            <h2><a href="{{ '/publications/' | relative_url }}" style="color: inherit;">selected publications</a></h2>
-            {%- include selected_papers.html %}
-          {%- endif %}
+  .btn-row {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+  }
 
-          <!-- Social -->
-          {%- if page.social %}
-            <div class="social">
-              <div class="contact-icons">
-                {% include social.html %}
-              </div>
+  .btn-outline {
+    padding: 10px 20px;
+    border: 2px solid #eee;
+    color: #eee;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+  }
 
-              <div class="contact-note">
-                {{ site.contact_note }}
-              </div>
+  .btn-outline:hover {
+    background-color: #eee;
+    color: #111;
+  }
 
-            </div>
-          {%- endif %}
-        </article>
+  .summary-section {
+    margin-top: 30px;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #bbb;
+  }
 
+  .summary-section strong {
+    color: #fff;
+  }
+
+  @media (max-width: 600px) {
+    .about-container {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .btn-row {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .profile-image {
+      width: 200px;
+    }
+  }
+  .summary-wrapper {
+    background-color: #222; /* Dark grey */
+    padding: 40px 20px;
+  }
+  
+  .summary-section {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #ccc;
+  }
+  
+  .summary-section h3 {
+    font-size: 1.6rem;
+    margin-bottom: 1em;
+    color: #fff;
+  }
+  
+  .summary-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    font-size: 1.1rem;
+  }
+  
+  .summary-section ul li {
+    margin-bottom: 0.8em;
+  }
+
+  
+  .resume-wrapper {
+    display: flex;
+    max-width: 1000px;
+    margin: 120px auto;
+    padding: 40px 20px;
+    background-color: #111;
+    color: #ddd;
+    font-family: 'Helvetica Neue', sans-serif;
+    line-height: 1.6;
+  }
+  
+  .resume-left {
+    flex: 0 0 140px;
+    padding-right: 40px;
+  }
+  
+  .resume-left h2 {
+    font-size: 2.4rem;
+    font-weight: 400;
+    color: #eee;
+    margin: 0;
+  }
+  
+  .resume-right {
+    flex: 1;
+  }
+  
+  .resume-right p {
+    color: #ccc;
+    margin-bottom: 2em;
+    font-size: 1rem;
+  }
+  
+  .resume-category h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1em;
+    color: #eee;
+  }
+  
+  .resume-columns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+  }
+  
+  .resume-entry {
+    flex: 1 1 400px;
+    font-size: 0.95rem;
+  }
+  
+  .resume-entry p {
+    margin-bottom: 1.5em;
+  }
+  
+  .resume-entry strong {
+    font-weight: 600;
+    color: #fff;
+  }
+  
+  .resume-entry .dimmed {
+    font-size: 0.85rem;
+    color: #999;
+    font-weight: normal;
+  }
+  
+  @media (max-width: 768px) {
+    .resume-wrapper {
+      flex-direction: column;
+    }
+  
+    .resume-left {
+      margin-bottom: 2em;
+      padding-right: 0;
+    }
+  }
+
+  
+</style>
+<!-- 
+<div class="about-container">
+  {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
+  <img src="{{ profile_image_path }}" alt="Profile image" class="profile-image" />
+  
+  <div class="about-text">
+    <h1><strong>Linfeng</strong> <span>Wang</span></h1>
+    <p>PhD bridging AI, Bioinformatics, Healthcare</p>
+
+    <div class="btn-row">
+      <a class="btn-outline" href="{{ '/cv/' | relative_url }}">ABOUT ME</a>
+      <a class="btn-outline" href="{{ '/blog/' | relative_url }}">EXPLORE</a>
+    </div>
+
+    <div class="summary-section">
+      <h3><strong>My Journey in AI and Computational Genomics</strong></h3>
+      <ul>
+        <li><strong>3+</strong> Years of experience developing cutting-edge ML models and end-to-end pipelines</li>
+        <li><strong>8+</strong> Years of research experience in biotechnology</li>
+        <li><strong>7</strong> Peer-reviewed publications, including 3 as first author</li>
+      </ul>
+    </div>
+  </div>
 </div>
+ -->
+
+ <div class="about-container">
+  {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
+  <img src="{{ profile_image_path }}" alt="Profile image" class="profile-image" />
+
+  <div class="about-text">
+    <h1><strong>Linfeng</strong> <span>Wang</span></h1>
+    <p>PhD bridging AI, Bioinformatics, Healthcare</p>
+
+    <div class="btn-row">
+      <a class="btn-outline" href="{{ '/cv/' | relative_url }}">ABOUT ME</a>
+      <a class="btn-outline" href="{{ '/blog/' | relative_url }}">EXPLORE</a>
+    </div>
+  </div>
+</div>
+
+
+<!-- Spacer: 12 empty lines -->
+<div style="margin-top: 12em;"></div>
+
+<div class="summary-wrapper">
+  <div class="summary-section">
+    <h3><strong>My Journey in AI and Heathcare</strong></h3>
+    <ul>
+      <li><strong>3+</strong> Years of experience developing cutting-edge ML models and end-to-end pipelines</li>
+      <li><strong>8+</strong> Years of research experience in biotechnology</li>
+      <li><strong>7</strong> Peer-reviewed publications, including <strong>3</strong> as first author</li>
+    </ul>
+  </div>
+</div>
+
+<div class="resume-wrapper">
+  <div class="resume-left">
+    <h2>Resume</h2>
+  </div>
+
+  <div class="resume-right">
+    <p>
+      A <strong>self-motivated</strong> and <strong>deep researcher</strong> with a proven track record as a 
+      <strong>fast learner</strong>, I thrive in <strong>translational and multidisciplinary environments</strong> 
+      with strong <strong>communication</strong> skills and a commitment to <strong>teamwork</strong>.
+      
+    </p>
+    <div class="resume-columns">
+      <!-- Experience Column -->
+      <div class="resume-entry">
+        <h3>Experience</h3>
+    
+        <p><strong>Machine learning Consultant</strong><br>
+        Deep Science Venture<br>
+        Mar 2025 to Present</p>
+    
+        <p><strong>Machine learning intern</strong><br>
+        LinkGevity<br>
+        Aug 2024 to Oct 2024</p>
+    
+        <p><strong>Machine Learning in Healthcare intern</strong><br>
+        Bytedance<br>
+        Mar 2023 to Sep 2023</p>
+    
+        <p><strong>Trainee</strong><br>
+        Syngenta<br>
+        Jun 2017 to Aug 2017</p>
+      </div>
+    
+      <!-- Education Column -->
+      <div class="resume-entry">
+        <h3>Education</h3>
+    
+        <p><strong>PhD. Data Science of infectious disease genomics</strong><br>
+        University of Washington<br>
+        Fall 2021 to present</p>
+    
+        <p><strong>Master of Research Bioengineering</strong> <span class="dimmed">(Merit)</span><br>
+        Imperial College London<br>
+        Fall 2019 to 2020 Fall</p>
+    
+        <p><strong>BSc Biochemistry</strong> <span class="dimmed">(First Class Honor)</span><br>
+        King's College London<br>
+        Fall 2016 to Summer 2019</p>
+    
+        <p><strong>Science & Engineering</strong><br>
+        International School of Geneva<br>
+        Summer 2012 to Summer 2016</p>
+    
+        <p>Beijing No.4 High School<br>
+        Fall 2010 to Summer 2012</p>
+      </div>
+    </div>
+
+    <div class="resume-category" style="margin-top: 4em;">
+      <h3>Skills</h3>
+      <div class="resume-columns">
+        <div class="resume-entry">
+          <p>Python / C++ / R<br>
+            Scikit-learn / Numpy / Pandas<br>
+            Matplotlib / Seaborn / Plotly</p>
+
+          <p>Pytorch / Tensorflow / PyG / Jax<br>
+            Linux / Unix / Bash / Git / NextFlow<br>
+            Google Cloud</p>
+
+          <p>BWA-mem / samtools / bcftools / GATK<br>
+            Freebayes / Beast2 /  trimmomatic / Plink2 <br>
+            Rxml / Figtree / iTol</p>
+        </div>
+      </div>
+    </div>
+    <div class="resume-category" style="margin-top: 4em;">
+      <h3>Publications</h3>
+    
+      <p><strong>2025</strong></p>
+      <ul style="padding-left: 1.2em;">
+        <li><strong>Wang L</strong>, Thawong N, Thorpe J, Higgins M, Tan M, et al. A novel tool for designing targeted gene amplicons in TB genomic studies. <em>bioRxiv</em>. (Submitted)</li>
+        <li>Thawong N, Sriloha P, Phelan JE, Phornsiricharoenphant W, et al., <strong>Wang L</strong>, Clark TG. Genomic analysis of TB in Thailand. <em>Research Square</em>. (Submitted)</li>
+        <li>Data Study Group Team. Detecting shallow gas from marine seismic images. <em>The Alan Turing Institute</em>.</li>
+      </ul>
+    
+      <p><strong>2024</strong></p>
+      <ul style="padding-left: 1.2em;">
+        <li><strong>Wang L</strong>, Lim DR, Phelan J, Campino S, Hibberd ML. WGS of TB in the Philippines. <em>Sci Rep</em> 14:70471.</li>
+        <li>Phelan J, Niazi F, <strong>Wang L</strong>, Ngwana-Joseph GC, et al. TGV: tools to visualize transmission graphs. <em>NAR Genomics Bioinform</em> 6(4).</li>
+      </ul>
+    
+      <p><strong>2023</strong></p>
+      <ul style="padding-left: 1.2em;">
+        <li><strong>Wang L</strong>, Campino S, Phelan J, Clark TG. Mixed infections in drug-resistant TB. <em>Sci Rep</em> 13:1–8.</li>
+        <li>Libiseller-Egger J, <strong>Wang L</strong>, Deelder W, Campino S, et al. TB-ML: comparing ML models for TB drug resistance. <em>Bioinform Adv</em>.</li>
+      </ul>
+    </div>
+
+    <p style="font-size: 1.1rem; color: #ccc;">
+      (More in <a href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank" style="color: #e89f8a; border-bottom: 1px solid #e89f8a; text-decoration: none;">Google Scholar</a>…)
+    </p>
+    <div class="btn-row">
+      <a href="/assets/Linfeng_Wang_Resume.pdf" class="btn-outline" target="_blank">DOWNLOAD RESUME</a>
+    </div>
+  </div> <!-- This closes .resume-right -->
+</div> <!-- This closes .resume-wrapper -->
+
+
+<div class="resume-wrapper">
+  <div class="resume-left">
+    <h2>Thesis</h2>
+  </div>
+
+  <div class="resume-right">
+    <h5>
+      <strong>Infectious disease Genomics Meets AI:</strong> Scalable Models, Interpretable Tools, and Data-Driven Diagnostics
+    </h5>
+    <div style="margin-top: 2em;"></div>
+    <div class="resume-columns">
+      <!-- Experience Column -->
+      <div class="resume-entry">    
+        <p><a href="projects/toast/" style="color: #e89f8a; border-bottom: 1px solid #e89f8a; text-decoration: none;"><em>TOAST</em>: Custom Amplicon Designer for TB Diagnostics</a><br>
+        <p><a href="projects/xgb" style="color: #e89f8a; border-bottom: 1px solid #e89f8a; text-decoration: none;">Clinical Outcome Prediction using Machine Learning</a><br>
+        <p><a href="projects/amp" style="color: #e89f8a; border-bottom: 1px solid #e89f8a; text-decoration: none;">TB Antimicrobial Peptide <em>Generative model</em></a><br>
+        <p><a href="projects/gnn" style="color: #e89f8a; border-bottom: 1px solid #e89f8a; text-decoration: none;"><em>Graph Neural Network</em> Adaptive Mutation Detection</a><br>
+        <p><a href="projects/gmm1" style="color: #e89f8a; border-bottom: 1px solid #e89f8a; text-decoration: none;">Dissecting Mixed infection with ML model</a><br>
+        <p><a href="projects/philippines" style="color: #e89f8a; border-bottom: 1px solid #e89f8a; text-decoration: none;">Understanding TB transmission in the Philippines<br>
+
+        <div class="btn-row">
+          <a href="/projects" class="btn-outline" target="_blank">EXPLORE ALL</a>
+        </div>
+
+      </div>
+      <div style="display: flex; gap: 1em; margin-top: 1.5em;">
+        <img src="assets/img/gnn1.png" alt="shipPhoto" style="width: 35%; height: auto; border-radius: 8px;">
+        <img src="assets/img/gnn2.png" alt="Seismic Model Output" style="width: 35%; height: auto; border-radius: 8px;">
+        <img src="assets/img/toast1.png" alt="Shallow Gas Detection" style="width: 35%; height: auto; border-radius: 8px;">
+      </div>
+
+      <div style="display: flex; gap: 1em; margin-top: 1.5em;">
+        <img src="assets/img/amp1.png" alt="shipPhoto" style="width: 35%; height: auto; border-radius: 8px;">
+        <img src="assets/img/gmm1.png" alt="Seismic Model Output" style="width: 35%; height: auto; border-radius: 8px;">
+        <img src="assets/img/philippines1.png" alt="Shallow Gas Detection" style="width: 35%; height: auto; border-radius: 8px;">
+      </div>
+    </div>
+  </div> <!-- This closes .resume-right -->
+</div>
+
+
+<div class="resume-wrapper">
+  <div class="resume-left">
+    <h3>Fun Experience</h3>
+  </div>
+
+  <div class="resume-right">
+    <h5>
+      <strong>Turing DSG Hackathon</em>:</strong>  Detecting Shallow Gas from Marine Seismic Images
+      (Alan Turning Institute: Data study group challenge)
+    </h5>
+    <div style="margin-top: 2em;"></div>
+    <div class="resume-columns">
+      <!-- Experience Column -->
+      Over a week time of intense collaboration with a diverse team of participates from all over the world we:
+      <ul>
+        <li>Explored CNN architectures and ensemble approaches for geospatial pattern recognition.</li>
+        <li>Developed classification, segmentation, and object detection models for shallow gas pocket identification in noisy, low-contrast marine datasets.</li>
+        <li>Contributed to the end-of-sprint report for industrial partner BP, presenting results with interpretability-focused visualizations.</li>
+      </ul>
+    </div>
+    <div style="display: flex; gap: 1em; margin-top: 1.5em;">
+      <img src="assets/img/ship_illustration.png" alt="shipPhoto" style="width: 35%; height: auto; border-radius: 8px;">
+      <img src="assets/img/detection.png" alt="Seismic Model Output" style="width: 35%; height: auto; border-radius: 8px;">
+      <img src="assets/img/segmentation.png" alt="Shallow Gas Detection" style="width: 35%; height: auto; border-radius: 8px;">
+    </div>
+    <div style="display: flex; gap: 1em; margin-top: 1.5em;">
+      <img src="assets/img/group_photo.jpeg" alt="group_photo" style="width: 135%; height: auto; border-radius: 8px;">
+    </div>
+    </div>
+  </div> <!-- This closes .resume-right -->
+</div>
+
+
