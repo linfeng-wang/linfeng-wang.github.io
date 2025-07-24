@@ -1,13 +1,3 @@
-# - title: General Information
-#   type: map
-#   contents:
-#     - name: Full Name
-#       value: Linfeng Wang
-#     - name: Date of Birth
-#       value: 15th Nov 1997
-#     - name: Languages
-#       value: English, Chinese, French, Japanese
-
 - title: General Information
   type: time_table
   contents:
@@ -17,153 +7,127 @@
         - 15th Nov 1997
         - English, Chinese, French, Japanese
 
-
 - title: Education
   type: time_table
   contents:
-    - title: PhD in Infectious Disease Epidemiology
+    - title: PhD in Computational Genomics
       institution: London School of Hygiene and Tropical Medicine
       year: 2021 - 2025
       description:
-        - <b>Supporting Scheme:</b> <a href='https://www.lido-dtp.ac.uk/'>LiDo-DTP</a>
-        - <b>Funding:</b> BBSRC
+        - Supporting Scheme - LiDo-DTP
+        - Funding - BBSRC
+        - Dissertation - Machine Learning-Enhanced Drug Resistance and Bioinformatics Transmission Profiling of Tuberculosis Using Genome Sequencing
     - title: MRes Bioengineering (Hons)
       institution: Imperial College London
-      year: 2020 - 2021
+      year: 2019 - 2020
       description:
-        - First-Class Honour with Merit
-        - Imperial Award
-    - title: Bsc Biochemistry (Hons)
+        - Merit
+        - Modules - Computational & Statistical Methods, Frontiers in Bioengineering, Biomaterials
+        - Dissertation - Design of an Artificial Bruch’s Membrane from Synthetic Polyesters
+    - title: BSc Biochemistry (Hons)
       institution: King's College London
       year: 2016 - 2019
       description:
         - First-Class Honour
+        - Dissertation - Investigation of Concordance Between Molecular Dynamics Simulation and FRET Biosensor using Designed Protein Linker System
 
-
-- title: Research Experience
+- title: Technical Skills
   type: time_table
   contents:
-    - title: PhD research project
-      institution: London School of Hygiene and Tropical Medicine, London, UK
+    - title: Programming
+      description:
+        - Python, R, Bash, MySQL, HTML/CSS, C++
+    - title: Data Science & ML
+      description:
+        - Pytorch, PyG, Fastai, scikit-learn, NumPy, Pandas, Matplotlib, Scipy, ggplot2, tidyverse, Jax
+    - title: Genomics Tools
+      description:
+        - BWA-mem, samtools, bcftools, Rxml, Freebayes, Beast2, Figtree, trimmomatic, iTol, Plink2, GATK, Nextflow
+
+- title: Publications
+  type: list
+  contents:
+    - Mixed infections in genotypic drug-resistant Mycobacterium tuberculosis. Scientific Reports (2023).
+    - TB-ML - A framework for comparing ML approaches to predict drug resistance. Bioinformatics Advances (2023).
+    - Whole genome sequencing of TB in the Philippines. Scientific Reports (2024).
+    - TGV - Visualisation tools for transmission graphs. NAR Genomics and Bioinformatics (2024).
+    - Detecting Shallow Gas from Marine Seismic Images. Turing Institute Report (2025).
+    - TOAST - A novel tool for amplicon design in TB studies. BioRxiv (submitted).
+    - LSTM-Based Transfer Learning Models for TB AMPs. (forthcoming).
+    - Deep Learning Approaches for MIC Prediction in TB. (forthcoming).
+    - Stepwise TB Outcome Prediction using XGBoost. (forthcoming).
+    - GNN-based Positive Selection Detection in TB. (forthcoming).
+
+- title: Experience
+  type: time_table
+  contents:
+    - title: PhD Candidate
+      institution: LSHTM (Clark Campino Phelan Lab), London
       year: 2022 - 2025
       description:
-        - 3-year PhD project with Prof Taane Clark, Dr Jody Phelan and Prof Susana Campino. (July 2022 – September 2025)
-        - Half year rotation with Prof Taane Clark, Dr Jody Phelan and Prof Susana Campino
-        - Half year rotation with Dr Matt Silver on Nutritional Epidemiology.
-        - title: <b>Research Topic:</b> <i>Rapid drug resistance and transmission profiling of tuberculosis using portable genome sequencing technology.
-          contents:
-            - <b>Background:</b> 48% of previously treated TB cases show signs of drug resistance. We are currently trying to develop computational tools for drug resistance identification. So far We also aim to apply data analysis technique to solve country specific treatment problems including transmission, regiment & outcome analysis.
-            - <b>Methods:</b> The methods include Python programming, Machine learning, Deep learning, Bash, MCMC, computational phylogenetics, SQL.
-    - title: PhD scheme Rotational Project 1
-      institution: London School of Hygiene and Tropical Medicine, London, UK
-      year: Oct 2021 – Feb 2022
+        - Machine learning models for drug resistance, treatment outcome, protein generation
+        - Deep learning using CNN, RNN, GNN, Transformers
+        - Designed tool for gene amplicon sequencing (Python & Nextflow)
+    - title: ML Consultant
+      institution: Deep Science Venture, London
+      year: 2025 - Present
       description:
-        - 5-month rotation with Prof Taane Clark, Dr Jody Phelan and Prof Susana Campino
-        - title: <b>Research Topic:</b> <i>Genetic Diversity and Drug Resistance of Tuberculosis in the Philippines.
-          contents:
-            - <b>Background:</b> 48% of previously treated TB cases show signs of drug resistance. We are currently trying to develop computational tools for drug resistance identification. So far We also aim to apply data analysis technique to solve country specific treatment problems including transmission, regiment & outcome analysis.
-            - <b>Methods:</b> Python programming, BEAST2, iTOL, gaussian distribution, K-means
-    - title: PhD scheme Rotational Project 2
-      institution: London School of Hygiene and Tropical Medicine, London, UK
-      year: Mar 2021 – July 2022
+        - Built CNN, RNN, VAE models for sequence tasks
+        - Applied SHAP, LIME, DeepLIFT for model interpretation
+    - title: Data Study Group Hackathon
+      institution: Alan Turing Institute
+      year: Jan 2024
       description:
-        - 5-month rotation with Dr Matt Silver on Nutritional Epidemiology.
-        - title: <b>Research Topic:</b> <i>Rapid drug resistance and transmission profiling of tuberculosis using portable genome sequencing technology.
-          contents:
-            - <b>Background:</b> Methylation is a common type of epigenetic modification. It is the addition of a methyl group to DNA sequences. They play an important role in the differentiation of tissue and germ layers by selectively controlling the expression of different genes and affecting transposable elements. I performed statistical analysis to identify methylations that affect foetal development and give rise to different phenotypes, I also performed analysis to find the effect of these methylations and on biological activity.
-            - <b>Methods:</b> R programming, PCR, linear regression, Correlation test, enrichment analysis
-    
-    - title: Master of Research project
-      institution: Imperial College London, London, UK
-      year: 2020 - 2021
+        - Built deep learning models for seismic data analysis
+        - Deployed CNNs with contrastive learning for geophysical image analysis
+    - title: PhD Placement
+      institution: Linkgevity, London
+      year: Aug 2024 – Oct 2024
       description:
-        - 12-month Master of Research project with Dr Jonathan Wojciechowski and Dr Eoghan Cunnane supervised by prof Molly Stevens.
-        - title: <b>Research Topic:</b> <i>Design of an Artificial Bruchs Membrane from Synthetic Polyesters.</i>
-          contents:
-            - <b>Background:</b> During transplantation of retinal progenitor epithelium (RPE) cells to treat retinal degeneration, an optimised delivery system is required to achieve an appropriate cellular organisation that simple bolus injection is unable to provide. I developed polymers with controllable degradation rates and optimised electrospinning for fibrous scaffold formation for RPE transplantation to treat macular degeneration. 
-            - <b>Methods:</b> polymer Synthesis (ROP), Electrospinning, SEM, NMR, data processing/visualisation using python, Image J, in vitro degradation.
-    - title: Bachelor of Science final year project
-      institution: King's College London, London, UK
-      year: Sep 2018 – Jan 2019
+        - Built MLP and GNN models for drug-drug interaction prediction
+        - Deployed scalable pipelines on GCP
+    - title: Research Assistant
+      institution: ByteDance (VoyagerX), London
+      year: Aug 2022 - Feb 2023
       description:
-        - 5-month Undergraduate final year project with Dr Andrew Beavil, King’s College London.
-        - title: <b>Research Topic:</b> <i>Investigation of Concordance Between Molecular Dynamics Simulation and FRET Biosensor using Designed Protein Linker System.
-          contents:
-            - <b>Background:</b> Förster resonance energy transfer (FRET) biosensor systems are assays developed to measure the separation between one ‘donor’ fluorophore in the presence of another ‘acceptor’ fluorophore. Molecular dynamics simulation was used in this project to predict the exact conformational states. I tested the system using inter-domain linkers with self-designed rigid or flexible properties both experimentally and computationally
-            - <b>Methods:</b> protein design, molecular cloning, plasmid DNA purification, protein purification, TCSPC spectroscopy and molecular dynamic simulations, Gel electrophoresis, PCR
-    - title: Bachelor of Science summer project
-      institution: King's College London, London, UK
-      year: Jun 2018 – Aug 2018
-      description:
-        - 2-month summer project working in the Laboratory of Dr Eugene Makeyev, King’s College London, funded by Wellcome Trust Biomedical Vocational Studentship.
-        - title: <b>Research Topic:</b> <i>How nonsense-mediated decay contributes to gene regulation in developing neurons?
-          contents:
-            - <b>Background:</b> Protein PTBP1 represses the inclusion of AS-NMD (alternative splicing induced non-sense-mediated decay), inducing alternative exons in dozens of previously unknown targets, which play important roles in stem cell proliferation, differentiation and survival. I tested the hypothesis that PTBP1-regulated AS-NMD events are critical for proper differentiation of stem cells into neurons.
-            - <b>Methods:</b> Gel electrophoresis, PCR, qPCR, bioinformatics analysis of RNA-seq data, mammalian cell cultures, reverse transcription, molecular cloning; RNA purification, primer design
+        - Built chemical databases; used autoencoders for neoantigen data
+        - Led market research and scientific reporting
 
-# - title: Computational Skills
-#   type: time_table
-#   contents:
-#     - title: Coding Skills
-#       description:
-#         - Python <span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span>
-#         - Bash  &#160 &#160  <span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span>
-#         - R  &#160 &#160 &#160  &#160  &#160   <span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span>
-#         - C++  &#160 &#160 &#160   <span class="fa fa-star checked"></span><span class="fa fa-star checked"></span>
-#         - SQL  &#160 &#160 &#160   <span class="fa fa-star checked"></span><span class="fa fa-star checked"></span>
-#     - title: Data Science Skills
-#       description:
-#         - <b>Python:</b> NumPy, Pandas, Matplotlib, Pytorch, Fastai,scikit learn, RDkit, Seaborn, Plotly
-#         - <b>R:</b> ggplot2,tidyverse,
-#     - title: Other Skills
-#       description:
-#         - <b>Website building:</b> Django, HTML, CSS
-#         - <b>Analytical software:</b> Yasara, Pymol, Snapgene, VMD, Gromacs, MestRenova, Chemdraw, ImageJ, Qtiplot, Graphpad Prism, Kraken
-#         - <b>Bioinformatic web tools:</b> Primer3, UCSC, BLAST, T-COFFEE, Uniprot, Swiss-model, iTOL
-#         - <b>Video editing skill:</b> Final cut, imovie
+- title: Teaching
+  type: list
+  contents:
+    - Python coding – Master’s course at LSHTM
+    - Genomics workshop instructor – Philippines, Indonesia, Thailand
+    - Teaching assistant – Sysmic statistics course
 
-# - title: Work Experience
-#   type: time_table
-#   contents:
-#     - year: Aug 2022 - Feb 2023
-#       title: 6-month part-time internship at ByteDance working with VoyagerX project for business prospect analysis of frontier biological technology development.
-#       description:
-#         - Biological market research
-#         - Scientific research analysis and summary report (Biologics, Neoantigen, small molecules, biological data integration)
-#         - Scientific publication analysis
-#         - Interdisciplinary collaboration
-#         - <b>Data science related tasks:</b> Data gathering, Data integration, Machine learning
-#     - year: 2017 
-#       title: 8-week internship at Syngenta AG headquarter in Basel Switzerland as part of the environment and publicity team
-#       description:
-#         - Participated in writing the paper - Multifunctional Field Margins, Assessing the benefits for nature, society and business.
-#         - Assist new students with module selection and campus orientation.
-#         - Data management.
-#         - Composing articles to be posted on the company intranet.
-#         - Summarising scientific papers into a more accessible format.
-#         - Reading reports critically; forming my own understanding and challenging the ideas.
-#         - Presenting and explaining findings.
-#         - Attending meetings and analysing problems and proposing next steps.
-#     - year: 2022
-#       title: Event organising committee for 3-day retreat events for PhD programme (150 attendee)
-#       description:
-#         - Activity planning
-#         - Time scheduling
-#         - Crowd communication
-#         - Speaker selection and invitation
-#     - year: 2017 - 2018
-#       title: Sponsorship officer in Bioscience Student Association at King’s College London
-#       description:
-#         - Networking.
-#         - Fundraising.
-#         - Organising events.
-#         - Answering student questions.
-#         - Helping new students adapt to university life.
-#     - year: 2017 - 2018
-#       title: Peer Assisted Learning Mentor in the School of Life science and Medicine at King’s College London
-#       description:
-#         - Lead workshops on study and organisational methods.
-#         - Assist new students with module selection and campus orientation.
+- title: Leadership & Service
+  type: time_table
+  contents:
+    - title: Student Committee
+      institution: LiDo PhD Programme, London
+      year: 2024 - 2025
+      description:
+        - Designed wellbeing surveys
+        - Organised 3-day retreat for 300+ participants
+
+- title: Awards
+  type: time_table
+  contents:
+    - title: UKRI BBSRC LiDo PhD Scholarship
+      year: 2021 - 2025
+    - title: Wellcome Trust Biomedical Studentship
+      year: 2018
+      description:
+        - Fundinng for Summer internship in the Lab of Dr. Eugene Makeyev
+
+    - title: Imperial Award for Personal Development
+      year: 2020
+      description:
+        - Effective teamwork
+        - Going above and beyond academic expectations
+        - Independent open-minded thought
+        - Self-awareness
+        - active self-management.
 
 - title: Honors and Awards
   type: time_table
@@ -192,7 +156,7 @@
 #         - Description 1.
 #         - Description 2.
 
-- title: Other Interests
+- title: Interests
   type: list
   contents:
-    - <u>Hobbies:</u> Coding, Judo, Guitar, Hiking, Gym.
+    - Judo, Scuba diving, basketball, writing, guitar, coding
