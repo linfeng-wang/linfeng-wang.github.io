@@ -1,21 +1,22 @@
 ---
 layout: page
-title: TOAST
-description:  A novel tool for designing targeted gene amplicons and an optimised set of primers for high-throughput sequencing in tuberculosis genomic studies
+title: Peptide Design using RNN
+description:  LSTM-Based Deep Learning Model for the Discovery of Antimicrobial Peptides Targeting Mycobacterium tuberculosis
 img: assets/img/amp1.png
 importance: 2
 category: work
 ---
 
-[Publication](https://www.biorxiv.org/content/10.1101/2025.01.13.632698v1.abstract)
+<!-- [Publication](https://www.biorxiv.org/content/10.1101/2025.01.13.632698v1.abstract) -->
 
-TOAST is a flexible tool for designing targeted amplicon panels to detect TB drug resistance.
+Developed LSTM-based classifiers and generators using transfer learning to predict and generate antimicrobial peptides (AMPs) specific to Mycobacterium tuberculosis.
 
-It uses mutation frequency data from over 50,000 genomes to prioritize high-value regions for primer selection.
+Benchmarked multiple LSTM architectures, achieving 90% accuracy and 0.97 AUC in TB-AMP classification, with transfer learning enhancing performance under limited data.
 
-The final 33-amplicon panel achieved over 97% coverage of key resistance markers and was validated using Nanopore sequencing.
+Designed a generative pipeline that produced 94 novel non-toxic peptide candidates, 10 of which met physicochemical criteria and structural validation for AMP-like properties.
 
-TOAST is available as a command-line tool, Python package, and interactive web app with support for custom inputs.
+Performed comparative motif and structural divergence analysis to ensure novelty and function of generated peptides, with full reproducibility provided via public code.
+
 
 <br>
 
@@ -23,28 +24,13 @@ TOAST is available as a command-line tool, Python package, and interactive web a
 <div style="display: flex; justify-content: center; gap: 2em; margin-top: 2em; text-align: center; flex-wrap: nowrap;">
 
   <div>
-    <img src="/assets/img/toast1.png" alt="TOAST Image 1" style="width: 320px; margin: 1em; border-radius: 4px;">
+    <img src="/assets/img/amp1.png" alt="TOAST Image 1" style="width: 320px; margin: 1em; border-radius: 4px;">
     <p style="color: #ccc; font-size: 0.95rem; margin-top: -0.5em;">Amplicon Design Tool Interface</p>
   </div>
 
   <div>
-    <img src="/assets/img/toast2.png" alt="TOAST Image 2" style="width: 320px; margin: 1em; border-radius: 4px;">
+    <img src="/assets/img/amp2.png" alt="TOAST Image 2" style="width: 320px; margin: 1em; border-radius: 4px;">
     <p style="color: #ccc; font-size: 0.95rem; margin-top: -0.5em;">Primer Coverage Distribution</p>
-  </div>
-
-</div>
-
-<div style="display: flex; justify-content: center; gap: 2em; margin-top: 2em; text-align: center; flex-wrap: nowrap;">
-
-  <div>
-    <img src="/assets/img/toast3.png" alt="TOAST Image 2" style="width: 320px; margin: 1em; border-radius: 4px;">
-    <a href="https://genomics.lshtm.ac.uk/webtoast/#/" target="_blank" style="color: #ccc; text-decoration: underline;">Webtoast: web-hosted TOAST</a>
-  </div>
-
-<div>
-    <img src="/assets/img/toast4.png" alt="TOAST Image 2" style="width: 320px; margin: 1em; border-radius: 4px;">
-    <a href="https://pypi.org/project/toast-amplicon/" target="_blank" style="color: #ccc; text-decoration: underline;">PyPI package</a>
-
   </div>
 
 </div>
