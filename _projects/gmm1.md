@@ -23,12 +23,12 @@ Proposed integration of this method into existing TBProfiler workflows for impro
 <div style="display: flex; justify-content: center; gap: 2em; margin-top: 2em; text-align: center; flex-wrap: nowrap;">
 
   <div>
-    <img src="/assets/img/gmm1.png" alt="TOAST Image 1" style="width: 320px; margin: 1em; border-radius: 4px;">
+    <img src="/assets/img/gmm1.png" alt="TOAST Image 1" style="width: 450px; margin: 1em; border-radius: 4px;">
     <p style="color: #ccc; font-size: 0.95rem; margin-top: -0.5em;">Mix infection over the world</p>
   </div>
 
   <div>
-    <img src="/assets/img/gmm2.png" alt="TOAST Image 2" style="width: 320px; margin: 1em; border-radius: 4px;">
+    <img src="/assets/img/gmm2.png" alt="TOAST Image 2" style="width: 450px; margin: 1em; border-radius: 4px;">
     <p style="color: #ccc; font-size: 0.95rem; margin-top: -0.5em;">Mixed infection dissection pipeline</p>
   </div>
 
