@@ -70,11 +70,83 @@
       <a class="nav-link" href="https://pathogenseq.lshtm.ac.uk/" target="_blank" rel="external nofollow noopener"><strong>Lab</strong></a>
     </li>
 
-    <!-- 
+    
   </ul>
 
 </div>
 
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600&display=swap');
+
+.card {
+  background: #eaeaea;
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  }
+
+  .card-body {
+    padding: 1rem;
+
+    .card-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #002b45;
+      text-transform: lowercase; // Reset all to lowercase first
+      margin-bottom: 0.5rem;
+      line-height: 1.4;
+
+      &::first-letter {
+        text-transform: uppercase; // Capitalize only the first letter
+      }
+
+      &:hover {
+        text-decoration: underline;
+        color: #00509e;
+      }
+    }
+
+    .card-text {
+      font-size: 0.8rem;
+      color: #444;
+      margin-bottom: 0.75rem;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .github-icon {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 1.1rem;
+
+      .icon a {
+        color: #24292e;
+        transition: color 0.2s ease-in-out;
+
+        &:hover {
+          color: #0366d6;
+        }
+      }
+
+      .stars {
+        font-size: 0.9rem;
+        color: #777;
+        margin-left: 0.25rem;
+
+        i {
+          margin-right: 2px;
+        }
+      }
+    }
+  }
+}
+
+</style>
 
     <!-- Content -->
     <div class="container mt-5">
@@ -1012,9 +1084,7 @@ Last updated: July 31, 2025.
   }
 </script>
 
-  </ul>
-</div>
-</body>
+  </body>
 
   <footer style="background-color: #2c2f36; padding: 2em 0; text-align: center; font-family: 'Georgia', serif; font-style: italic; color: #2c2f36;">
     <span style="font-size: 1.2rem;">
