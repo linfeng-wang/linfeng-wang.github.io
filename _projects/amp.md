@@ -4,7 +4,7 @@ title: Peptide Design using RNN
 description:  LSTM-Based Deep Learning Model for the Discovery of Antimicrobial Peptides Targeting Mycobacterium tuberculosis
 img: assets/img/amp1.png
 importance: 2
-category: work
+category: PhD
 ---
 
 <!-- [Publication](https://www.biorxiv.org/content/10.1101/2025.01.13.632698v1.abstract) -->

@@ -4,7 +4,7 @@ title: TOAST Amplicon Designer Tool
 description:  A novel tool for designing targeted gene amplicons and an optimised set of primers for high-throughput sequencing in tuberculosis genomic studies
 img: assets/img/toast1.png
 importance: 2
-category: work
+category: PhD
 ---
 
 [Publication](https://www.biorxiv.org/content/10.1101/2025.01.13.632698v1.abstract)

@@ -4,7 +4,7 @@ title: GNN for positive selection detection
 description:  Decoding Positive Selection in Mycobacterium tuberculosis with Phylogeny-Guided Graph Attention Models
 img: assets/img/gnn1.png
 importance: 2
-category: work
+category: PhD
 ---
 
 <!-- [Publication](https://www.biorxiv.org/content/10.1101/2025.01.13.632698v1.abstract) -->

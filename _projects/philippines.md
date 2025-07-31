@@ -4,7 +4,7 @@ title: Philippines TB transmission report
 description:  Whole genome sequencing analysis of Mycobacterium tuberculosis reveals circulating strain types and drug-resistance mutations in the Philippines
 img: assets/img/philippines1.png
 importance: 2
-category: work
+category: PhD
 ---
 
 [Publication](https://www.nature.com/articles/s41598-024-70471-x)

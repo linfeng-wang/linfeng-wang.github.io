@@ -4,7 +4,7 @@ title: Treatment outcome prediction for Clinical Records
 description:  A multi-stage machine learning framework for stepwise prediction of tuberculosis treatment outcomes - Integrating gradient boosted decision trees and feature-level analysis for clinical decision support
 img: assets/img/xgb1.png
 importance: 2
-category: work
+category: PhD
 ---
 
 <!-- [Publication](https://www.biorxiv.org/content/10.1101/2025.01.13.632698v1.abstract) -->
