@@ -6,7 +6,6 @@
 //     });
 // });
 
-
 // darkmode.js
 document.addEventListener('DOMContentLoaded', function() {
     // Disable dark mode toggle
