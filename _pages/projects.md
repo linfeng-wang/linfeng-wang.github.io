@@ -5,8 +5,7 @@ permalink: /projects/
 description: Explore projects 
 nav: true
 nav_order: 2
-display_categories: [PhD]
-# display_categories: [PhD, Fun]
+display_categories: [PhD, Fun]
 horizontal: false
 ---
 
@@ -57,3 +56,5 @@ horizontal: false
   {%- endif -%}
 {%- endif -%}
 </div>
+
+

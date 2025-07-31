@@ -3,20 +3,20 @@
   <!-- Left: About -->
   <ul class="navbar-nav">
     <li class="nav-item {% if page.url == '/about/' or page.permalink == '/' %}active{% endif %}">
-      <a class="nav-link" href="{{ '/' | relative_url }}"><strong>Home</strong></a>
+      <a class="nav-link" href="{{ '/' | relative_url }}">Home</a>
     </li>
   </ul>
 
   <!-- Right: Scholar + LinkedIn + Lab + (optional) dark mode -->
   <ul class="navbar-nav flex-row">
     <li class="nav-item mr-3">
-      <a class="nav-link" href="https://scholar.google.com/citations?user=ZUOMRG0AAAAJ&hl=en" target="_blank"><strong>Google Scholar</strong></a>
+      <a class="nav-link" href="https://scholar.google.com/citations?user=ZUOMRG0AAAAJ&hl=en" target="_blank">Google Scholar</a>
     </li>
     <li class="nav-item mr-3">
-      <a class="nav-link" href="https://www.linkedin.com/in/w15/" target="_blank"><strong>LinkedIn</strong></a>
+      <a class="nav-link" href="https://www.linkedin.com/in/w15/" target="_blank">LinkedIn</a>
     </li>
     <li class="nav-item mr-3">
-      <a class="nav-link" href="https://pathogenseq.lshtm.ac.uk/" target="_blank"><strong>Lab</strong></a>
+      <a class="nav-link" href="https://pathogenseq.lshtm.ac.uk/" target="_blank">Lab</a>
     </li>
 
     {% if site.enable_darkmode %}
@@ -30,6 +30,8 @@
   </ul>
 
 </div>
+
+
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600&display=swap');
