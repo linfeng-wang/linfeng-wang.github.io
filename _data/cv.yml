@@ -3,7 +3,8 @@
   contents:
     - title: Linfeng Wang
       description: 
-        - Current PhD student at London School of Hygiene and Tropical Medicine
+        - Machine Learning Engineer at Biographica, London
+        - PhD in Computational Genomics, London School of Hygiene and Tropical Medicine
         - 15th Nov 1997
         - English, Chinese, French, Japanese
 
@@ -12,7 +13,7 @@
   contents:
     - title: PhD in Computational Genomics
       institution: London School of Hygiene and Tropical Medicine
-      year: 2021 - 2025
+      year: 2021 - 2026
       description:
         - Supporting Scheme - LiDo-DTP
         - Funding - BBSRC
@@ -39,38 +40,53 @@
         - Python, R, Bash, MySQL, HTML/CSS, C++
     - title: Data Science & ML
       description:
-        - Pytorch, PyG, Fastai, scikit-learn, NumPy, Pandas, Matplotlib, Scipy, ggplot2, tidyverse, Jax
+        - PyTorch, PyG, scikit-learn, Transformers, LLMs, CNNs, RNNs, GNNs, VAEs, XGBoost
+        - NumPy, Pandas, Scipy, Jax, Fastai, Numba
+    - title: MLOps & Cloud
+      description:
+        - AWS, GCP, Azure, Docker, Git, Nextflow, Jupyter, Huggingface, LangChain
+    - title: Visualization
+      description:
+        - Matplotlib, Plotly, Seaborn, ggplot2, Streamlit, Flask
     - title: Genomics Tools
       description:
-        - BWA-mem, samtools, bcftools, Rxml, Freebayes, Beast2, Figtree, trimmomatic, iTol, Plink2, GATK, Nextflow
+        - BWA-MEM, SAMtools, BCFtools, RAxML, FreeBayes, BEAST2, FigTree, Trimmomatic, iTOL, PLINK2, GATK
 
 - title: Publications
   type: list
   contents:
-    - Mixed infections in genotypic drug-resistant Mycobacterium tuberculosis. Scientific Reports (2023).
+    - Decoding positive selection in M. tuberculosis with phylogeny-guided graph attention models. BMC Bioinformatics (2026).
+    - TOAST - A novel tool for designing targeted gene amplicons in TB genomic studies. BMC Genomics 26(1) (2025).
+    - LSTM-based deep learning model for the discovery of antimicrobial peptides targeting M. tuberculosis. Bioinformatics Advances (2025).
+    - A multi-stage machine learning framework for stepwise prediction of TB treatment outcomes. Research Square (preprint, 2025).
+    - Detecting Shallow Gas from Marine Seismic Images. Turing Institute Data Study Group Report (2025).
+    - Whole genome sequencing of TB in the Philippines. Scientific Reports 14:70471 (2024).
+    - TGV - Visualisation tools for transmission graphs. NAR Genomics and Bioinformatics 6(4) (2024).
+    - Mixed infections in genotypic drug-resistant Mycobacterium tuberculosis. Scientific Reports 13:1-8 (2023).
     - TB-ML - A framework for comparing ML approaches to predict drug resistance. Bioinformatics Advances (2023).
-    - Whole genome sequencing of TB in the Philippines. Scientific Reports (2024).
-    - TGV - Visualisation tools for transmission graphs. NAR Genomics and Bioinformatics (2024).
-    - Detecting Shallow Gas from Marine Seismic Images. Turing Institute Report (2025).
-    - TOAST - A novel tool for amplicon design in TB studies. BioRxiv (submitted).
-    - LSTM-Based Transfer Learning Models for TB AMPs. (forthcoming).
+    - Genomic analysis of tuberculosis in Thailand. Research Square (submitted, 2025).
     - Deep Learning Approaches for MIC Prediction in TB. (forthcoming).
-    - Stepwise TB Outcome Prediction using XGBoost. (forthcoming).
-    - GNN-based Positive Selection Detection in TB. (forthcoming).
 
 - title: Experience
   type: time_table
   contents:
-    - title: PhD Candidate
+    - title: Machine Learning Engineer
+      institution: Biographica, London
+      year: Apr 2026 - Present
+      description:
+        - Develop, test and benchmark deep learning models predicting gene expression from DNA sequence and biological context
+        - Build scalable PyTorch training and fine-tuning pipelines on Azure and AWS, covering dataset construction, evaluation, hyperparameter optimisation and reproducible experimentation
+        - Apply ML to gene-editing and crop-trait prediction, combining multi-omics data
+    - title: PhD Researcher
       institution: LSHTM (Clark Campino Phelan Lab), London
-      year: 2022 - 2025
+      year: Oct 2021 - Mar 2026
       description:
         - Machine learning models for drug resistance, treatment outcome, protein generation
         - Deep learning using CNN, RNN, GNN, Transformers
         - Designed tool for gene amplicon sequencing (Python & Nextflow)
     - title: ML Consultant
       institution: Deep Science Venture, London
-      year: 2025 - Present
+      year: Mar 2025 - Oct 2025
       description:
         - Built CNN, RNN, VAE models for sequence tasks
         - Applied SHAP, LIME, DeepLIFT for model interpretation
@@ -114,11 +130,11 @@
   type: time_table
   contents:
     - title: UKRI BBSRC LiDo PhD Scholarship
-      year: 2021 - 2025
+      year: 2021 - 2026
     - title: Wellcome Trust Biomedical Studentship
       year: 2018
       description:
-        - Fundinng for Summer internship in the Lab of Dr. Eugene Makeyev
+        - Funding for summer internship in the Lab of Dr. Eugene Makeyev
 
     - title: Imperial Award for Personal Development
       year: 2020
@@ -127,22 +143,7 @@
         - Going above and beyond academic expectations
         - Independent open-minded thought
         - Self-awareness
-        - active self-management.
-
-- title: Honors and Awards
-  type: time_table
-  contents:
-    - year: 2020
-      title: Imperial Award
-      description:
-        - Effective teamwork
-        - Going above and beyond academic expectations
-        - Independent open-minded thought
-        - Self-awareness
-        - active self-management.
-
-    - year: 2018
-      title: Wellcome Trust Biomedical Vacational Studentship
+        - Active self-management
 
 # - title: Academic Interests
 #   type: nested_list

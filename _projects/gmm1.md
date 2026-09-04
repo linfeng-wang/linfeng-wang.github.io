@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Mix infection analysis through machine learning
+title: Mixed infection analysis through machine learning
 description:  Mixed infections in genotypic drug-resistant Mycobacterium tuberculosis
 img: assets/img/gmm1.png
 importance: 2

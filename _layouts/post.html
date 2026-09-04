@@ -19,8 +19,12 @@ layout: default
     <h1 class="post-title">{{ page.title }}</h1>
     <p class="post-meta">{{ page.date | date: "%B %-d, %Y" }}{%- if page.author -%} • {{ page.author }}{%- endif -%}{%- if page.meta -%} • {{ page.meta }}{%- endif -%}</p>
     <p class="post-tags">
+      {%- if page.collection == 'posts' -%}
       <a href="{{ year | prepend: '/blog/' | prepend: site.baseurl}}"> <i class="fas fa-calendar fa-sm"></i> {{ year }} </a>
-      {%- if tags != "" %}
+      {%- else -%}
+      <i class="fas fa-calendar fa-sm"></i> {{ year }}
+      {%- endif -%}
+      {%- if tags != "" and page.collection == 'posts' %}
       &nbsp; &middot; &nbsp;
         {% for tag in page.tags -%}
         <a href="{{ tag | slugify | prepend: '/blog/tag/' | prepend: site.baseurl}}">
@@ -28,7 +32,7 @@ layout: default
           {% endfor -%}
       {% endif %}
 
-      {%- if categories != "" %}
+      {%- if categories != "" and page.collection == 'posts' %}
       &nbsp; &middot; &nbsp;
         {% for category in page.categories -%}
         <a href="{{ category | slugify | prepend: '/blog/category/' | prepend: site.baseurl}}">

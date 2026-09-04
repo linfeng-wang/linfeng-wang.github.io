@@ -8,12 +8,13 @@ middle_name:
 last_name: Wang
 email: linfeng.wang@lshtm.ac.uk
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+  Machine Learning Engineer at Biographica. PhD in computational genomics, working at the
+  intersection of AI, bioinformatics and healthcare.
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
   Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.
-keywords: jekyll, jekyll-theme, academic-website, portfolio-website  # add your own keywords or leave empty
+keywords: machine learning, bioinformatics, computational genomics, deep learning, tuberculosis, AI  # add your own keywords or leave empty
 
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: 👤 # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
@@ -261,7 +262,7 @@ jekyll-archives:
     tag: '/blog/tag/:name/'
     category: '/blog/category/:name/'
 
-display_tags: ['formatting', 'images', 'links', 'math', 'code'] # these tags will be displayed on the front page of your blog
+display_tags: [] # these tags will be displayed on the front page of your blog (must match tags on real posts)
 
 # -----------------------------------------------------------------------------
 # Jekyll Scholar
