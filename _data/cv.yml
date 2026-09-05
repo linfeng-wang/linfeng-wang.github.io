@@ -4,7 +4,7 @@
     - title: Linfeng Wang
       description: 
         - Machine Learning Engineer at Biographica, London
-        - PhD in Computational Genomics, London School of Hygiene and Tropical Medicine
+        - PhD in Machine Learning and Computational Genomics, London School of Hygiene and Tropical Medicine
         - 15th Nov 1997
         - English, Chinese, French, Japanese
 
@@ -31,18 +31,18 @@
       description:
         - Built CNN, RNN, VAE models for sequence tasks
         - Applied SHAP, LIME, DeepLIFT for model interpretation
+    - title: PhD Placement
+      institution: LinkGevity, London
+      year: Aug 2024 - Oct 2024
+      description:
+        - Built MLP and GNN models for drug-drug interaction prediction
+        - Deployed scalable pipelines on GCP
     - title: Data Study Group Hackathon
       institution: Alan Turing Institute
       year: Jan 2024
       description:
         - Built deep learning models for seismic data analysis
         - Deployed CNNs with contrastive learning for geophysical image analysis
-    - title: PhD Placement
-      institution: Linkgevity, London
-      year: Aug 2024 – Oct 2024
-      description:
-        - Built MLP and GNN models for drug-drug interaction prediction
-        - Deployed scalable pipelines on GCP
     - title: Research Assistant
       institution: ByteDance (VoyagerX), London
       year: Aug 2022 - Feb 2023
