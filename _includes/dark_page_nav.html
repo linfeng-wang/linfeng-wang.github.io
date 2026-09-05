@@ -1,0 +1,13 @@
+{%- comment -%}
+  Nav styling for pages that paint their own dark background (the homepage
+  and the project pages). The site theme is light-only, so it colours nav
+  links for a light background; these rules restate them for a dark one.
+  Included by _layouts/about.html and _layouts/project.html.
+{%- endcomment -%}
+<style>
+  .navbar-nav .nav-item .nav-link             { color: #ddd; }
+  .navbar-nav .nav-item .nav-link:hover       { color: #e89f8a; }
+  .navbar-nav .nav-item.active > .nav-link    { color: #fff; }
+  .navbar-nav .nav-item.active > .nav-link:hover { color: #e89f8a; }
+  .navbar-toggler .icon-bar                   { background-color: #ddd; }
+</style>

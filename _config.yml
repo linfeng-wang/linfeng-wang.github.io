@@ -6,7 +6,7 @@ title: blank # the website title (if blank, full name will be used instead)
 first_name: Linfeng
 middle_name:
 last_name: Wang
-email: linfeng.wang@lshtm.ac.uk
+email: wanglinfeng1115@gmail.com
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   Machine Learning Engineer at Biographica. PhD in computational genomics, working at the
   intersection of AI, bioinformatics and healthcare.

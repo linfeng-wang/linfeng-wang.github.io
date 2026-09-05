@@ -2,6 +2,8 @@
 layout: default
 ---
 
+{% include dark_page_nav.html %}
+
 <style>
   body {
     background-color: #111;
@@ -306,13 +308,6 @@ layout: default
   .resume-wrapper strong,
   .resume-wrapper li strong       { color: #fff; }
 
-  /* The navbar sits directly on this page's dark background, but the
-     site theme is light-only and colours nav links for a light page. */
-  .navbar-nav .nav-item .nav-link             { color: #ddd; }
-  .navbar-nav .nav-item .nav-link:hover       { color: #e89f8a; }
-  .navbar-nav .nav-item.active > .nav-link    { color: #fff; }
-  .navbar-nav .nav-item.active > .nav-link:hover { color: #e89f8a; }
-  .navbar-toggler .icon-bar                   { background-color: #ddd; }
 
 </style>
 
@@ -392,7 +387,11 @@ layout: default
       <div class="resume-entry">
         <h3>Education</h3>
     
-        <p><strong>PhD Data Science of Infectious Disease Genomics</strong><br>
+        <!-- http, not https: the server's certificate only covers
+             genomics.lshtm.ac.uk, so https to this host fails validation.
+             Switch to https once the cert lists pathogenseq.lshtm.ac.uk. -->
+        <p><strong>PhD Data Science of Infectious Disease Genomics</strong>
+        (<a href="http://pathogenseq.lshtm.ac.uk/" target="_blank" rel="noopener" style="color: #e89f8a; text-decoration: none; border-bottom: 1px solid rgba(232,159,138,0.5);">group website</a>)<br>
         London School of Hygiene and Tropical Medicine<br>
         Oct 2021 to Mar 2026</p>
     
