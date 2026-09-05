@@ -144,16 +144,79 @@
     <!-- Content -->
     <div class="container mt-5">
       
-        <!-- page.html -->
-        <div class="post">
+        <style>
+  .navbar-nav .nav-item .nav-link             { color: #ddd; }
+  .navbar-nav .nav-item .nav-link:hover       { color: #e89f8a; }
+  .navbar-nav .nav-item.active > .nav-link    { color: #fff; }
+  .navbar-nav .nav-item.active > .nav-link:hover { color: #e89f8a; }
+  .navbar-toggler .icon-bar                   { background-color: #ddd; }
+</style>
 
-          <header class="post-header">
-            <h1 class="post-title">Projects</h1>
-            <p class="post-description">Machine learning and genomics work from my PhD, with papers, code and tools.</p>
-          </header>
 
-          <article>
-            <!-- pages/projects.md -->
+<style>
+  body {
+    background-color: #111;
+    color: #ddd;
+  }
+
+  /* ---------- Page header ---------- */
+  .projects-dark .post-title       { color: #fff; }
+  .projects-dark .post-description { color: #bbb; }
+
+  .projects-dark h2.category {
+    color: #8a8a8a;
+    border-bottom-color: #2e2e2e;
+  }
+
+  /* ---------- Cards ---------- */
+  .projects-dark .card {
+    background: #1b1b1b;
+    border: 1px solid #2b2b2b;
+    transition: box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out;
+  }
+
+  .projects-dark .card:hover {
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.55);
+    border-color: #444;
+  }
+
+  /* the thumbnails are figures on white grounds, so give them their own
+     light plate rather than letting them butt against the dark card */
+  .projects-dark .card img {
+    background: #f7f7f7;
+    display: block;
+  }
+
+  .projects-dark .card .card-body .card-title { color: #fff; }
+
+  .projects-dark .card .card-body .card-title:hover,
+  .projects-dark .card:hover .card-body .card-title { color: #e89f8a; }
+
+  .projects-dark .card .card-body .card-text { color: #b5b5b5; }
+
+  .projects-dark .card .card-body .github-icon .icon a { color: #ccc; }
+  .projects-dark .card .card-body .github-icon .icon a:hover { color: #e89f8a; }
+  .projects-dark .card .card-body .github-icon .stars { color: #999; }
+
+  .projects-dark figure { margin-bottom: 0; }
+
+  /* ---------- Phone ---------- */
+  @media (max-width: 700px) {
+    .projects-dark .post-title { font-size: 2rem; }
+  }
+
+  html, body { max-width: 100%; overflow-x: hidden; }
+</style>
+
+<div class="post projects-dark">
+
+  <header class="post-header">
+    <h1 class="post-title">Projects</h1>
+    <p class="post-description">Machine learning and genomics work from my PhD, with papers, code and tools.</p>
+  </header>
+
+  <article>
+    <!-- pages/projects.md -->
 <div class="projects">
   <!-- Display categorized projects -->
   <h2 class="category">PhD</h2>
@@ -319,11 +382,10 @@
 </div>
 
 
-          </article>
+  </article>
 
-        </div>
+</div>
 
-    
       
     </div>
 
