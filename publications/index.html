@@ -42,11 +42,6 @@
 
     <!-- Dark Mode -->
     
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/native.css" media="none" id="highlight_theme_dark">
-
-    <script src="/assets/js/theme.js"></script>
-    <script src="/assets/js/dark_mode.js"></script>
-    
 
   </head>
 
@@ -74,13 +69,6 @@
       <a class="nav-link" href="https://pathogenseq.lshtm.ac.uk/" target="_blank" rel="external nofollow noopener">Lab</a>
     </li>
 
-    
-    <li class="toggle-container nav-item">
-      <button id="light-toggle" title="Change theme">
-        <i class="fas fa-moon"></i>
-        <i class="fas fa-sun"></i>
-      </button>
-    </li>
     
   </ul>
 
@@ -110,13 +98,8 @@
       font-size: 1rem;
       font-weight: 600;
       color: #002b45;
-      text-transform: lowercase; // Reset all to lowercase first
       margin-bottom: 0.5rem;
       line-height: 1.4;
-
-      &::first-letter {
-        text-transform: uppercase; // Capitalize only the first letter
-      }
 
       &:hover {
         text-decoration: underline;
@@ -250,7 +233,7 @@
     <footer class="fixed-bottom">
       <div class="container mt-0">
         &copy; Copyright 2026 Linfeng  Wang. Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.
-Last updated: September 04, 2026.
+Last updated: September 05, 2026.
       </div>
     </footer> -->
 
@@ -374,11 +357,30 @@ Last updated: September 04, 2026.
   }
 </script>
 
-  </body>
 
-  <footer style="background-color: #2c2f36; padding: 2em 0; text-align: center; font-family: 'Georgia', serif; font-style: italic; color: #2c2f36;">
-    <span style="font-size: 1.2rem;">
-      Linfeng Wang | linfeng.wang@lshtm.ac.uk | London School of Hygiene and Tropical Medicine | London, UK
-    </span>
-  </footer>
+    <style>
+      .site-footer,
+      .site-footer span {
+        color: #e8e8e8;
+      }
+      .site-footer {
+        background-color: #2c2f36;
+        padding: 2em 1.25em;
+        text-align: center;
+        font-family: 'Georgia', serif;
+        font-style: italic;
+        font-size: 1.15rem;
+        line-height: 1.6;
+      }
+      .site-footer .sep { opacity: 0.55; padding: 0 0.5em; }
+      @media (max-width: 600px) {
+        .site-footer { padding: 1.5em 1em; font-size: 1rem; }
+        /* stack the parts instead of letting them overflow a narrow screen */
+        .site-footer .sep { display: block; height: 0; overflow: hidden; padding: 0; }
+      }
+    </style>
+    <footer class="site-footer">
+      <span>Linfeng Wang<span class="sep">|</span>London, UK</span>
+    </footer>
+  </body>
 </html>

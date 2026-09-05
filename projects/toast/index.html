@@ -10,9 +10,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>TOAST Amplicon Designer Tool | Linfeng  Wang</title>
+    <title>TOAST amplicon designer | Linfeng  Wang</title>
     <meta name="author" content="Linfeng  Wang">
-    <meta name="description" content="A novel tool for designing targeted gene amplicons and an optimised set of primers for high-throughput sequencing in tuberculosis genomic studies">
+    <meta name="description" content="Turning genome-scale mutation data into an optimised TB sequencing panel">
     <meta name="keywords" content="machine learning, bioinformatics, computational genomics, deep learning, tuberculosis, AI">
 
 
@@ -42,11 +42,6 @@
 
     <!-- Dark Mode -->
     
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/native.css" media="none" id="highlight_theme_dark">
-
-    <script src="/assets/js/theme.js"></script>
-    <script src="/assets/js/dark_mode.js"></script>
-    
 
   </head>
 
@@ -74,13 +69,6 @@
       <a class="nav-link" href="https://pathogenseq.lshtm.ac.uk/" target="_blank" rel="external nofollow noopener">Lab</a>
     </li>
 
-    
-    <li class="toggle-container nav-item">
-      <button id="light-toggle" title="Change theme">
-        <i class="fas fa-moon"></i>
-        <i class="fas fa-sun"></i>
-      </button>
-    </li>
     
   </ul>
 
@@ -110,13 +98,8 @@
       font-size: 1rem;
       font-weight: 600;
       color: #002b45;
-      text-transform: lowercase; // Reset all to lowercase first
       margin-bottom: 0.5rem;
       line-height: 1.4;
-
-      &::first-letter {
-        text-transform: uppercase; // Capitalize only the first letter
-      }
 
       &:hover {
         text-decoration: underline;
@@ -168,51 +151,39 @@
         <div class="post">
 
           <header class="post-header">
-            <h1 class="post-title">TOAST Amplicon Designer Tool</h1>
-            <p class="post-description">A novel tool for designing targeted gene amplicons and an optimised set of primers for high-throughput sequencing in tuberculosis genomic studies</p>
+            <h1 class="post-title">TOAST amplicon designer</h1>
+            <p class="post-description">Turning genome-scale mutation data into an optimised TB sequencing panel</p>
           </header>
 
           <article>
-            <p><a href="https://www.biorxiv.org/content/10.1101/2025.01.13.632698v1.abstract" rel="external nofollow noopener" target="_blank">Publication</a></p>
+            <p>Published in <em>BMC Genomics</em> (2025) ·
+<a href="https://doi.org/10.1186/s12864-025-12247-9" rel="external nofollow noopener" target="_blank">Paper</a> ·
+<a href="https://genomics.lshtm.ac.uk/webtoast/#/" rel="external nofollow noopener" target="_blank">Web app</a> ·
+<a href="https://pypi.org/project/toast-amplicon/" rel="external nofollow noopener" target="_blank">Python package</a></p>
 
-<p>TOAST is a flexible tool for designing targeted amplicon panels to detect TB drug resistance.</p>
+<p>TOAST designs targeted amplicon panels for detecting drug resistance in
+<em>Mycobacterium tuberculosis</em>. Sequencing whole genomes is often too costly for
+routine diagnostics, so the practical question is which small set of regions to
+amplify. TOAST answers that from the data.</p>
 
-<p>It uses mutation frequency data from over 50,000 genomes to prioritize high-value regions for primer selection.</p>
+<h4 id="approach">Approach</h4>
 
-<p>The final 33-amplicon panel achieved over 97% coverage of key resistance markers and was validated using Nanopore sequencing.</p>
+<ul>
+  <li>Ranks candidate regions using mutation-frequency data drawn from over 50,000 TB genomes</li>
+  <li>Optimises primer selection so each amplicon carries as much resistance information as possible</li>
+  <li>Accepts custom inputs, so panels can be retargeted to other organisms or resistance profiles</li>
+</ul>
 
-<p>TOAST is available as a command-line tool, Python package, and interactive web app with support for custom inputs.</p>
+<h4 id="results">Results</h4>
 
-<p><br></p>
+<ul>
+  <li>A final 33-amplicon panel covering over 97% of key resistance markers</li>
+  <li>Validated experimentally using Nanopore sequencing</li>
+</ul>
 
-<div style="display: flex; justify-content: center; gap: 2em; margin-top: 2em; text-align: center; flex-wrap: nowrap;">
+<h4 id="availability">Availability</h4>
 
-  <div>
-    <img src="/assets/img/toast1.png" alt="TOAST Image 1" style="width: 450px; margin: 1em; border-radius: 4px;">
-    <p style="color: #ccc; font-size: 0.95rem; margin-top: -0.5em;">Amplicon Design Tool Interface</p>
-  </div>
-
-  <div>
-    <img src="/assets/img/toast2.png" alt="TOAST Image 2" style="width: 450px; margin: 1em; border-radius: 4px;">
-    <p style="color: #ccc; font-size: 0.95rem; margin-top: -0.5em;">Primer Coverage Distribution</p>
-  </div>
-
-</div>
-
-<div style="display: flex; justify-content: center; gap: 2em; margin-top: 2em; text-align: center; flex-wrap: nowrap;">
-
-  <div>
-    <img src="/assets/img/toast3.png" alt="TOAST Image 3" style="width: 450px; margin: 1em; border-radius: 4px;">
-    <a href="https://genomics.lshtm.ac.uk/webtoast/#/" target="_blank" style="color: #ccc; text-decoration: underline;" rel="external nofollow noopener">Webtoast: web-hosted TOAST</a>
-  </div>
-
-<div>
-    <img src="/assets/img/toast4.png" alt="TOAST Image 4" style="width: 450px; margin: 1em; border-radius: 4px;">
-    <a href="https://pypi.org/project/toast-amplicon/" target="_blank" style="color: #ccc; text-decoration: underline;" rel="external nofollow noopener">PyPI package</a>
-
-  </div>
-
-</div>
+<p>Command-line tool, installable Python package, and an interactive web app.</p>
 
           </article>
 
@@ -226,7 +197,7 @@
     <footer class="fixed-bottom">
       <div class="container mt-0">
         &copy; Copyright 2026 Linfeng  Wang. Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.
-Last updated: September 04, 2026.
+Last updated: September 05, 2026.
       </div>
     </footer> -->
 
@@ -350,11 +321,30 @@ Last updated: September 04, 2026.
   }
 </script>
 
-  </body>
 
-  <footer style="background-color: #2c2f36; padding: 2em 0; text-align: center; font-family: 'Georgia', serif; font-style: italic; color: #2c2f36;">
-    <span style="font-size: 1.2rem;">
-      Linfeng Wang | linfeng.wang@lshtm.ac.uk | London School of Hygiene and Tropical Medicine | London, UK
-    </span>
-  </footer>
+    <style>
+      .site-footer,
+      .site-footer span {
+        color: #e8e8e8;
+      }
+      .site-footer {
+        background-color: #2c2f36;
+        padding: 2em 1.25em;
+        text-align: center;
+        font-family: 'Georgia', serif;
+        font-style: italic;
+        font-size: 1.15rem;
+        line-height: 1.6;
+      }
+      .site-footer .sep { opacity: 0.55; padding: 0 0.5em; }
+      @media (max-width: 600px) {
+        .site-footer { padding: 1.5em 1em; font-size: 1rem; }
+        /* stack the parts instead of letting them overflow a narrow screen */
+        .site-footer .sep { display: block; height: 0; overflow: hidden; padding: 0; }
+      }
+    </style>
+    <footer class="site-footer">
+      <span>Linfeng Wang<span class="sep">|</span>London, UK</span>
+    </footer>
+  </body>
 </html>

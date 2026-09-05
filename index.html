@@ -43,11 +43,6 @@
 
     <!-- Dark Mode -->
     
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/native.css" media="none" id="highlight_theme_dark">
-
-    <script src="/assets/js/theme.js"></script>
-    <script src="/assets/js/dark_mode.js"></script>
-    
 
   </head>
 
@@ -75,13 +70,6 @@
       <a class="nav-link" href="https://pathogenseq.lshtm.ac.uk/" target="_blank" rel="external nofollow noopener">Lab</a>
     </li>
 
-    
-    <li class="toggle-container nav-item">
-      <button id="light-toggle" title="Change theme">
-        <i class="fas fa-moon"></i>
-        <i class="fas fa-sun"></i>
-      </button>
-    </li>
     
   </ul>
 
@@ -111,13 +99,8 @@
       font-size: 1rem;
       font-weight: 600;
       color: #002b45;
-      text-transform: lowercase; // Reset all to lowercase first
       margin-bottom: 0.5rem;
       line-height: 1.4;
-
-      &::first-letter {
-        text-transform: uppercase; // Capitalize only the first letter
-      }
 
       &:hover {
         text-decoration: underline;
@@ -366,6 +349,117 @@
   }
 
   
+
+  /* ---------- Responsive image rows ---------- */
+  .img-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    margin-top: 1.5em;
+  }
+
+  .img-row img {
+    flex: 1 1 0;
+    min-width: 0;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  /* a row holding one wide image */
+  .img-row--single img {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+
+  .hero-spacer { margin-top: 12em; }
+
+  /* long DOI/URLs must not push the page sideways on narrow screens */
+  .resume-entry a,
+  .resume-entry li {
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+
+  /* ---------- Phone ---------- */
+  @media (max-width: 700px) {
+    .img-row {
+      flex-direction: column;
+      gap: 0.75em;
+      margin-top: 1em;
+    }
+
+    .img-row img {
+      width: 100%;
+      flex: 1 1 auto;
+    }
+
+    .hero-spacer { margin-top: 4em; }
+
+    .about-container {
+      margin: 40px auto 20px;
+      gap: 24px;
+    }
+
+    .about-text h1 { font-size: 2.1rem; }
+    .about-text p  { font-size: 1.05rem; }
+
+    .summary-wrapper { padding: 28px 16px; }
+    .summary-section h3 { font-size: 1.35rem; }
+    .summary-section ul { font-size: 1rem; }
+
+    .resume-wrapper {
+      margin: 48px auto;
+      padding: 24px 16px;
+    }
+
+    .resume-left h2 { font-size: 1.9rem; }
+
+    .resume-columns { gap: 24px; }
+
+    .resume-entry { flex-basis: 100%; }
+
+    .btn-row { flex-direction: column; align-items: stretch; }
+    .btn-outline { text-align: center; }
+  }
+
+  /* never allow sideways scrolling of the page itself */
+  html, body { max-width: 100%; overflow-x: hidden; }
+
+
+  /* ---------- Explicit text colours for this dark page ----------
+     The site theme is light-only, so its default text colour is black.
+     This page paints its own dark background, so every text element here
+     must state its colour rather than inherit the theme's. */
+  .about-text h1 strong,
+  .about-text h1 span          { color: #fff; }
+
+  .summary-section li,
+  .summary-section ul li       { color: #ccc; }
+
+  .resume-wrapper h3           { color: #eee; }
+  .resume-wrapper h4,
+  .resume-wrapper h5,
+  .resume-wrapper h5 strong    { color: #eee; }
+  .resume-wrapper li           { color: #ccc; }
+  .resume-wrapper p strong,
+  .resume-right p strong       { color: #fff; }
+  .resume-wrapper em           { color: inherit; }
+
+
+  /* bare text nodes and inline emphasis inside the dark resume blocks */
+  .resume-wrapper .resume-columns { color: #ccc; }
+  .resume-wrapper strong,
+  .resume-wrapper li strong       { color: #fff; }
+
+  /* The navbar sits directly on this page's dark background, but the
+     site theme is light-only and colours nav links for a light page. */
+  .navbar-nav .nav-item .nav-link             { color: #ddd; }
+  .navbar-nav .nav-item .nav-link:hover       { color: #e89f8a; }
+  .navbar-nav .nav-item.active > .nav-link    { color: #fff; }
+  .navbar-nav .nav-item.active > .nav-link:hover { color: #e89f8a; }
+  .navbar-toggler .icon-bar                   { background-color: #ddd; }
+
 </style>
 
 
@@ -390,7 +484,7 @@
 
 
 <!-- Spacer: 12 empty lines -->
-<div style="margin-top: 12em;"></div>
+<div class="hero-spacer"></div>
 
 <div class="summary-wrapper">
   <div class="summary-section">
@@ -402,7 +496,7 @@
 <strong>8+</strong> Years of research experience in biotechnology</li>
       <li>
 <strong>8</strong> Peer-reviewed publications, including <strong>5</strong> as first author</li>
-      <li>(<strong>2</strong> further papers not yet peer-reviewed)</li>
+      <li>(<strong>2</strong> further papers currently being peer reviewed)</li>
     </ul>
   </div>
 </div>
@@ -564,15 +658,15 @@
         </div>
 
       </div>
-      <div style="display: flex; gap: 1em; margin-top: 0.5em;">
-        <img src="/assets/img/gnn1.png" alt="shipPhoto" style="width: 35%; height: auto; border-radius: 8px;">
-        <img src="/assets/img/gnn2.png" alt="Seismic Model Output" style="width: 35%; height: auto; border-radius: 8px;">
-        <img src="/assets/img/toast1.png" alt="Shallow Gas Detection" style="width: 35%; height: auto; border-radius: 8px;">
+      <div class="img-row" style="margin-top: 0.5em;">
+        <img src="/assets/img/gnn1.png" alt="Graph neural network model output">
+        <img src="/assets/img/gnn2.png" alt="Phylogeny-guided attention visualisation">
+        <img src="/assets/img/toast1.png" alt="TOAST amplicon designer interface">
       </div>
-      <div style="display: flex; gap: 1em; margin-top: 0.5em;">
-        <img src="/assets/img/amp1.png" alt="shipPhoto" style="width: 35%; height: auto; border-radius: 8px;">
-        <img src="/assets/img/gmm1.png" alt="Seismic Model Output" style="width: 35%; height: auto; border-radius: 8px;">
-        <img src="/assets/img/philippines1.png" alt="Shallow Gas Detection" style="width: 35%; height: auto; border-radius: 8px;">
+      <div class="img-row" style="margin-top: 0.5em;">
+        <img src="/assets/img/amp1.png" alt="Antimicrobial peptide generative model">
+        <img src="/assets/img/gmm1.png" alt="Mixed infection analysis">
+        <img src="/assets/img/philippines1.png" alt="TB transmission analysis in the Philippines">
       </div>
     </div>
   </div> <!-- This closes .resume-right -->
@@ -599,13 +693,13 @@
         <li>Contributed to the end-of-sprint report for industrial partner BP, presenting results with interpretability-focused visualizations.</li>
       </ul>
     </div>
-    <div style="display: flex; gap: 1em; margin-top: 1.5em;">
-      <img src="/assets/img/ship_illustration.png" alt="shipPhoto" style="width: 35%; height: auto; border-radius: 8px;">
-      <img src="/assets/img/detection.png" alt="Seismic Model Output" style="width: 35%; height: auto; border-radius: 8px;">
-      <img src="/assets/img/segmentation.png" alt="Shallow Gas Detection" style="width: 35%; height: auto; border-radius: 8px;">
+    <div class="img-row" style="margin-top: 1.5em;">
+      <img src="/assets/img/ship_illustration.png" alt="Marine seismic survey illustration">
+      <img src="/assets/img/detection.png" alt="Seismic Model Output">
+      <img src="/assets/img/segmentation.png" alt="Shallow Gas Detection">
     </div>
-    <div style="display: flex; gap: 1em; margin-top: 1.5em;">
-      <img src="/assets/img/group_photo.png" alt="group_photo" style="width: 115%; height: auto; border-radius: 8px;">
+    <div class="img-row img-row--single" style="margin-top: 1.5em;">
+      <img src="/assets/img/group_photo.png" alt="Group photo from the pathogen genomics course">
     </div>
   </div> <!-- This closes .resume-right -->  
 </div>
@@ -632,10 +726,10 @@
         <li>Individual problem-solving workshops: providing AI and bioinformatics solutions to real research problems on a case-by-case basis.</li>
       </ul>
     </div>
-    <div style="display: flex; gap: 1em; margin-top: 1.5em;">
-      <img src="/assets/img/philippines_t.jpeg" alt="philippines_t" style="width: 37%; height: auto; border-radius: 8px;">
-      <img src="/assets/img/indonesia.jpeg" alt="indonesia" style="width: 37%; height: auto; border-radius: 8px;">
-      <img src="/assets/img/thailand.jpeg" alt="Thailand" style="width: 37%; height: auto; border-radius: 8px;">
+    <div class="img-row" style="margin-top: 1.5em;">
+      <img src="/assets/img/philippines_t.jpeg" alt="Teaching in the Philippines">
+      <img src="/assets/img/indonesia.jpeg" alt="Teaching in Indonesia">
+      <img src="/assets/img/thailand.jpeg" alt="Teaching in Thailand">
     </div>
   </div> <!-- This closes .resume-right -->  
 </div>
@@ -647,7 +741,7 @@
     <footer class="fixed-bottom">
       <div class="container mt-0">
         &copy; Copyright 2026 Linfeng  Wang. Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.
-Last updated: September 04, 2026.
+Last updated: September 05, 2026.
       </div>
     </footer> -->
 
@@ -771,11 +865,30 @@ Last updated: September 04, 2026.
   }
 </script>
 
-  </body>
 
-  <footer style="background-color: #2c2f36; padding: 2em 0; text-align: center; font-family: 'Georgia', serif; font-style: italic; color: #2c2f36;">
-    <span style="font-size: 1.2rem;">
-      Linfeng Wang | linfeng.wang@lshtm.ac.uk | London School of Hygiene and Tropical Medicine | London, UK
-    </span>
-  </footer>
+    <style>
+      .site-footer,
+      .site-footer span {
+        color: #e8e8e8;
+      }
+      .site-footer {
+        background-color: #2c2f36;
+        padding: 2em 1.25em;
+        text-align: center;
+        font-family: 'Georgia', serif;
+        font-style: italic;
+        font-size: 1.15rem;
+        line-height: 1.6;
+      }
+      .site-footer .sep { opacity: 0.55; padding: 0 0.5em; }
+      @media (max-width: 600px) {
+        .site-footer { padding: 1.5em 1em; font-size: 1rem; }
+        /* stack the parts instead of letting them overflow a narrow screen */
+        .site-footer .sep { display: block; height: 0; overflow: hidden; padding: 0; }
+      }
+    </style>
+    <footer class="site-footer">
+      <span>Linfeng Wang<span class="sep">|</span>London, UK</span>
+    </footer>
+  </body>
 </html>
