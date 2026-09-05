@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: projects
 title: Projects
 permalink: /projects/
 description: Machine learning and genomics work from my PhD, with papers, code and tools.
