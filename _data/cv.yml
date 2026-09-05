@@ -131,10 +131,6 @@
   contents:
     - title: UKRI BBSRC LiDo PhD Scholarship
       year: 2021 - 2026
-    - title: Wellcome Trust Biomedical Studentship
-      year: 2018
-      description:
-        - Funding for summer internship in the Lab of Dr. Eugene Makeyev
 
     - title: Imperial Award for Personal Development
       year: 2020
@@ -144,6 +140,11 @@
         - Independent open-minded thought
         - Self-awareness
         - Active self-management
+
+    - title: Wellcome Trust Biomedical Studentship
+      year: 2018
+      description:
+        - Funding for summer internship in the Lab of Dr. Eugene Makeyev
 
 # - title: Academic Interests
 #   type: nested_list
@@ -160,4 +161,4 @@
 - title: Interests
   type: list
   contents:
-    - Judo, Scuba diving, basketball, writing, guitar, coding
+    - Judo, bouldering, scuba diving, basketball, writing, guitar, coding
