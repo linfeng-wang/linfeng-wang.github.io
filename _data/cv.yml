@@ -8,65 +8,6 @@
         - 15th Nov 1997
         - English, Chinese, French, Japanese
 
-- title: Education
-  type: time_table
-  contents:
-    - title: PhD in Computational Genomics
-      institution: London School of Hygiene and Tropical Medicine
-      year: 2021 - 2026
-      description:
-        - Supporting Scheme - LiDo-DTP
-        - Funding - BBSRC
-        - Dissertation - Machine Learning-Enhanced Drug Resistance and Bioinformatics Transmission Profiling of Tuberculosis Using Genome Sequencing
-    - title: MRes Bioengineering (Hons)
-      institution: Imperial College London
-      year: 2019 - 2020
-      description:
-        - Merit
-        - Modules - Computational & Statistical Methods, Frontiers in Bioengineering, Biomaterials
-        - Dissertation - Design of an Artificial Bruch’s Membrane from Synthetic Polyesters
-    - title: BSc Biochemistry (Hons)
-      institution: King's College London
-      year: 2016 - 2019
-      description:
-        - First-Class Honour
-        - Dissertation - Investigation of Concordance Between Molecular Dynamics Simulation and FRET Biosensor using Designed Protein Linker System
-
-- title: Technical Skills
-  type: time_table
-  contents:
-    - title: Programming
-      description:
-        - Python, R, Bash, MySQL, HTML/CSS, C++
-    - title: Data Science & ML
-      description:
-        - PyTorch, PyG, scikit-learn, Transformers, LLMs, CNNs, RNNs, GNNs, VAEs, XGBoost
-        - NumPy, Pandas, Scipy, Jax, Fastai, Numba
-    - title: MLOps & Cloud
-      description:
-        - AWS, GCP, Azure, Docker, Git, Nextflow, Jupyter, Huggingface, LangChain
-    - title: Visualization
-      description:
-        - Matplotlib, Plotly, Seaborn, ggplot2, Streamlit, Flask
-    - title: Genomics Tools
-      description:
-        - BWA-MEM, SAMtools, BCFtools, RAxML, FreeBayes, BEAST2, FigTree, Trimmomatic, iTOL, PLINK2, GATK
-
-- title: Publications
-  type: list
-  contents:
-    - Decoding positive selection in M. tuberculosis with phylogeny-guided graph attention models. BMC Bioinformatics (2026).
-    - TOAST - A novel tool for designing targeted gene amplicons in TB genomic studies. BMC Genomics 26(1) (2025).
-    - LSTM-based deep learning model for the discovery of antimicrobial peptides targeting M. tuberculosis. Bioinformatics Advances (2025).
-    - A multi-stage machine learning framework for stepwise prediction of TB treatment outcomes. Research Square (preprint, 2025).
-    - Detecting Shallow Gas from Marine Seismic Images. Turing Institute Data Study Group Report (2025).
-    - Whole genome sequencing of TB in the Philippines. Scientific Reports 14:70471 (2024).
-    - TGV - Visualisation tools for transmission graphs. NAR Genomics and Bioinformatics 6(4) (2024).
-    - Mixed infections in genotypic drug-resistant Mycobacterium tuberculosis. Scientific Reports 13:1-8 (2023).
-    - TB-ML - A framework for comparing ML approaches to predict drug resistance. Bioinformatics Advances (2023).
-    - Genomic analysis of tuberculosis in Thailand. Research Square (submitted, 2025).
-    - Deep Learning Approaches for MIC Prediction in TB. (forthcoming).
-
 - title: Experience
   type: time_table
   contents:
@@ -108,6 +49,65 @@
       description:
         - Built chemical databases; used autoencoders for neoantigen data
         - Led market research and scientific reporting
+
+- title: Technical Skills
+  type: time_table
+  contents:
+    - title: Programming
+      description:
+        - Python, R, Bash, MySQL, HTML/CSS, C++
+    - title: Data Science & ML
+      description:
+        - PyTorch, PyG, scikit-learn, Transformers, LLMs, CNNs, RNNs, GNNs, VAEs, XGBoost
+        - NumPy, Pandas, Scipy, Jax, Fastai, Numba
+    - title: MLOps & Cloud
+      description:
+        - AWS, GCP, Azure, Docker, Git, Nextflow, Jupyter, Huggingface, LangChain
+    - title: Visualization
+      description:
+        - Matplotlib, Plotly, Seaborn, ggplot2, Streamlit, Flask
+    - title: Genomics Tools
+      description:
+        - BWA-MEM, SAMtools, BCFtools, RAxML, FreeBayes, BEAST2, FigTree, Trimmomatic, iTOL, PLINK2, GATK
+
+- title: Education
+  type: time_table
+  contents:
+    - title: PhD in Computational Genomics
+      institution: London School of Hygiene and Tropical Medicine
+      year: 2021 - 2026
+      description:
+        - Supporting Scheme - LiDo-DTP
+        - Funding - BBSRC
+        - Dissertation - Machine Learning-Enhanced Drug Resistance and Bioinformatics Transmission Profiling of Tuberculosis Using Genome Sequencing
+    - title: MRes Bioengineering (Hons)
+      institution: Imperial College London
+      year: 2019 - 2020
+      description:
+        - Merit
+        - Modules - Computational & Statistical Methods, Frontiers in Bioengineering, Biomaterials
+        - Dissertation - Design of an Artificial Bruch’s Membrane from Synthetic Polyesters
+    - title: BSc Biochemistry (Hons)
+      institution: King's College London
+      year: 2016 - 2019
+      description:
+        - First-Class Honour
+        - Dissertation - Investigation of Concordance Between Molecular Dynamics Simulation and FRET Biosensor using Designed Protein Linker System
+
+- title: Publications
+  type: list
+  contents:
+    - Decoding positive selection in M. tuberculosis with phylogeny-guided graph attention models. BMC Bioinformatics (2026).
+    - TOAST - A novel tool for designing targeted gene amplicons in TB genomic studies. BMC Genomics 26(1) (2025).
+    - LSTM-based deep learning model for the discovery of antimicrobial peptides targeting M. tuberculosis. Bioinformatics Advances (2025).
+    - A multi-stage machine learning framework for stepwise prediction of TB treatment outcomes. Research Square (preprint, 2025).
+    - Detecting Shallow Gas from Marine Seismic Images. Turing Institute Data Study Group Report (2025).
+    - Whole genome sequencing of TB in the Philippines. Scientific Reports 14:70471 (2024).
+    - TGV - Visualisation tools for transmission graphs. NAR Genomics and Bioinformatics 6(4) (2024).
+    - Mixed infections in genotypic drug-resistant Mycobacterium tuberculosis. Scientific Reports 13:1-8 (2023).
+    - TB-ML - A framework for comparing ML approaches to predict drug resistance. Bioinformatics Advances (2023).
+    - Genomic analysis of tuberculosis in Thailand. Research Square (submitted, 2025).
+    - Deep Learning Approaches for MIC Prediction in TB. (forthcoming).
 
 - title: Teaching
   type: list

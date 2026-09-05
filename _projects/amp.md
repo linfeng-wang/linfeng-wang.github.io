@@ -1,29 +1,30 @@
 ---
 layout: page
-title: Peptide Design using RNN
-description:  LSTM-Based Deep Learning Model for the Discovery of Antimicrobial Peptides Targeting Mycobacterium tuberculosis
+title: Antimicrobial peptide design
+description: An LSTM generative model that proposes new peptides active against TB
 img: assets/img/amp1.png
 importance: 2
 category: PhD
 ---
 
-<!-- [Publication](https://www.biorxiv.org/content/10.1101/2025.01.13.632698v1.abstract) -->
+Published in *Bioinformatics Advances* (2025) &middot;
+[Paper](https://doi.org/10.1093/bioadv/vbaf274)
 
-Developed LSTM-based classifiers and generators using transfer learning to predict and generate antimicrobial peptides (AMPs) specific to Mycobacterium tuberculosis.
+Antimicrobial peptides are a promising route around conventional drug
+resistance, but the search space of possible sequences is vast. This project
+pairs a classifier that recognises TB-active peptides with a generator that
+proposes new ones.
 
-Benchmarked multiple LSTM architectures, achieving 90% accuracy and 0.97 AUC in TB-AMP classification, with transfer learning enhancing performance under limited data.
+#### Approach
 
-Designed a generative pipeline that produced 94 novel non-toxic peptide candidates, 10 of which met physicochemical criteria and structural validation for AMP-like properties.
+- Benchmarked several LSTM architectures for classifying TB-active antimicrobial peptides
+- Used transfer learning to compensate for the small amount of TB-specific labelled data
+- Built a generative pipeline to sample novel candidate sequences
 
-Performed comparative motif and structural divergence analysis to ensure novelty and function of generated peptides, with full reproducibility provided via public code.
+#### Results
 
-<br>
+- 90% classification accuracy and 0.97 AUC, with transfer learning giving the largest gain under limited data
+- 94 novel non-toxic candidate peptides generated, 10 of which met physicochemical and structural criteria
+- Motif and structural divergence analysis confirmed the candidates were genuinely novel rather than memorised
 
-<div style="display: flex; justify-content: center; gap: 2em; margin-top: 2em; text-align: center; flex-wrap: nowrap;">
-
-  <div>
-    <img src="/assets/img/amp1.png" alt="TOAST Image 1" style="width: 800px; margin: 1em; border-radius: 4px;">
-    <p style="color: #ccc; font-size: 0.95rem; margin-top: -0.5em;">Generated protein structure prediction and visualization</p>
-  </div>
-
-</div>
+Full code is released for reproducibility.

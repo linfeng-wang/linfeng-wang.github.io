@@ -203,6 +203,117 @@ layout: default
   }
 
   
+
+  /* ---------- Responsive image rows ---------- */
+  .img-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    margin-top: 1.5em;
+  }
+
+  .img-row img {
+    flex: 1 1 0;
+    min-width: 0;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  /* a row holding one wide image */
+  .img-row--single img {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+
+  .hero-spacer { margin-top: 12em; }
+
+  /* long DOI/URLs must not push the page sideways on narrow screens */
+  .resume-entry a,
+  .resume-entry li {
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+
+  /* ---------- Phone ---------- */
+  @media (max-width: 700px) {
+    .img-row {
+      flex-direction: column;
+      gap: 0.75em;
+      margin-top: 1em;
+    }
+
+    .img-row img {
+      width: 100%;
+      flex: 1 1 auto;
+    }
+
+    .hero-spacer { margin-top: 4em; }
+
+    .about-container {
+      margin: 40px auto 20px;
+      gap: 24px;
+    }
+
+    .about-text h1 { font-size: 2.1rem; }
+    .about-text p  { font-size: 1.05rem; }
+
+    .summary-wrapper { padding: 28px 16px; }
+    .summary-section h3 { font-size: 1.35rem; }
+    .summary-section ul { font-size: 1rem; }
+
+    .resume-wrapper {
+      margin: 48px auto;
+      padding: 24px 16px;
+    }
+
+    .resume-left h2 { font-size: 1.9rem; }
+
+    .resume-columns { gap: 24px; }
+
+    .resume-entry { flex-basis: 100%; }
+
+    .btn-row { flex-direction: column; align-items: stretch; }
+    .btn-outline { text-align: center; }
+  }
+
+  /* never allow sideways scrolling of the page itself */
+  html, body { max-width: 100%; overflow-x: hidden; }
+
+
+  /* ---------- Explicit text colours for this dark page ----------
+     The site theme is light-only, so its default text colour is black.
+     This page paints its own dark background, so every text element here
+     must state its colour rather than inherit the theme's. */
+  .about-text h1 strong,
+  .about-text h1 span          { color: #fff; }
+
+  .summary-section li,
+  .summary-section ul li       { color: #ccc; }
+
+  .resume-wrapper h3           { color: #eee; }
+  .resume-wrapper h4,
+  .resume-wrapper h5,
+  .resume-wrapper h5 strong    { color: #eee; }
+  .resume-wrapper li           { color: #ccc; }
+  .resume-wrapper p strong,
+  .resume-right p strong       { color: #fff; }
+  .resume-wrapper em           { color: inherit; }
+
+
+  /* bare text nodes and inline emphasis inside the dark resume blocks */
+  .resume-wrapper .resume-columns { color: #ccc; }
+  .resume-wrapper strong,
+  .resume-wrapper li strong       { color: #fff; }
+
+  /* The navbar sits directly on this page's dark background, but the
+     site theme is light-only and colours nav links for a light page. */
+  .navbar-nav .nav-item .nav-link             { color: #ddd; }
+  .navbar-nav .nav-item .nav-link:hover       { color: #e89f8a; }
+  .navbar-nav .nav-item.active > .nav-link    { color: #fff; }
+  .navbar-nav .nav-item.active > .nav-link:hover { color: #e89f8a; }
+  .navbar-toggler .icon-bar                   { background-color: #ddd; }
+
 </style>
 
 
@@ -225,7 +336,7 @@ layout: default
 
 
 <!-- Spacer: 12 empty lines -->
-<div style="margin-top: 12em;"></div>
+<div class="hero-spacer"></div>
 
 <div class="summary-wrapper">
   <div class="summary-section">
@@ -234,7 +345,7 @@ layout: default
       <li><strong>4+</strong> Years of experience developing cutting-edge ML models and end-to-end pipelines</li>
       <li><strong>8+</strong> Years of research experience in biotechnology</li>
       <li><strong>8</strong> Peer-reviewed publications, including <strong>5</strong> as first author</li>
-      <li>(<strong>2</strong> further papers not yet peer-reviewed)</li>
+      <li>(<strong>2</strong> further papers currently being peer reviewed)</li>
     </ul>
   </div>
 </div>
@@ -385,15 +496,15 @@ layout: default
         </div>
 
       </div>
-      <div style="display: flex; gap: 1em; margin-top: 0.5em;">
-        <img src="{{ '/assets/img/gnn1.png' | relative_url }}" alt="shipPhoto" style="width: 35%; height: auto; border-radius: 8px;">
-        <img src="{{ '/assets/img/gnn2.png' | relative_url }}" alt="Seismic Model Output" style="width: 35%; height: auto; border-radius: 8px;">
-        <img src="{{ '/assets/img/toast1.png' | relative_url }}" alt="Shallow Gas Detection" style="width: 35%; height: auto; border-radius: 8px;">
+      <div class="img-row" style="margin-top: 0.5em;">
+        <img src="{{ '/assets/img/gnn1.png' | relative_url }}" alt="Graph neural network model output">
+        <img src="{{ '/assets/img/gnn2.png' | relative_url }}" alt="Phylogeny-guided attention visualisation">
+        <img src="{{ '/assets/img/toast1.png' | relative_url }}" alt="TOAST amplicon designer interface">
       </div>
-      <div style="display: flex; gap: 1em; margin-top: 0.5em;">
-        <img src="{{ '/assets/img/amp1.png' | relative_url }}" alt="shipPhoto" style="width: 35%; height: auto; border-radius: 8px;">
-        <img src="{{ '/assets/img/gmm1.png' | relative_url }}" alt="Seismic Model Output" style="width: 35%; height: auto; border-radius: 8px;">
-        <img src="{{ '/assets/img/philippines1.png' | relative_url }}" alt="Shallow Gas Detection" style="width: 35%; height: auto; border-radius: 8px;">
+      <div class="img-row" style="margin-top: 0.5em;">
+        <img src="{{ '/assets/img/amp1.png' | relative_url }}" alt="Antimicrobial peptide generative model">
+        <img src="{{ '/assets/img/gmm1.png' | relative_url }}" alt="Mixed infection analysis">
+        <img src="{{ '/assets/img/philippines1.png' | relative_url }}" alt="TB transmission analysis in the Philippines">
       </div>
     </div>
   </div> <!-- This closes .resume-right -->
@@ -420,13 +531,13 @@ layout: default
         <li>Contributed to the end-of-sprint report for industrial partner BP, presenting results with interpretability-focused visualizations.</li>
       </ul>
     </div>
-    <div style="display: flex; gap: 1em; margin-top: 1.5em;">
-      <img src="{{ '/assets/img/ship_illustration.png' | relative_url }}" alt="shipPhoto" style="width: 35%; height: auto; border-radius: 8px;">
-      <img src="{{ '/assets/img/detection.png' | relative_url }}" alt="Seismic Model Output" style="width: 35%; height: auto; border-radius: 8px;">
-      <img src="{{ '/assets/img/segmentation.png' | relative_url }}" alt="Shallow Gas Detection" style="width: 35%; height: auto; border-radius: 8px;">
+    <div class="img-row" style="margin-top: 1.5em;">
+      <img src="{{ '/assets/img/ship_illustration.png' | relative_url }}" alt="Marine seismic survey illustration">
+      <img src="{{ '/assets/img/detection.png' | relative_url }}" alt="Seismic Model Output">
+      <img src="{{ '/assets/img/segmentation.png' | relative_url }}" alt="Shallow Gas Detection">
     </div>
-    <div style="display: flex; gap: 1em; margin-top: 1.5em;">
-      <img src="{{ '/assets/img/group_photo.png' | relative_url }}" alt="group_photo" style="width: 115%; height: auto; border-radius: 8px;">
+    <div class="img-row img-row--single" style="margin-top: 1.5em;">
+      <img src="{{ '/assets/img/group_photo.png' | relative_url }}" alt="Group photo from the pathogen genomics course">
     </div>
   </div> <!-- This closes .resume-right -->  
 </div>
@@ -453,10 +564,10 @@ layout: default
         <li>Individual problem-solving workshops: providing AI and bioinformatics solutions to real research problems on a case-by-case basis.</li>
       </ul>
     </div>
-    <div style="display: flex; gap: 1em; margin-top: 1.5em;">
-      <img src="{{ '/assets/img/philippines_t.jpeg' | relative_url }}" alt="philippines_t" style="width: 37%; height: auto; border-radius: 8px;">
-      <img src="{{ '/assets/img/indonesia.jpeg' | relative_url }}" alt="indonesia" style="width: 37%; height: auto; border-radius: 8px;">
-      <img src="{{ '/assets/img/thailand.jpeg' | relative_url }}" alt="Thailand" style="width: 37%; height: auto; border-radius: 8px;">
+    <div class="img-row" style="margin-top: 1.5em;">
+      <img src="{{ '/assets/img/philippines_t.jpeg' | relative_url }}" alt="Teaching in the Philippines">
+      <img src="{{ '/assets/img/indonesia.jpeg' | relative_url }}" alt="Teaching in Indonesia">
+      <img src="{{ '/assets/img/thailand.jpeg' | relative_url }}" alt="Teaching in Thailand">
     </div>
   </div> <!-- This closes .resume-right -->  
 </div>

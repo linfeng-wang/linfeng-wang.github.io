@@ -1,35 +1,27 @@
 ---
 layout: page
-title: Treatment outcome prediction for Clinical Records
-description:  A multi-stage machine learning framework for stepwise prediction of tuberculosis treatment outcomes - Integrating gradient boosted decision trees and feature-level analysis for clinical decision support
+title: TB treatment outcome prediction
+description: Staged risk prediction from clinical records, built for messy real-world data
 img: assets/img/xgb1.png
-importance: 2
+importance: 4
 category: PhD
 ---
 
-<!-- [Publication](https://www.biorxiv.org/content/10.1101/2025.01.13.632698v1.abstract) -->
+Preprint on *Research Square* (2025) &middot;
+[Preprint](https://doi.org/10.21203/rs.3.rs-7558046/v1)
 
-Built a multi-stage machine learning model using XGBoost to predict tuberculosis treatment outcomes across different clinical checkpoints.
+Clinicians do not get all the information about a patient at once. This
+framework predicts tuberculosis treatment outcomes in stages, so a useful
+estimate is available at each point in care rather than only at the end.
 
-Integrated genomic features, patient metadata, and radiological information to support decision-making in resource-constrained healthcare settings.
+#### Approach
 
-Designed the framework to be robust to missing data and scalable across diverse clinical environments using TB Portals data.
+- Multi-stage gradient boosted decision tree (XGBoost) models, one per clinical checkpoint
+- Combines genomic features, patient metadata and radiological information
+- Built on TB Portals data, and designed to degrade gracefully when fields are missing
 
-Demonstrated strong predictive performance, particularly in early-stage outcome assessment, enabling prioritization and risk stratification in TB management.
+#### Results
 
-<br>
-
-
-<div style="display: flex; justify-content: center; gap: 2em; margin-top: 2em; text-align: center; flex-wrap: nowrap;">
-
-  <div>
-    <img src="/assets/img/xgb1.png" alt="TOAST Image 1" style="width: 800px; margin: 1em; border-radius: 4px;">
-    <p style="color: #ccc; font-size: 0.95rem; margin-top: -0.5em;">Predictive accuracy across the different models</p>
-  </div>
-
-</div>
-
-  Model 1 uses only demographic features (demographics and socioeconomic data). 
-  Model 2 adds microbiological features (drug resistance and health levels), improving sensitivity and accuracy. 
-  Model 3 adds in X-ray based features (lung localisation and severity scores), further enhancing performance. 
-  Model 4 incorporates demographic, microbiological and treatment feature levels, including Treatment data (regimen and adherence), achieving the highest metrics. This stepwise progression highlights how additional diagnostic and treatment data improve predictive accuracy.
+- Strong predictive performance, strongest at the early-stage checkpoints where a prediction is most actionable
+- Feature-level analysis surfaces which inputs drive each prediction, supporting clinical decision-making
+- Intended for resource-constrained settings, where the cheapest available features still give a usable signal

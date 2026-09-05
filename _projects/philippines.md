@@ -1,30 +1,27 @@
 ---
 layout: page
-title: Philippines TB transmission report
-description:  Whole genome sequencing analysis of Mycobacterium tuberculosis reveals circulating strain types and drug-resistance mutations in the Philippines
+title: TB transmission in the Philippines
+description: Whole-genome sequencing of 732 isolates, including prison transmission clusters
 img: assets/img/philippines1.png
-importance: 2
+importance: 5
 category: PhD
 ---
 
-[Publication](https://www.nature.com/articles/s41598-024-70471-x)
+Published in *Scientific Reports* (2024) &middot;
+[Paper](https://www.nature.com/articles/s41598-024-70471-x)
 
-Conducted whole-genome sequencing on 732 M. tuberculosis isolates across the Philippines, revealing predominance of L1 Manila strain and emerging L4 drug-resistant lineages.
+A national picture of which tuberculosis strains are circulating in the
+Philippines, which drug-resistance mutations they carry, and where transmission
+is concentrated.
 
-Identified MDR-TB and XDR-TB clusters linked to prison transmission and novel resistance mutations using genome-wide association and phylogenetic analyses.
+#### Approach
 
-Developed genomic surveillance insights using mutation frequency data and time-scaled Bayesian phylogenetics to assess transmission dynamics and drug resistance evolution.
+- Whole-genome sequencing of 732 *M. tuberculosis* isolates from across the country
+- Genome-wide association and phylogenetic analysis to link strain types to resistance
+- Time-scaled Bayesian phylogenetics to reconstruct transmission dynamics
 
-Detected novel bedaquiline resistance mutations within prison-derived isolates, highlighting urgent public health concerns in carceral settings.
+#### Findings
 
-<br>
-
-
-<div style="display: flex; justify-content: center; gap: 2em; margin-top: 2em; text-align: center; flex-wrap: nowrap;">
-
-  <div>
-    <img src="/assets/img/philippines1.png" alt="TOAST Image 1" style="width: 800px; margin: 1em; border-radius: 4px;">
-    <p style="color: #ccc; font-size: 0.95rem; margin-top: -0.5em;">Phylogenetic tree of the 724 M. tuberculosis study isolates constructed using 34,260 SNPs</p>
-  </div>
-
-</div>
+- The L1 Manila strain predominates, alongside emerging drug-resistant L4 lineages
+- MDR-TB and XDR-TB clusters trace to transmission within prisons
+- Novel bedaquiline resistance mutations found in prison-derived isolates, a direct public health concern in carceral settings

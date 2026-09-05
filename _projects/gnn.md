@@ -1,36 +1,28 @@
 ---
 layout: page
-title: GNN for positive selection detection
-description:  Decoding Positive Selection in Mycobacterium tuberculosis with Phylogeny-Guided Graph Attention Models
+title: GNN for positive selection
+description: Reading evolutionary signal off phylogenetic trees with graph attention
 img: assets/img/gnn1.png
-importance: 2
+importance: 3
 category: PhD
 ---
 
-<!-- [Publication](https://www.biorxiv.org/content/10.1101/2025.01.13.632698v1.abstract) -->
+Published in *BMC Bioinformatics* (2026) &middot;
+[Paper](https://doi.org/10.1186/s12859-026-06583-0)
 
-Developed a graph attention network (GAT) model that integrates phylogenetic tree structure and SNP presence to detect positively selected mutations in Mycobacterium tuberculosis.
+Mutations under positive selection are the ones most likely to matter clinically,
+but distinguishing them from neutral variation is hard. Standard methods treat
+mutations independently and discard the evolutionary structure that connects
+them. This model reads that structure directly.
 
-Leveraged attention-based deep learning to focus on topologically informative regions within evolutionary graphs, enhancing interpretability and biological relevance.
+#### Approach
 
-Achieved strong performance, and identified high-confidence adaptive mutations previously classified as uncertain by WHO.
+- A graph attention network (GAT) that combines phylogenetic tree topology with SNP presence
+- Attention lets the model weight topologically informative parts of the tree, which also makes its decisions inspectable
+- Trained and evaluated on *Mycobacterium tuberculosis* phylogenies
 
-Demonstrated the model’s capability to uncover novel resistance markers and support long-term genomic surveillance in TB.
+#### Results
 
-
-<br>
-
-
-<div style="display: flex; justify-content: center; gap: 2em; margin-top: 2em; text-align: center; flex-wrap: nowrap;">
-
-  <div>
-    <img src="/assets/img/gnn1.png" alt="TOAST Image 1" style="width: 450px; margin: 1em; border-radius: 4px;">
-    <p style="color: #ccc; font-size: 0.95rem; margin-top: -0.5em;">Phylogeny-informed graph construction and node feature propagation using attention-based graph neural networks</p>
-  </div>
-
-  <div>
-    <img src="/assets/img/gnn2.png" alt="TOAST Image 2" style="width: 450px; margin: 1em; border-radius: 4px;">
-    <p style="color: #ccc; font-size: 0.95rem; margin-top: -0.5em;">edge-level attention weights in the first GAT layer for mutation network plot corresponding to the rpob-p.Ser450Leu mutation (red: mutation present, grey: mutation absent). High attention (yellow/green)</p>
-  </div>
-
-</div>
+- 88% accuracy in identifying positively selected mutations
+- Flagged high-confidence adaptive mutations that the WHO catalogue currently lists as uncertain
+- Points toward novel resistance markers usable for long-term genomic surveillance

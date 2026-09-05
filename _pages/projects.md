@@ -2,10 +2,10 @@
 layout: page
 title: Projects
 permalink: /projects/
-description: Explore projects 
+description: Machine learning and genomics work from my PhD, with papers, code and tools.
 nav: true
 nav_order: 2
-display_categories: [PhD, Fun]
+display_categories: [PhD]
 horizontal: false
 ---
 

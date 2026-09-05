@@ -1,50 +1,33 @@
 ---
 layout: page
-title: TOAST Amplicon Designer Tool
-description:  A novel tool for designing targeted gene amplicons and an optimised set of primers for high-throughput sequencing in tuberculosis genomic studies
+title: TOAST amplicon designer
+description: Turning genome-scale mutation data into an optimised TB sequencing panel
 img: assets/img/toast1.png
-importance: 2
+importance: 1
 category: PhD
 ---
 
-[Publication](https://www.biorxiv.org/content/10.1101/2025.01.13.632698v1.abstract)
+Published in *BMC Genomics* (2025) &middot;
+[Paper](https://doi.org/10.1186/s12864-025-12247-9) &middot;
+[Web app](https://genomics.lshtm.ac.uk/webtoast/#/) &middot;
+[Python package](https://pypi.org/project/toast-amplicon/)
 
-TOAST is a flexible tool for designing targeted amplicon panels to detect TB drug resistance.
+TOAST designs targeted amplicon panels for detecting drug resistance in
+*Mycobacterium tuberculosis*. Sequencing whole genomes is often too costly for
+routine diagnostics, so the practical question is which small set of regions to
+amplify. TOAST answers that from the data.
 
-It uses mutation frequency data from over 50,000 genomes to prioritize high-value regions for primer selection.
+#### Approach
 
-The final 33-amplicon panel achieved over 97% coverage of key resistance markers and was validated using Nanopore sequencing.
+- Ranks candidate regions using mutation-frequency data drawn from over 50,000 TB genomes
+- Optimises primer selection so each amplicon carries as much resistance information as possible
+- Accepts custom inputs, so panels can be retargeted to other organisms or resistance profiles
 
-TOAST is available as a command-line tool, Python package, and interactive web app with support for custom inputs.
+#### Results
 
-<br>
+- A final 33-amplicon panel covering over 97% of key resistance markers
+- Validated experimentally using Nanopore sequencing
 
+#### Availability
 
-<div style="display: flex; justify-content: center; gap: 2em; margin-top: 2em; text-align: center; flex-wrap: nowrap;">
-
-  <div>
-    <img src="/assets/img/toast1.png" alt="TOAST Image 1" style="width: 450px; margin: 1em; border-radius: 4px;">
-    <p style="color: #ccc; font-size: 0.95rem; margin-top: -0.5em;">Amplicon Design Tool Interface</p>
-  </div>
-
-  <div>
-    <img src="/assets/img/toast2.png" alt="TOAST Image 2" style="width: 450px; margin: 1em; border-radius: 4px;">
-    <p style="color: #ccc; font-size: 0.95rem; margin-top: -0.5em;">Primer Coverage Distribution</p>
-  </div>
-
-</div>
-
-<div style="display: flex; justify-content: center; gap: 2em; margin-top: 2em; text-align: center; flex-wrap: nowrap;">
-
-  <div>
-    <img src="/assets/img/toast3.png" alt="TOAST Image 3" style="width: 450px; margin: 1em; border-radius: 4px;">
-    <a href="https://genomics.lshtm.ac.uk/webtoast/#/" target="_blank" style="color: #ccc; text-decoration: underline;">Webtoast: web-hosted TOAST</a>
-  </div>
-
-<div>
-    <img src="/assets/img/toast4.png" alt="TOAST Image 4" style="width: 450px; margin: 1em; border-radius: 4px;">
-    <a href="https://pypi.org/project/toast-amplicon/" target="_blank" style="color: #ccc; text-decoration: underline;">PyPI package</a>
-
-  </div>
-
-</div>
+Command-line tool, installable Python package, and an interactive web app.

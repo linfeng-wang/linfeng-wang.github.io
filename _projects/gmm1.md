@@ -1,35 +1,27 @@
 ---
 layout: page
-title: Mixed infection analysis through machine learning
-description:  Mixed infections in genotypic drug-resistant Mycobacterium tuberculosis
+title: Detecting mixed TB infections
+description: Using Gaussian mixture models to find multiple strains in one patient
 img: assets/img/gmm1.png
-importance: 2
+importance: 6
 category: PhD
 ---
 
-[Publication](https://www.nature.com/articles/s41598-023-44341-x)
+Published in *Scientific Reports* (2023) &middot;
+[Paper](https://www.nature.com/articles/s41598-023-44341-x)
 
-Developed a custom Python pipeline using Gaussian Mixture Models to detect mixed M. tuberculosis infections from WGS data.
+A patient can carry more than one strain of tuberculosis at once. Mixed
+infections distort resistance calls and complicate treatment, but they are easy
+to miss in standard sequencing pipelines.
 
-Analyzed over 5,000 public isolates to model expected allele frequency distributions and benchmark mixed infection detection thresholds.
+#### Approach
 
-Demonstrated that mixed infections are significantly associated with genotypic drug resistance, suggesting transmission complexity and diagnostic challenges.
+- A Python pipeline using Gaussian mixture models to detect mixed infections from whole-genome sequencing data
+- Modelled expected allele-frequency distributions across more than 5,000 public isolates
+- Benchmarked detection thresholds against those distributions
 
-Proposed integration of this method into existing TBProfiler workflows for improved strain-level resistance resolution.
+#### Findings
 
-<br>
-
-
-<div style="display: flex; justify-content: center; gap: 2em; margin-top: 2em; text-align: center; flex-wrap: nowrap;">
-
-  <div>
-    <img src="/assets/img/gmm1.png" alt="TOAST Image 1" style="width: 450px; margin: 1em; border-radius: 4px;">
-    <p style="color: #ccc; font-size: 0.95rem; margin-top: -0.5em;">Mix infection over the world</p>
-  </div>
-
-  <div>
-    <img src="/assets/img/gmm2.png" alt="TOAST Image 2" style="width: 450px; margin: 1em; border-radius: 4px;">
-    <p style="color: #ccc; font-size: 0.95rem; margin-top: -0.5em;">Mixed infection dissection pipeline</p>
-  </div>
-
-</div>
+- Mixed infections are significantly associated with genotypic drug resistance
+- That association points to both greater transmission complexity and a diagnostic blind spot
+- The method is designed to slot into existing TBProfiler workflows for strain-level resistance resolution
