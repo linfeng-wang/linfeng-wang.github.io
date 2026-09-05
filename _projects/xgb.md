@@ -1,13 +1,13 @@
 ---
 layout: project
-title: TB treatment outcome prediction
-description: Staged risk prediction from clinical records, built for messy real-world data
+title: "TB treatment outcome prediction"
+description: "Staged risk prediction from clinical records, built for messy real-world data"
 img: assets/img/xgb1.png
-img_alt: Table comparing four reduced feature sets against the full fifty-feature model
-img_caption: Performance of four reduced feature sets against the full 50-feature model. Model 4 reaches 0.9067 accuracy and 0.9535 AUC-ROC using five features, against 0.9111 and 0.9555 for all fifty.
+img_alt: "Table comparing four reduced feature sets against the full fifty-feature model"
+img_caption: "Performance of four reduced feature sets against the full 50-feature model. Model 4 reaches 0.9067 accuracy and 0.9535 AUC-ROC using five features, against 0.9111 and 0.9555 for all fifty."
 importance: 4
 category: PhD
-publication: Preprint on <em>Research Square</em> (2025)
+publication: "Preprint on <em>Research Square</em> (2025)"
 links:
   - label: "Preprint"
     url: "https://doi.org/10.21203/rs.3.rs-7558046/v1"

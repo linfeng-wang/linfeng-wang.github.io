@@ -1,13 +1,13 @@
 ---
 layout: project
-title: GNN for positive selection
-description: Reading evolutionary signal off phylogenetic trees with graph attention
+title: "GNN for positive selection"
+description: "Reading evolutionary signal off phylogenetic trees with graph attention"
 img: assets/img/gnn1.png
-img_alt: Phylogenetic tree, pairwise distance matrix, and the resulting weighted graph with attention update equations
-img_caption: From phylogeny to graph. (a) A tree of eight isolates, with those carrying the mutation of interest in red. (b) The pairwise distance matrix derived from that tree. (c) The weighted graph built from those distances, and the attention update the model applies to it.
+img_alt: "Phylogenetic tree, pairwise distance matrix, and the resulting weighted graph with attention update equations"
+img_caption: "From phylogeny to graph. (a) A tree of eight isolates, with those carrying the mutation of interest in red. (b) The pairwise distance matrix derived from that tree. (c) The weighted graph built from those distances, and the attention update the model applies to it."
 importance: 3
 category: PhD
-publication: Published in <em>BMC Bioinformatics</em> (2026)
+publication: "Published in <em>BMC Bioinformatics</em> (2026)"
 links:
   - label: "Paper"
     url: "https://doi.org/10.1186/s12859-026-06583-0"

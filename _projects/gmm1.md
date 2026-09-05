@@ -1,13 +1,13 @@
 ---
 layout: project
-title: Detecting mixed TB infections
-description: Using Gaussian mixture models to find multiple strains in one patient
+title: "Detecting mixed TB infections"
+description: "Using Gaussian mixture models to find multiple strains in one patient"
 img: assets/img/gmm1.png
-img_alt: World map showing estimated mixed-infection rate by country
-img_caption: Estimated mixed-infection rate by country across the public isolates analysed. The scale runs from 0 to roughly 0.05; grey marks countries with no data.
+img_alt: "World map showing estimated mixed-infection rate by country"
+img_caption: "Estimated mixed-infection rate by country across the public isolates analysed. The scale runs from 0 to roughly 0.05; grey marks countries with no data."
 importance: 6
 category: PhD
-publication: Published in <em>Scientific Reports</em> (2023)
+publication: "Published in <em>Scientific Reports</em> (2023)"
 links:
   - label: "Paper"
     url: "https://www.nature.com/articles/s41598-023-44341-x"

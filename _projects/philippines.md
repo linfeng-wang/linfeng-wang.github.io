@@ -1,13 +1,13 @@
 ---
 layout: project
-title: TB transmission in the Philippines
-description: Whole-genome sequencing of 732 isolates, including prison transmission clusters
+title: "TB transmission in the Philippines"
+description: "Whole-genome sequencing of 732 isolates, including prison transmission clusters"
 img: assets/img/philippines1.png
-img_alt: Circular phylogeny of 732 isolates annotated with resistance type, lineage, island group and collection year
-img_caption: Phylogeny of the 732 isolates. The rings carry, from the tree outwards, lineage, island group, drug-resistance type and year of collection. Red branches mark the clusters of most concern.
+img_alt: "Circular phylogeny of 732 isolates annotated with resistance type, lineage, island group and collection year"
+img_caption: "Phylogeny of the 732 isolates. The rings carry, from the tree outwards, lineage, island group, drug-resistance type and year of collection. Red branches mark the clusters of most concern."
 importance: 5
 category: PhD
-publication: Published in <em>Scientific Reports</em> (2024)
+publication: "Published in <em>Scientific Reports</em> (2024)"
 links:
   - label: "Paper"
     url: "https://www.nature.com/articles/s41598-024-70471-x"

@@ -1,13 +1,13 @@
 ---
 layout: project
-title: TOAST amplicon designer
-description: Turning genome-scale mutation data into an optimised TB sequencing panel
+title: "TOAST amplicon designer"
+description: "Turning genome-scale mutation data into an optimised TB sequencing panel"
 img: assets/img/toast1.png
-img_alt: Circos plot of the M. tuberculosis genome with drug-resistance genes and the designed amplicon panel
-img_caption: The designed panel (pale blue blocks, inner ring) tiled against the drug-resistance genes of the <em>M. tuberculosis</em> genome (coloured outer ring). Dark ticks inside each gene band mark resistance-associated mutation positions.
+img_alt: "Circos plot of the M. tuberculosis genome with drug-resistance genes and the designed amplicon panel"
+img_caption: "The designed panel (pale blue blocks, inner ring) tiled against the drug-resistance genes of the <em>M. tuberculosis</em> genome (coloured outer ring). Dark ticks inside each gene band mark resistance-associated mutation positions."
 importance: 1
 category: PhD
-publication: Published in <em>BMC Genomics</em> (2025)
+publication: "Published in <em>BMC Genomics</em> (2025)"
 links:
   - label: "Paper"
     url: "https://doi.org/10.1186/s12864-025-12247-9"

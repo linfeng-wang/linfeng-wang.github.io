@@ -1,13 +1,13 @@
 ---
 layout: project
-title: Antimicrobial peptide design
-description: An LSTM generative model that proposes new peptides active against TB
+title: "Antimicrobial peptide design"
+description: "An LSTM generative model that proposes new peptides active against TB"
 img: assets/img/amp1.png
-img_alt: Three generated peptide candidates shown as backbone, electrostatic surface and hydrophobicity surface
-img_caption: Three generated candidates (rows a to c), each in three views: predicted backbone (i), surface coloured by charge (ii, blue positive and red negative), and surface coloured by hydrophobicity (iii, gold hydrophobic and teal hydrophilic).
+img_alt: "Three generated peptide candidates shown as backbone, electrostatic surface and hydrophobicity surface"
+img_caption: "Three generated candidates (rows a to c), each in three views: predicted backbone (i), surface coloured by charge (ii, blue positive and red negative), and surface coloured by hydrophobicity (iii, gold hydrophobic and teal hydrophilic)."
 importance: 2
 category: PhD
-publication: Published in <em>Bioinformatics Advances</em> (2025)
+publication: "Published in <em>Bioinformatics Advances</em> (2025)"
 links:
   - label: "Paper"
     url: "https://doi.org/10.1093/bioadv/vbaf274"
