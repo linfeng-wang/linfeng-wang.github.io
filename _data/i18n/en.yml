@@ -1,0 +1,133 @@
+# UI strings for the homepage (_layouts/about.html).
+# The Publications and Skills blocks are deliberately NOT here: they are
+# citations and tool names, identical in every language, so they stay in the
+# layout. Only their section headings are translated.
+# Values may contain inline HTML; the layout renders them unescaped.
+
+nav:
+  home: "Home"
+  switch_label: "中文"
+
+hero:
+  role: "Machine Learning Engineer at Biographica"
+  tagline: "PhD bridging AI and Biotech"
+
+buttons:
+  about: "ABOUT ME"
+  explore: "EXPLORE"
+  explore_all: "EXPLORE ALL"
+  download_cv: "DOWNLOAD RESUME"
+
+summary:
+  heading: "My Journey in AI and Healthcare"
+  stats:
+    - "<strong>6+</strong> Years of experience developing cutting-edge ML models and end-to-end pipelines"
+    - "<strong>10+</strong> Years of research experience in biotechnology"
+    - "<strong>8</strong> Peer-reviewed publications, including <strong>5</strong> as first author"
+    - "(<strong>2</strong> further papers currently being peer reviewed)"
+
+resume:
+  heading: "Resume"
+  intro: >-
+    A <strong>self-motivated</strong> and <strong>deep researcher</strong> with a proven track record as a
+    <strong>fast learner</strong>, I thrive in <strong>translational and multidisciplinary environments</strong>
+    with strong <strong>communication</strong> skills and a commitment to <strong>teamwork</strong>.
+  experience_heading: "Experience"
+  education_heading: "Education"
+  skills_heading: "Skills"
+  publications_heading: "Publications"
+  more_in_scholar_prefix: "(More in "
+  more_in_scholar_label: "Google Scholar"
+  more_in_scholar_suffix: "…)"
+
+experience:
+  - role: "Machine Learning Engineer"
+    org: "Biographica"
+    dates: "Apr 2026 to Present"
+  - role: "Machine Learning Consultant"
+    org: "Deep Science Venture"
+    dates: "Mar 2025 to Oct 2025"
+  - role: "Machine Learning Intern"
+    org: "LinkGevity"
+    dates: "Aug 2024 to Oct 2024"
+  - role: "Data Science Intern"
+    org: "ByteDance"
+    dates: "Aug 2022 to Feb 2023"
+  - role: "Trainee"
+    org: "Syngenta"
+    dates: "Jun 2017 to Aug 2017"
+
+education:
+  - degree: "PhD - Machine learning for Infectious Disease Genomics"
+    link_url: "http://pathogenseq.lshtm.ac.uk/"
+    link_label: "group website"
+    org: "London School of Hygiene and Tropical Medicine"
+    dates: "Oct 2021 to Mar 2026"
+  - degree: "Master of Research Bioengineering"
+    qualifier: "(Merit)"
+    org: "Imperial College London"
+    dates: "Oct 2019 to Oct 2020"
+  - degree: "BSc Biochemistry"
+    qualifier: "(First Class Honours)"
+    org: "King's College London"
+    dates: "Sep 2016 to Jul 2019"
+  - degree: "Science &amp; Engineering"
+    org: "International School of Geneva"
+    dates: "Summer 2012 to Summer 2016"
+  - org: "Beijing No. 4 High School"
+    dates: "Fall 2010 to Summer 2012"
+
+thesis:
+  heading: "Thesis"
+  title_bold: "Infectious Disease Genomics Meets AI:"
+  title_rest: "Scalable Models, Interpretable Tools, and Data-Driven Diagnostics"
+  projects:
+    - url: "/projects/toast/"
+      label: "<em>TOAST</em>: Custom Amplicon Designer for TB Diagnostics"
+    - url: "/projects/xgb/"
+      label: "Clinical Outcome Prediction using Machine Learning"
+    - url: "/projects/amp/"
+      label: "TB Antimicrobial Peptide <em>Generative Model</em>"
+    - url: "/projects/gnn/"
+      label: "<em>Graph Neural Network</em> Adaptive Mutation Detection"
+    - url: "/projects/gmm1/"
+      label: "Dissecting Mixed Infections with ML Models"
+    - url: "/projects/philippines/"
+      label: "Understanding TB transmission in the Philippines"
+
+fun_experience:
+  heading: "Fun Experience"
+  title_bold: "Turing DSG Hackathon:"
+  title_rest: "Detecting Shallow Gas from Marine Seismic Images (Alan Turing Institute: Data Study Group challenge)"
+  intro: "Over a week of intense collaboration with a diverse team of participants from all over the world, we:"
+  bullets:
+    - "Explored CNN architectures and ensemble approaches for geospatial pattern recognition."
+    - "Developed classification, segmentation, and object detection models for shallow gas pocket identification in noisy, low-contrast marine datasets."
+    - "Contributed to the end-of-sprint report for industrial partner BP, presenting results with interpretability-focused visualizations."
+
+teaching_trips:
+  heading: "Teaching Trips"
+  title_bold: "Data &amp; AI:"
+  title_rest: "for pathogen genomics (Philippines, Indonesia, Thailand, UK)"
+  intro: "Week-long intensive courses taught at a range of locations to diverse groups of researchers from all over the world:"
+  bullets:
+    - "Teaching <strong>Bash programming</strong> and the use of command-line based software."
+    - "Teaching the <strong>mathematics and biology</strong> behind the genomics sequencing pipeline we developed in house."
+    - "Building a <strong>RAG chatbot</strong> with <strong>LangChain</strong> and <strong>ChromaDB</strong>, grounded in the course content, for interactive participant Q&amp;A."
+    - "Individual problem-solving workshops: providing AI and bioinformatics solutions to real research problems on a case-by-case basis."
+
+images:
+  profile_alt: "Profile image"
+  gnn1: "Graph neural network model output"
+  gnn2: "Phylogeny-guided attention visualisation"
+  toast1: "TOAST amplicon designer interface"
+  amp1: "Antimicrobial peptide generative model"
+  gmm1: "Mixed infection analysis"
+  philippines1: "TB transmission analysis in the Philippines"
+  ship: "Marine seismic survey illustration"
+  detection: "Seismic Model Output"
+  segmentation: "Shallow Gas Detection"
+  group_photo: "Group photo from the pathogen genomics course"
+  philippines_t: "Teaching in the Philippines"
+  indonesia: "Teaching in Indonesia"
+  thailand: "Teaching in Thailand"

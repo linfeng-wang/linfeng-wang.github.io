@@ -1,0 +1,131 @@
+# Chinese UI strings for the homepage. Mirrors _data/i18n/en.yml key for key.
+# Paper titles, journal names and tool names stay in English by convention;
+# the Publications and Skills blocks are not translated at all (see en.yml).
+
+nav:
+  home: "首页"
+  switch_label: "EN"
+
+hero:
+  role: "机器学习工程师 · Biographica"
+  tagline: "连接人工智能与生物技术的博士研究者"
+
+buttons:
+  about: "关于我"
+  explore: "浏览项目"
+  explore_all: "查看全部项目"
+  download_cv: "下载简历"
+
+summary:
+  heading: "我在人工智能与健康领域的历程"
+  stats:
+    - "<strong>6+</strong> 年前沿机器学习模型与端到端流程的开发经验"
+    - "<strong>10+</strong> 年生物技术领域的科研经验"
+    - "<strong>8</strong> 篇同行评审论文，其中 <strong>5</strong> 篇为第一作者"
+    - "（另有 <strong>2</strong> 篇论文正在同行评审中）"
+
+resume:
+  heading: "简历"
+  intro: >-
+    我是一名<strong>自驱力强</strong>、<strong>钻研深入</strong>的研究者，具备出色的<strong>学习能力</strong>，
+    擅长在<strong>转化医学与跨学科环境</strong>中工作，拥有良好的<strong>沟通</strong>能力，
+    并重视<strong>团队协作</strong>。
+  experience_heading: "工作经历"
+  education_heading: "教育经历"
+  skills_heading: "专业技能"
+  publications_heading: "发表论文"
+  more_in_scholar_prefix: "（更多论文见 "
+  more_in_scholar_label: "Google Scholar"
+  more_in_scholar_suffix: "）"
+
+experience:
+  - role: "机器学习工程师"
+    org: "Biographica"
+    dates: "2026年4月 至今"
+  - role: "机器学习顾问"
+    org: "Deep Science Venture"
+    dates: "2025年3月 – 2025年10月"
+  - role: "机器学习实习生"
+    org: "LinkGevity"
+    dates: "2024年8月 – 2024年10月"
+  - role: "数据科学实习生"
+    org: "字节跳动"
+    dates: "2022年8月 – 2023年2月"
+  - role: "实习生"
+    org: "先正达 Syngenta"
+    dates: "2017年6月 – 2017年8月"
+
+education:
+  - degree: "博士 · 传染病基因组学中的机器学习"
+    link_url: "http://pathogenseq.lshtm.ac.uk/"
+    link_label: "课题组网站"
+    org: "伦敦卫生与热带医学院"
+    dates: "2021年10月 – 2026年3月"
+  - degree: "生物工程 研究型硕士"
+    qualifier: "（优异 Merit）"
+    org: "伦敦帝国理工学院"
+    dates: "2019年10月 – 2020年10月"
+  - degree: "生物化学 理学学士"
+    qualifier: "（一等荣誉学位）"
+    org: "伦敦国王学院"
+    dates: "2016年9月 – 2019年7月"
+  - degree: "科学与工程方向"
+    org: "日内瓦国际学校"
+    dates: "2012年夏 – 2016年夏"
+  - org: "北京市第四中学"
+    dates: "2010年秋 – 2012年夏"
+
+thesis:
+  heading: "博士论文"
+  title_bold: "当传染病基因组学遇上人工智能："
+  title_rest: "可扩展的模型、可解释的工具与数据驱动的诊断方法"
+  projects:
+    - url: "/projects/toast/"
+      label: "<em>TOAST</em>：面向结核病诊断的定制扩增子设计工具"
+    - url: "/projects/xgb/"
+      label: "基于机器学习的临床治疗结果预测"
+    - url: "/projects/amp/"
+      label: "结核病抗菌肽<em>生成模型</em>"
+    - url: "/projects/gnn/"
+      label: "<em>图神经网络</em>驱动的适应性突变检测"
+    - url: "/projects/gmm1/"
+      label: "用机器学习模型解析混合感染"
+    - url: "/projects/philippines/"
+      label: "菲律宾结核病传播规律研究"
+
+fun_experience:
+  heading: "其他经历"
+  title_bold: "图灵研究所 DSG 黑客松："
+  title_rest: "海上地震勘探数据中的浅层气体检测（艾伦·图灵研究所 Data Study Group 挑战赛）"
+  intro: "在为期一周的高强度协作中，我与来自世界各地的跨学科团队共同完成了以下工作："
+  bullets:
+    - "探索用于地理空间模式识别的 CNN 架构与集成学习方法。"
+    - "针对噪声大、对比度低的海洋数据集，开发了浅层气体识别的分类、分割与目标检测模型。"
+    - "参与撰写面向产业合作方 BP 的项目结题报告，并以侧重可解释性的可视化方式呈现结果。"
+
+teaching_trips:
+  heading: "教学出访"
+  title_bold: "数据与人工智能："
+  title_rest: "面向病原体基因组学的课程（菲律宾、印度尼西亚、泰国、英国）"
+  intro: "在多个国家开展为期一周的强化课程，面向来自世界各地的研究人员："
+  bullets:
+    - "讲授 <strong>Bash 编程</strong>与命令行软件的使用。"
+    - "讲授团队自主开发的基因组测序流程背后的<strong>数学与生物学原理</strong>。"
+    - "使用 <strong>LangChain</strong> 与 <strong>ChromaDB</strong> 构建基于课程内容的 <strong>RAG 问答机器人</strong>，支持学员互动答疑。"
+    - "开设一对一问题研讨：针对学员实际研究中的问题，提供人工智能与生物信息学解决方案。"
+
+images:
+  profile_alt: "个人照片"
+  gnn1: "图神经网络模型输出"
+  gnn2: "系统发育引导的注意力可视化"
+  toast1: "TOAST 扩增子设计工具界面"
+  amp1: "抗菌肽生成模型"
+  gmm1: "混合感染分析"
+  philippines1: "菲律宾结核病传播分析"
+  ship: "海洋地震勘探示意图"
+  detection: "地震数据模型输出"
+  segmentation: "浅层气体检测结果"
+  group_photo: "病原体基因组学课程合影"
+  philippines_t: "在菲律宾授课"
+  indonesia: "在印度尼西亚授课"
+  thailand: "在泰国授课"

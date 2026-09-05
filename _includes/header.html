@@ -1,9 +1,10 @@
+{%- assign nav_t = site.data.i18n[page.lang] | default: site.data.i18n.en -%}
 <div class="d-flex justify-content-between align-items-start w-100 px-4">
 
   <!-- Left: About -->
   <ul class="navbar-nav">
     <li class="nav-item {% if page.url == '/about/' or page.permalink == '/' %}active{% endif %}">
-      <a class="nav-link" href="{{ '/' | relative_url }}">Home</a>
+      <a class="nav-link" href="{% if page.lang == 'zh' %}{{ '/zh/' | relative_url }}{% else %}{{ '/' | relative_url }}{% endif %}">{{ nav_t.nav.home }}</a>
     </li>
   </ul>
 
@@ -18,6 +19,19 @@
     <li class="nav-item mr-3">
       <a class="nav-link" href="https://www.linkedin.com/in/w15/" target="_blank">LinkedIn</a>
     </li>
+    {%- comment -%}
+      Language toggle. Rendered only when the page declares a counterpart via
+      alt_lang_url, so pages with no translation do not offer a switch that
+      would dead-end in the other language.
+    {%- endcomment -%}
+    {% if page.alt_lang_url %}
+    <li class="nav-item mr-3">
+      <a class="nav-link lang-toggle" href="{{ page.alt_lang_url | relative_url }}"
+         hreflang="{% if page.lang == 'zh' %}en{% else %}zh-Hans{% endif %}"
+         title="{% if page.lang == 'zh' %}Switch to English{% else %}切换到中文{% endif %}"
+         >{% if page.lang == 'zh' %}EN{% else %}中文{% endif %}</a>
+    </li>
+    {% endif %}
 
     {% if site.enable_darkmode %}
     <li class="toggle-container nav-item">

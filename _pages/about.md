@@ -2,6 +2,8 @@
 layout: about
 title: About
 permalink: /
+lang: en
+alt_lang_url: /zh/
 subtitle: <a href='https://scholar.google.com/citations?user=ZUOMRG0AAAAJ&hl=en'>Google Scholar</a> | <a href='https://www.linkedin.com/in/w15/'>LinkedIn</a>
 
 profile:

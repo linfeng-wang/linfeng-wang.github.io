@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang }}">
+<html lang="{% if page.lang == 'zh' %}zh-Hans{% else %}{{ page.lang | default: site.lang }}{% endif %}">
 
   <!-- Head -->
   <head>

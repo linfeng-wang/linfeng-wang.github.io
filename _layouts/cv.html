@@ -62,6 +62,32 @@ layout: default
 
   .cv-dark .cv .card a:hover { color: #f3b9a7; }
 
+  /* Chinese dates ("2021年10月 – 2026年3月") are wider than the English ones,
+     and _includes/cv/time_table.html pins the year column to an inline 75px,
+     so on the Chinese page the badge overlapped the job title. */
+  /* Only from the Bootstrap md breakpoint up, where the year and the entry sit
+     side by side. Below it both languages stack, and the fixed column would
+     just squeeze the text. */
+  @media (min-width: 768px) {
+    .cv-zh .cv .card .list-group-item .row { flex-wrap: nowrap; }
+
+    .cv-zh .cv .card .list-group-item .row > [class*="col-xs-2"] {
+      flex: 0 0 168px;
+      width: 168px !important;
+      max-width: none !important;  /* Bootstrap caps this at 16.67%, which clipped it */
+    }
+
+    .cv-zh .cv .card .list-group-item .row > [class*="col-xs-10"] {
+      flex: 1 1 auto;
+      max-width: none !important;
+    }
+  }
+
+  .cv-zh .cv .card .list-group-item .badge {
+    min-width: 0 !important;
+    white-space: nowrap;
+  }
+
   /* ---------- Phone ---------- */
   @media (max-width: 700px) {
     .cv-dark .post-title { font-size: 2rem; }
@@ -70,7 +96,7 @@ layout: default
   html, body { max-width: 100%; overflow-x: hidden; }
 </style>
 
-        <div class="post cv-dark">
+        <div class="post cv-dark{% if page.lang == 'zh' %} cv-zh{% endif %}">
 
           <header class="post-header">
             <h1 class="post-title">{{ page.title }} {% if page.cv_pdf %}<a href="{{ page.cv_pdf | prepend: 'assets/pdf/' | relative_url}}" target="_blank" rel="noopener noreferrer" class="float-right"><i class="fas fa-file-pdf"></i></a>{% endif %}</h1>
@@ -79,7 +105,7 @@ layout: default
 
           <article>
             <div class="cv">
-              {% for entry in site.data.cv %}
+              {% assign cv_entries = site.data.cv[page.lang] | default: site.data.cv.en %}{% for entry in cv_entries %}
                 <div class="card mt-3 p-3">
                   <h3 class="card-title font-weight-medium">{{ entry.title }}</h3>
                   <div>

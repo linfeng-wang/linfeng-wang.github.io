@@ -1,0 +1,152 @@
+- title: 基本信息
+  type: time_table
+  contents:
+    - title: 王临风 (Linfeng Wang)
+      description:
+        - 机器学习工程师 · Biographica，英国伦敦
+        - 机器学习与计算基因组学 博士，伦敦卫生与热带医学院
+        - 1997年11月15日
+        - 英语、中文、法语、日语
+
+- title: 工作与科研经历
+  type: time_table
+  contents:
+    - title: 机器学习工程师
+      institution: Biographica，英国伦敦
+      year: 2026年4月 – 至今
+      description:
+        - 开发、测试并评估基于 DNA 序列与生物学背景预测基因表达的深度学习模型
+        - 在 Azure 与 AWS 平台上搭建可扩展的 PyTorch 训练与微调流程，涵盖数据集构建、模型评估、超参数优化与可复现实验
+        - 将机器学习应用于基因编辑与作物性状预测，整合多组学数据
+    - title: 博士研究员
+      institution: 伦敦卫生与热带医学院（Clark–Campino–Phelan 实验室），英国伦敦
+      year: 2021年10月 – 2026年3月
+      description:
+        - 构建用于耐药性、治疗结果预测与蛋白质生成的机器学习模型
+        - 使用 CNN、RNN、GNN 与 Transformer 进行深度学习建模
+        - 开发基因扩增子测序设计工具（Python 与 Nextflow）
+    - title: 机器学习顾问
+      institution: Deep Science Venture，英国伦敦
+      year: 2025年3月 – 2025年10月
+      description:
+        - 开发面向生物序列任务的 CNN、RNN 与 VAE 模型
+        - 应用 SHAP、LIME 与 DeepLIFT 进行模型可解释性分析
+    - title: 机器学习实习生
+      institution: LinkGevity，英国伦敦
+      year: 2024年8月 – 2024年10月
+      description:
+        - 构建用于药物相互作用预测的 MLP 与 GNN 模型
+        - 在 GCP 上部署可扩展的训练流程
+    - title: Data Study Group 参与者
+      institution: 艾伦·图灵研究所
+      year: 2024年1月
+      description:
+        - 构建用于地震数据分析的深度学习模型
+        - 部署结合对比学习的 CNN，用于地球物理图像分析
+    - title: 研究助理
+      institution: 字节跳动（VoyagerX），英国伦敦
+      year: 2022年8月 – 2023年2月
+      description:
+        - 构建化学数据库，并使用自编码器分析新抗原数据
+        - 主导市场调研与科研报告撰写
+
+- title: 专业技能
+  type: time_table
+  contents:
+    - title: 编程语言
+      description:
+        - Python, R, Bash, MySQL, HTML/CSS, C++
+    - title: 数据科学与机器学习
+      description:
+        - PyTorch, PyG, scikit-learn, Transformers, LLMs, CNNs, RNNs, GNNs, VAEs, XGBoost
+        - NumPy, Pandas, Scipy, Jax, Fastai, Numba
+    - title: 工程与云平台
+      description:
+        - AWS, GCP, Azure, Docker, Git, Nextflow, Jupyter, Huggingface, LangChain
+    - title: 可视化
+      description:
+        - Matplotlib, Plotly, Seaborn, ggplot2, Streamlit, Flask
+    - title: 基因组学工具
+      description:
+        - BWA-MEM, SAMtools, BCFtools, RAxML, FreeBayes, BEAST2, FigTree, Trimmomatic, iTOL, PLINK2, GATK
+
+- title: 教育经历
+  type: time_table
+  contents:
+    - title: 机器学习与计算基因组学 博士
+      institution: 伦敦卫生与热带医学院（伦敦大学）
+      year: 2021 – 2026
+      description:
+        - 培养项目 — LiDo-DTP
+        - 资助方 — BBSRC
+        - 论文 — 结核病耐药性的整合基因组测序与机器学习研究及诊断工具开发
+    - title: 生物工程 研究型硕士（荣誉）
+      institution: 伦敦帝国理工学院
+      year: 2019 – 2020
+      description:
+        - 优异成绩 Merit
+        - 课程 — 计算与统计方法、生物工程前沿、生物材料
+        - 论文 — 由合成聚酯制备人工布鲁赫膜的设计
+    - title: 生物化学 理学学士（荣誉）
+      institution: 伦敦国王学院
+      year: 2016 – 2019
+      description:
+        - 一等荣誉学位
+        - 论文 — 基于设计蛋白连接系统的分子动力学模拟与 FRET 生物传感器一致性研究
+
+- title: 发表论文
+  type: list
+  contents:
+    - Decoding positive selection in M. tuberculosis with phylogeny-guided graph attention models. BMC Bioinformatics (2026).
+    - TOAST - A novel tool for designing targeted gene amplicons in TB genomic studies. BMC Genomics 26(1) (2025).
+    - LSTM-based deep learning model for the discovery of antimicrobial peptides targeting M. tuberculosis. Bioinformatics Advances (2025).
+    - A multi-stage machine learning framework for stepwise prediction of TB treatment outcomes. Research Square（预印本，2025）.
+    - Detecting Shallow Gas from Marine Seismic Images. Turing Institute Data Study Group Report (2025).
+    - Whole genome sequencing of TB in the Philippines. Scientific Reports 14:70471 (2024).
+    - TGV - Visualisation tools for transmission graphs. NAR Genomics and Bioinformatics 6(4) (2024).
+    - Mixed infections in genotypic drug-resistant Mycobacterium tuberculosis. Scientific Reports 13:1-8 (2023).
+    - TB-ML - A framework for comparing ML approaches to predict drug resistance. Bioinformatics Advances (2023).
+    - Genomic analysis of tuberculosis in Thailand. Research Square（投稿中，2025）.
+    - Deep Learning Approaches for MIC Prediction in TB.（撰写中）
+
+- title: 教学经历
+  type: list
+  contents:
+    - Python 编程 — 伦敦卫生与热带医学院硕士课程
+    - 基因组学工作坊讲师 — 菲律宾、印度尼西亚、泰国
+    - 助教 — Sysmic 统计学课程
+
+- title: 组织与服务
+  type: time_table
+  contents:
+    - title: 学生委员会成员
+      institution: LiDo 博士培养项目，英国伦敦
+      year: 2024 – 2025
+      description:
+        - 设计学生身心健康调研问卷
+        - 组织 300 余人参与的三日学术营
+
+- title: 奖项与荣誉
+  type: time_table
+  contents:
+    - title: UKRI BBSRC LiDo 博士奖学金
+      year: 2021 – 2026
+
+    - title: 帝国理工学院个人发展奖
+      year: 2020
+      description:
+        - 高效的团队协作
+        - 超越学业要求的表现
+        - 独立而开放的思考
+        - 自我认知
+        - 主动的自我管理
+
+    - title: Wellcome Trust 生物医学暑期研究奖学金
+      year: 2018
+      description:
+        - 资助于 Eugene Makeyev 博士实验室开展的暑期科研项目
+
+- title: 兴趣爱好
+  type: list
+  contents:
+    - 柔道、抱石攀岩、潜水、篮球、写作、吉他、编程

@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<title>王临风 Linfeng Wang — 简历</title>
+<!--
+  Source for assets/pdf/CV_Linfeng_Wang_zh.pdf.
+  Regenerate after editing:
+    "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" \
+      --headless=new --disable-gpu --no-pdf-header-footer \
+      --print-to-pdf=assets/pdf/CV_Linfeng_Wang_zh.pdf assets/cv-zh/cv-zh.html
+  Kept in the repo so the PDF never becomes an unregenerable binary.
+-->
+<style>
+  @page { size: A4; margin: 15mm 14mm; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: "PingFang SC", "Songti SC", "Heiti SC", "Noto Sans CJK SC", sans-serif;
+    font-size: 10pt; line-height: 1.5; color: #111; margin: 0;
+  }
+  h1 { font-size: 19pt; margin: 0 0 3pt; letter-spacing: .5pt; }
+  .contact { font-size: 8.6pt; color: #444; margin-bottom: 11pt; }
+  .contact a { color: #444; text-decoration: none; }
+  h2 {
+    font-size: 10.5pt; margin: 13pt 0 6pt; padding-bottom: 2.5pt;
+    border-bottom: 1px solid #222; letter-spacing: 1pt;
+  }
+  .row { display: flex; justify-content: space-between; align-items: baseline;
+         margin-top: 7pt; gap: 10pt; }
+  .row .what { font-weight: 700; }
+  .row .when { color: #555; font-size: 8.8pt; white-space: nowrap; }
+  .org { color: #333; font-size: 9.2pt; margin-top: 1pt; }
+  .proj { color: #333; font-size: 9.2pt; font-style: italic; margin-top: 1pt; }
+  ul { margin: 3pt 0 0; padding-left: 15pt; }
+  li { margin-bottom: 1.5pt; }
+  .skills p { margin: 2.5pt 0; display: flex; gap: 6pt; }
+  .skills b { flex: 0 0 78pt; }
+  .skills span { flex: 1; }
+  .pubs li { margin-bottom: 3pt; }
+  .note { color: #555; font-size: 8.8pt; margin: 2pt 0 0; }
+</style>
+</head>
+<body>
+
+<h1>王临风 <span style="font-size:13pt;font-weight:400">Linfeng Wang, PhD</span></h1>
+<div class="contact">
+  wanglinfeng1115@gmail.com &nbsp;⋄&nbsp; +44 7599 610897 &nbsp;⋄&nbsp;
+  linkedin.com/in/w15 &nbsp;⋄&nbsp; linfeng-wang.github.io
+</div>
+
+<h2>专业技能</h2>
+<div class="skills">
+  <p><b>编程语言与框架</b><span>Python, PyTorch, PyG, R, Bash, MySQL, HTML/CSS, C++</span></p>
+  <p><b>机器学习</b><span>Scikit-learn, Transformers, LLMs, CNNs, RNNs, GNNs, VAEs, XGBoost</span></p>
+  <p><b>开发工具</b><span>AWS, GCP, Azure, Docker, Git, Nextflow, Pandas, NumPy, Jupyter, Hugging Face, LangChain, Numba</span></p>
+  <p><b>可视化</b><span>Matplotlib, Plotly, ggplot2, Streamlit, Flask</span></p>
+</div>
+
+<h2>工作与科研经历</h2>
+
+<div class="row"><span class="what">机器学习工程师 — Biographica</span><span class="when">2026年4月 – 至今</span></div>
+<div class="org">英国伦敦</div>
+<ul>
+  <li>开发、测试并评估基于 DNA 序列与生物学背景预测基因表达的深度学习模型。</li>
+  <li>在 Azure 与 AWS 平台上搭建可扩展的 PyTorch 训练与微调流程，涵盖数据集构建、模型评估、超参数优化与可复现实验。</li>
+  <li>将机器学习应用于基因编辑与作物性状预测，整合多组学数据。</li>
+</ul>
+
+<div class="row"><span class="what">博士研究员 — 伦敦卫生与热带医学院</span><span class="when">2021年10月 – 2026年3月</span></div>
+<div class="org">Clark–Campino–Phelan 实验室，英国伦敦</div>
+<ul>
+  <li>使用 PyTorch 开发容器化（Docker）、可复现的深度学习模型（CNN、RNN、GNN、Transformer）。</li>
+  <li>在高性能计算集群上用 Python 构建统计分析流程，对高维数据进行 GWAS、PCA、逻辑回归与优势比分析。</li>
+  <li>用 Python 开发网页应用与后端软件（PyPI 工具包），实现扩增子引物设计的自动化。</li>
+  <li>开发基于 RNN 的生成式模型，用于新型抗菌肽序列的设计与分类，准确率达 91%。</li>
+  <li>开发基于 GNN 的分类模型，依据系统发育树预测自然选择，准确率达 88%。</li>
+  <li>构建并部署整合 ChromaDB、LangChain 与 OpenAI API 的 RAG 大模型问答机器人，用于课程内容检索与反馈收集。</li>
+</ul>
+
+<div class="row"><span class="what">机器学习顾问 — Deep Science Venture</span><span class="when">2025年3月 – 2025年10月</span></div>
+<div class="org">英国伦敦</div>
+<div class="proj">项目：基于深度生成模型的序列药物发现</div>
+<ul>
+  <li>主导 CNN、RNN 与 VAE 模型在生物序列上的开发，结合数据增强与超参数优化。</li>
+  <li>构建基因表达预测模型，准确率达 86%。</li>
+  <li>应用 SHAP、LIME 与 DeepLIFT，从深度模型中提取可解释的生物学信息。</li>
+  <li>主导生成式序列发现任务的模型设计方向。</li>
+</ul>
+
+<div class="row"><span class="what">机器学习实习生 — LinkGevity</span><span class="when">2024年8月 – 2024年10月</span></div>
+<div class="org">英国伦敦</div>
+<div class="proj">项目：基于图神经网络的药物相互作用预测</div>
+<ul>
+  <li>复现并改进 GNN 模型，整合 BERT 预测药物化合物间的相互作用。</li>
+  <li>训练药物相互作用模型用于药物设计，预测性能提升 15%。</li>
+  <li>利用 Google Cloud Platform 与 AWS 扩展机器学习训练流程，支持高通量实验。</li>
+</ul>
+
+<div class="row"><span class="what">Data Study Group 参与者 — 艾伦·图灵研究所</span><span class="when">2024年1月</span></div>
+<div class="org">英国伦敦</div>
+<div class="proj">项目：海上地震勘探数据中的浅层气体隐患检测</div>
+<ul>
+  <li>主导深度学习模型开发，使用结合对比学习的 CNN 完成地球物理图像的检测与分割。</li>
+  <li>在两周内于历史地震数据集上实现 93% 的分类准确率。</li>
+  <li>跨学科协作，将地球科学问题转化为机器学习解决方案。</li>
+</ul>
+
+<div class="row"><span class="what">数据科学实习生 — 字节跳动</span><span class="when">2022年8月 – 2023年2月</span></div>
+<div class="org">英国伦敦</div>
+<div class="proj">项目：新抗原洞察平台与市场调研</div>
+<ul>
+  <li>构建集成 SQL 的候选药物化学数据库。</li>
+  <li>使用自编码器挖掘生物数据集中免疫相关分子的潜在规律。</li>
+  <li>协调生物制剂与小分子方向的跨学科市场调研，并撰写双周研究简报。</li>
+  <li>开发面向药物发现的端到端机器学习流程。</li>
+</ul>
+
+<h2>代表性论文</h2>
+<ul class="pubs">
+  <li>Wang et al. <b>TOAST: A novel tool for designing targeted gene amplicons.</b> <i>BMC Genomics</i> (2025). doi:10.1186/s12864-025-12247-9</li>
+  <li>Wang et al. <b>LSTM-Based Models for Antimicrobial Peptide Classification and Generation.</b> <i>Bioinformatics Advances</i> (2025). doi:10.1093/bioadv/vbaf274</li>
+  <li>Wang et al. <b>Decoding Positive Selection with Phylogeny-Guided Graph Attention Models.</b> <i>BMC Bioinformatics</i> (2026). doi:10.1186/s12859-026-06583-0</li>
+  <li>Wang et al. <b>ML for stepwise prediction of TB treatment outcomes.</b> <i>Research Square</i>（预印本，2025）. doi:10.21203/rs.3.rs-7558046/v1</li>
+  <li>Data Study Group Report: British Geological Survey — Detecting Shallow Gas from Marine Seismic Images. 艾伦·图灵研究所 (2025).</li>
+</ul>
+
+<h2>教育经历</h2>
+
+<div class="row"><span class="what">伦敦卫生与热带医学院（伦敦大学）· 计算基因组学 博士</span><span class="when">2021年10月 – 2026年3月</span></div>
+<p class="note">论文：结核病耐药性的整合基因组测序与机器学习研究及诊断工具开发<br>
+奖学金：UKRI – BBSRC – LiDo 博士奖学金</p>
+
+<div class="row"><span class="what">伦敦帝国理工学院 · 生物工程 研究型硕士（荣誉），优异成绩 Merit</span><span class="when">2019年10月 – 2020年10月</span></div>
+<p class="note">相关课程：科研数据分析</p>
+
+<div class="row"><span class="what">伦敦国王学院 · 生物化学 理学学士（荣誉），一等成绩</span><span class="when">2016年9月 – 2019年7月</span></div>
+<p class="note">相关课程：生物信息学、蛋白质设计与功能、分子动力学模拟<br>
+奖项：Wellcome Trust 生物医学暑期研究奖学金（2018）</p>
+
+</body>
+</html>

@@ -312,108 +312,81 @@ layout: default
 </style>
 
 
+{%- assign t = site.data.i18n[page.lang] | default: site.data.i18n.en -%}
+
  <div class="about-container">
   {% assign profile_image_path = page.profile.image | prepend: '/assets/img/' | relative_url %}
-  <img src="{{ profile_image_path }}" alt="Profile image" class="profile-image" />
+  <img src="{{ profile_image_path }}" alt="{{ t.images.profile_alt }}" class="profile-image" />
 
   <div class="about-text">
     <h1><strong>Linfeng</strong> <span>Wang</span></h1>
-    <p>Machine Learning Engineer at Biographica<br>
-    PhD bridging AI and Biotech</p>
+    <p>{{ t.hero.role }}<br>
+    {{ t.hero.tagline }}</p>
 
     <div class="btn-row">
-      <a class="btn-outline" href="{{ '/cv/' | relative_url }}">ABOUT ME</a>
-      <a class="btn-outline" href="{{ '/projects/' | relative_url }}">EXPLORE</a>
+      <a class="btn-outline" href="{{ page.cv_url | default: '/cv/' | relative_url }}">{{ t.buttons.about }}</a>
+      <a class="btn-outline" href="{{ '/projects/' | relative_url }}">{{ t.buttons.explore }}</a>
 
     </div>
   </div>
 </div>
 
 
-<!-- Spacer: 12 empty lines -->
 <div class="hero-spacer"></div>
 
 <div class="summary-wrapper">
   <div class="summary-section">
-    <h3><strong>My Journey in AI and Healthcare</strong></h3>
+    <h3><strong>{{ t.summary.heading }}</strong></h3>
     <ul>
-      <li><strong>6+</strong> Years of experience developing cutting-edge ML models and end-to-end pipelines</li>
-      <li><strong>10+</strong> Years of research experience in biotechnology</li>
-      <li><strong>8</strong> Peer-reviewed publications, including <strong>5</strong> as first author</li>
-      <li>(<strong>2</strong> further papers currently being peer reviewed)</li>
+      {%- for stat in t.summary.stats %}
+      <li>{{ stat }}</li>
+      {%- endfor %}
     </ul>
   </div>
 </div>
 
 <div class="resume-wrapper">
   <div class="resume-left">
-    <h2>Resume</h2>
+    <h2>{{ t.resume.heading }}</h2>
   </div>
 
   <div class="resume-right">
     <p>
-      A <strong>self-motivated</strong> and <strong>deep researcher</strong> with a proven track record as a 
-      <strong>fast learner</strong>, I thrive in <strong>translational and multidisciplinary environments</strong> 
-      with strong <strong>communication</strong> skills and a commitment to <strong>teamwork</strong>.
-      
+      {{ t.resume.intro }}
     </p>
     <div class="resume-columns">
       <!-- Experience Column -->
       <div class="resume-entry">
-        <h3>Experience</h3>
+        <h3>{{ t.resume.experience_heading }}</h3>
+        {%- for e in t.experience %}
 
-        <p><strong>Machine Learning Engineer</strong><br>
-        Biographica<br>
-        Apr 2026 to Present</p>
-
-        <p><strong>Machine Learning Consultant</strong><br>
-        Deep Science Venture<br>
-        Mar 2025 to Oct 2025</p>
-    
-        <p><strong>Machine Learning Intern</strong><br>
-        LinkGevity<br>
-        Aug 2024 to Oct 2024</p>
-    
-        <p><strong>Data Science Intern</strong><br>
-        ByteDance<br>
-        Aug 2022 to Feb 2023</p>
-    
-        <p><strong>Trainee</strong><br>
-        Syngenta<br>
-        Jun 2017 to Aug 2017</p>
+        <p><strong>{{ e.role }}</strong><br>
+        {{ e.org }}<br>
+        {{ e.dates }}</p>
+        {%- endfor %}
       </div>
-    
+
       <!-- Education Column -->
       <div class="resume-entry">
-        <h3>Education</h3>
-    
+        <h3>{{ t.resume.education_heading }}</h3>
+        {%- for e in t.education %}
+
+        <p>
+        {%- if e.degree %}<strong>{{ e.degree }}</strong>
+        {%- if e.qualifier %} <span class="dimmed">{{ e.qualifier }}</span>{% endif -%}
+        {%- if e.link_url %}
         <!-- http, not https: the server's certificate only covers
              genomics.lshtm.ac.uk, so https to this host fails validation.
              Switch to https once the cert lists pathogenseq.lshtm.ac.uk. -->
-        <p><strong>PhD - Machine learning for Infectious Disease Genomics</strong>
-        (<a href="http://pathogenseq.lshtm.ac.uk/" target="_blank" rel="noopener" style="color: #e89f8a; text-decoration: none; border-bottom: 1px solid rgba(232,159,138,0.5);">group website</a>)<br>
-        London School of Hygiene and Tropical Medicine<br>
-        Oct 2021 to Mar 2026</p>
-    
-        <p><strong>Master of Research Bioengineering</strong> <span class="dimmed">(Merit)</span><br>
-        Imperial College London<br>
-        Oct 2019 to Oct 2020</p>
-    
-        <p><strong>BSc Biochemistry</strong> <span class="dimmed">(First Class Honours)</span><br>
-        King's College London<br>
-        Sep 2016 to Jul 2019</p>
-    
-        <p><strong>Science & Engineering</strong><br>
-        International School of Geneva<br>
-        Summer 2012 to Summer 2016</p>
-    
-        <p>Beijing No. 4 High School<br>
-        Fall 2010 to Summer 2012</p>
+        (<a href="{{ e.link_url }}" target="_blank" rel="noopener" style="color: #e89f8a; text-decoration: none; border-bottom: 1px solid rgba(232,159,138,0.5);">{{ e.link_label }}</a>)
+        {%- endif %}<br>{% endif -%}
+        {{ e.org }}<br>
+        {{ e.dates }}</p>
+        {%- endfor %}
       </div>
     </div>
-
     <div class="resume-entry" style="margin-top: 2em;">
-      <h3>Skills</h3>
+      <h3>{{ t.resume.skills_heading }}</h3>
       <div class="resume-columns">
         <div class="resume-entry">
           <p>Python / C++ / R<br>
@@ -431,7 +404,7 @@ layout: default
       </div>
     </div>
     <div class="resume-entry" style="margin-top: 2em;">
-      <h3>Publications</h3>
+      <h3>{{ t.resume.publications_heading }}</h3>
     
       <p><strong>2026</strong></p>
       <ul style="padding-left: 1.2em;">
@@ -461,10 +434,10 @@ layout: default
     </div>
 
     <p style="font-size: 1.1rem; color: #ccc;">
-      (More in <a href="https://scholar.google.com/citations?user=ZUOMRG0AAAAJ&amp;hl=en" target="_blank" style="color: #e89f8a; border-bottom: 1px solid #e89f8a; text-decoration: none;">Google Scholar</a>…)
+      {{ t.resume.more_in_scholar_prefix }}<a href="https://scholar.google.com/citations?user=ZUOMRG0AAAAJ&amp;hl=en" target="_blank" style="color: #e89f8a; border-bottom: 1px solid #e89f8a; text-decoration: none;">{{ t.resume.more_in_scholar_label }}</a>{{ t.resume.more_in_scholar_suffix }}
     </p>
     <div class="btn-row">
-      <a href="{{ '/assets/pdf/CV_Linfeng_Wang_is.pdf' | relative_url }}" class="btn-outline" download>DOWNLOAD RESUME</a>
+      <a href="{{ page.cv_pdf_url | default: '/assets/pdf/CV_Linfeng_Wang_is.pdf' | relative_url }}" class="btn-outline" download>{{ t.buttons.download_cv }}</a>
     </div>
   </div> <!-- This closes .resume-right -->
 </div> <!-- This closes .resume-wrapper -->
@@ -472,38 +445,34 @@ layout: default
 
 <div class="resume-wrapper">
   <div class="resume-left">
-    <h2>Thesis</h2>
+    <h2>{{ t.thesis.heading }}</h2>
   </div>
 
   <div class="resume-right">
     <h5>
-      <strong>Infectious Disease Genomics Meets AI:</strong> Scalable Models, Interpretable Tools, and Data-Driven Diagnostics
+      <strong>{{ t.thesis.title_bold }}</strong> {{ t.thesis.title_rest }}
     </h5>
     <div style="margin-top: 2em;"></div>
     <div class="resume-columns">
-      <!-- Experience Column -->
-      <div class="resume-entry">    
-        <p><a href="{{ '/projects/toast/' | relative_url }}" style="color: #e89f8a; border-bottom: 1px solid #e89f8a; text-decoration: none;"><em>TOAST</em>: Custom Amplicon Designer for TB Diagnostics</a></p>
-        <p><a href="{{ '/projects/xgb/' | relative_url }}" style="color: #e89f8a; border-bottom: 1px solid #e89f8a; text-decoration: none;">Clinical Outcome Prediction using Machine Learning</a></p>
-        <p><a href="{{ '/projects/amp/' | relative_url }}" style="color: #e89f8a; border-bottom: 1px solid #e89f8a; text-decoration: none;">TB Antimicrobial Peptide <em>Generative Model</em></a></p>
-        <p><a href="{{ '/projects/gnn/' | relative_url }}" style="color: #e89f8a; border-bottom: 1px solid #e89f8a; text-decoration: none;"><em>Graph Neural Network</em> Adaptive Mutation Detection</a></p>
-        <p><a href="{{ '/projects/gmm1/' | relative_url }}" style="color: #e89f8a; border-bottom: 1px solid #e89f8a; text-decoration: none;">Dissecting Mixed Infections with ML Models</a></p>
-        <p><a href="{{ '/projects/philippines/' | relative_url }}" style="color: #e89f8a; border-bottom: 1px solid #e89f8a; text-decoration: none;">Understanding TB transmission in the Philippines</a></p>
+      <div class="resume-entry">
+        {%- for pr in t.thesis.projects %}
+        <p><a href="{{ pr.url | relative_url }}" style="color: #e89f8a; border-bottom: 1px solid #e89f8a; text-decoration: none;">{{ pr.label }}</a></p>
+        {%- endfor %}
 
         <div class="btn-row">
-          <a href="{{ '/projects/' | relative_url }}" class="btn-outline">EXPLORE ALL</a>
+          <a href="{{ '/projects/' | relative_url }}" class="btn-outline">{{ t.buttons.explore_all }}</a>
         </div>
 
       </div>
       <div class="img-row" style="margin-top: 0.5em;">
-        <img src="{{ '/assets/img/gnn1.png' | relative_url }}" alt="Graph neural network model output">
-        <img src="{{ '/assets/img/gnn2.png' | relative_url }}" alt="Phylogeny-guided attention visualisation">
-        <img src="{{ '/assets/img/toast1.png' | relative_url }}" alt="TOAST amplicon designer interface">
+        <img src="{{ '/assets/img/gnn1.png' | relative_url }}" alt="{{ t.images.gnn1 }}">
+        <img src="{{ '/assets/img/gnn2.png' | relative_url }}" alt="{{ t.images.gnn2 }}">
+        <img src="{{ '/assets/img/toast1.png' | relative_url }}" alt="{{ t.images.toast1 }}">
       </div>
       <div class="img-row" style="margin-top: 0.5em;">
-        <img src="{{ '/assets/img/amp1.png' | relative_url }}" alt="Antimicrobial peptide generative model">
-        <img src="{{ '/assets/img/gmm1.png' | relative_url }}" alt="Mixed infection analysis">
-        <img src="{{ '/assets/img/philippines1.png' | relative_url }}" alt="TB transmission analysis in the Philippines">
+        <img src="{{ '/assets/img/amp1.png' | relative_url }}" alt="{{ t.images.amp1 }}">
+        <img src="{{ '/assets/img/gmm1.png' | relative_url }}" alt="{{ t.images.gmm1 }}">
+        <img src="{{ '/assets/img/philippines1.png' | relative_url }}" alt="{{ t.images.philippines1 }}">
       </div>
     </div>
   </div> <!-- This closes .resume-right -->
@@ -512,61 +481,57 @@ layout: default
 
 <div class="resume-wrapper">
   <div class="resume-left">
-    <h3>Fun Experience</h3>
+    <h3>{{ t.fun_experience.heading }}</h3>
   </div>
 
   <div class="resume-right">
     <h5>
-      <strong>Turing DSG Hackathon:</strong>  Detecting Shallow Gas from Marine Seismic Images
-      (Alan Turing Institute: Data Study Group challenge)
+      <strong>{{ t.fun_experience.title_bold }}</strong>  {{ t.fun_experience.title_rest }}
     </h5>
     <div style="margin-top: 2em;"></div>
     <div class="resume-columns">
-      <!-- Experience Column -->
-      Over a week of intense collaboration with a diverse team of participants from all over the world, we:
+      {{ t.fun_experience.intro }}
       <ul>
-        <li>Explored CNN architectures and ensemble approaches for geospatial pattern recognition.</li>
-        <li>Developed classification, segmentation, and object detection models for shallow gas pocket identification in noisy, low-contrast marine datasets.</li>
-        <li>Contributed to the end-of-sprint report for industrial partner BP, presenting results with interpretability-focused visualizations.</li>
+        {%- for b in t.fun_experience.bullets %}
+        <li>{{ b }}</li>
+        {%- endfor %}
       </ul>
     </div>
     <div class="img-row" style="margin-top: 1.5em;">
-      <img src="{{ '/assets/img/ship_illustration.png' | relative_url }}" alt="Marine seismic survey illustration">
-      <img src="{{ '/assets/img/detection.png' | relative_url }}" alt="Seismic Model Output">
-      <img src="{{ '/assets/img/segmentation.png' | relative_url }}" alt="Shallow Gas Detection">
+      <img src="{{ '/assets/img/ship_illustration.png' | relative_url }}" alt="{{ t.images.ship }}">
+      <img src="{{ '/assets/img/detection.png' | relative_url }}" alt="{{ t.images.detection }}">
+      <img src="{{ '/assets/img/segmentation.png' | relative_url }}" alt="{{ t.images.segmentation }}">
     </div>
     <div class="img-row img-row--single" style="margin-top: 1.5em;">
-      <img src="{{ '/assets/img/group_photo.png' | relative_url }}" alt="Group photo from the pathogen genomics course">
+      <img src="{{ '/assets/img/group_photo.png' | relative_url }}" alt="{{ t.images.group_photo }}">
     </div>
-  </div> <!-- This closes .resume-right -->  
+  </div> <!-- This closes .resume-right -->
 </div>
 
 
 
 <div class="resume-wrapper">
   <div class="resume-left">
-    <h3>Teaching Trips</h3>
+    <h3>{{ t.teaching_trips.heading }}</h3>
   </div>
 
   <div class="resume-right">
     <h5>
-      <strong>Data &amp; AI:</strong>  for pathogen genomics (Philippines, Indonesia, Thailand, UK)
+      <strong>{{ t.teaching_trips.title_bold }}</strong>  {{ t.teaching_trips.title_rest }}
     </h5>
     <div style="margin-top: 2em;"></div>
     <div class="resume-columns">
-      <!-- Experience Column -->
-      Week-long intensive courses taught at a range of locations to diverse groups of researchers from all over the world:
+      {{ t.teaching_trips.intro }}
       <ul>
-        <li>Teaching <strong>Bash programming</strong> and the use of command-line based software.</li>
-        <li>Teaching the <strong>mathematics and biology</strong> behind the genomics sequencing pipeline we developed in house.</li>
-        <li>Building a <strong>RAG chatbot</strong> with <strong>LangChain</strong> and <strong>ChromaDB</strong>, grounded in the course content, for interactive participant Q&amp;A.</li>
-        <li>Individual problem-solving workshops: providing AI and bioinformatics solutions to real research problems on a case-by-case basis.</li>
+        {%- for b in t.teaching_trips.bullets %}
+        <li>{{ b }}</li>
+        {%- endfor %}
       </ul>
     </div>
     <div class="img-row" style="margin-top: 1.5em;">
-      <img src="{{ '/assets/img/philippines_t.jpeg' | relative_url }}" alt="Teaching in the Philippines">
-      <img src="{{ '/assets/img/indonesia.jpeg' | relative_url }}" alt="Teaching in Indonesia">
-      <img src="{{ '/assets/img/thailand.jpeg' | relative_url }}" alt="Teaching in Thailand">
+      <img src="{{ '/assets/img/philippines_t.jpeg' | relative_url }}" alt="{{ t.images.philippines_t }}">
+      <img src="{{ '/assets/img/indonesia.jpeg' | relative_url }}" alt="{{ t.images.indonesia }}">
+      <img src="{{ '/assets/img/thailand.jpeg' | relative_url }}" alt="{{ t.images.thailand }}">
     </div>
-  </div> <!-- This closes .resume-right -->  
+  </div> <!-- This closes .resume-right -->
 </div>
