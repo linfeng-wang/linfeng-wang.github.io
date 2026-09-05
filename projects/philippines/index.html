@@ -57,16 +57,13 @@
     </li>
   </ul>
 
-  <!-- Right: Scholar + LinkedIn + Lab + (optional) dark mode -->
+  <!-- Right: Scholar + LinkedIn -->
   <ul class="navbar-nav flex-row">
     <li class="nav-item mr-3">
       <a class="nav-link" href="https://scholar.google.com/citations?user=ZUOMRG0AAAAJ&amp;hl=en" target="_blank" rel="external nofollow noopener">Google Scholar</a>
     </li>
     <li class="nav-item mr-3">
       <a class="nav-link" href="https://www.linkedin.com/in/w15/" target="_blank" rel="external nofollow noopener">LinkedIn</a>
-    </li>
-    <li class="nav-item mr-3">
-      <a class="nav-link" href="https://pathogenseq.lshtm.ac.uk/" target="_blank" rel="external nofollow noopener">Lab</a>
     </li>
 
     
@@ -147,21 +144,198 @@
     <!-- Content -->
     <div class="container mt-5">
       
-        <!-- page.html -->
-        <div class="post">
+        <style>
+  .navbar-nav .nav-item .nav-link             { color: #ddd; }
+  .navbar-nav .nav-item .nav-link:hover       { color: #e89f8a; }
+  .navbar-nav .nav-item.active > .nav-link    { color: #fff; }
+  .navbar-nav .nav-item.active > .nav-link:hover { color: #e89f8a; }
+  .navbar-toggler .icon-bar                   { background-color: #ddd; }
+</style>
 
-          <header class="post-header">
-            <h1 class="post-title">TB transmission in the Philippines</h1>
-            <p class="post-description">Whole-genome sequencing of 732 isolates, including prison transmission clusters</p>
-          </header>
 
-          <article>
-            <p>Published in <em>Scientific Reports</em> (2024) ·
-<a href="https://www.nature.com/articles/s41598-024-70471-x" rel="external nofollow noopener" target="_blank">Paper</a></p>
+<style>
+  body {
+    background-color: #111;
+    color: #ddd;
+  }
 
-<p>A national picture of which tuberculosis strains are circulating in the
+  .project-page {
+    max-width: 820px;
+    margin: 60px auto 40px;
+    padding: 0 20px;
+  }
+
+  /* ---------- Banner ---------- */
+  .project-header {
+    margin-bottom: 2.5em;
+  }
+
+  .project-header .project-title {
+    color: #fff;
+    font-size: 2.6rem;
+    font-weight: 700;
+    line-height: 1.15;
+    margin: 0 0 0.35em;
+  }
+
+  .project-header .project-subtitle {
+    color: #bbb;
+    font-size: 1.15rem;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  /* ---------- Figure ----------
+     The figures are scientific images on white grounds, so they sit on a
+     light panel rather than floating on the dark page. */
+  .project-figure {
+    margin: 0 0 2.5em;
+  }
+
+  .project-figure .figure-panel {
+    background: #f7f7f7;
+    border-radius: 10px;
+    padding: 18px;
+    text-align: center;
+  }
+
+  .project-figure img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 4px;
+  }
+
+  .project-figure figcaption {
+    color: #999;
+    font-size: 0.92rem;
+    line-height: 1.55;
+    margin-top: 0.9em;
+    padding: 0 2px;
+  }
+
+  .project-figure figcaption strong { color: #ccc; }
+
+  /* ---------- Body ---------- */
+  .project-body { font-size: 1.02rem; line-height: 1.7; }
+
+  .project-body p  { color: #ccc; margin-bottom: 1.3em; }
+  .project-body li { color: #ccc; margin-bottom: 0.5em; }
+  .project-body ul { padding-left: 1.3em; margin-bottom: 1.6em; }
+
+  .project-body h2,
+  .project-body h3,
+  .project-body h4 {
+    color: #fff;
+    font-weight: 600;
+    margin-top: 2em;
+    margin-bottom: 0.7em;
+  }
+
+  .project-body h4 { font-size: 1.2rem; }
+
+  .project-body strong { color: #fff; }
+  .project-body em     { color: inherit; }
+
+  .project-body a {
+    color: #e89f8a;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(232, 159, 138, 0.5);
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+
+  .project-body a:hover { color: #f3b9a7; }
+
+  .project-header .project-meta {
+    color: #aaa;
+    font-size: 0.97rem;
+    margin: 1.1em 0 0;
+  }
+
+  .project-header .project-meta a {
+    color: #e89f8a;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(232, 159, 138, 0.5);
+  }
+
+  .project-header .project-meta a:hover { color: #f3b9a7; }
+
+  /* the theme is light-only, so nested inline tags would take its black */
+  .project-header .project-meta em,
+  .project-header .project-meta strong,
+  .project-header .project-subtitle em,
+  .project-figure figcaption em,
+  .project-figure figcaption strong { color: inherit; }
+
+  .project-back {
+    margin-top: 3em;
+    padding-top: 1.5em;
+    border-top: 1px solid #2a2a2a;
+  }
+
+  .project-back a {
+    color: #e89f8a;
+    text-decoration: none;
+    font-size: 0.95rem;
+  }
+
+  .project-back a:hover { color: #f3b9a7; }
+
+  /* ---------- Phone ---------- */
+  @media (max-width: 700px) {
+    .project-page { margin: 32px auto 24px; padding: 0 16px; }
+    .project-header { margin-bottom: 1.8em; }
+    .project-header .project-title { font-size: 1.95rem; }
+    .project-header .project-subtitle { font-size: 1.02rem; }
+    .project-figure .figure-panel { padding: 10px; }
+    .project-figure figcaption { font-size: 0.87rem; }
+    .project-body { font-size: 1rem; }
+    .project-body h4 { font-size: 1.1rem; }
+  }
+
+  html, body { max-width: 100%; overflow-x: hidden; }
+</style>
+
+<div class="project-page">
+
+  <header class="project-header">
+    <h1 class="project-title">TB transmission in the Philippines</h1>
+    <p class="project-subtitle">Whole-genome sequencing of 732 isolates, including prison transmission clusters</p>
+    <p class="project-meta">Published in <em>Scientific Reports</em> (2024) · <a href="https://www.nature.com/articles/s41598-024-70471-x" target="_blank" rel="noopener">Paper</a>
+    </p>
+  </header>
+  <figure class="project-figure">
+    <div class="figure-panel">
+      <img src="/assets/img/philippines1.png" alt="Circular phylogeny of 732 isolates annotated with resistance type, lineage, island group and collection year" loading="lazy">
+    </div>
+    <figcaption>Phylogeny of the 732 isolates. The rings carry, from the tree outwards, lineage, island group, drug-resistance type and year of collection. Red branches mark the clusters of most concern.</figcaption>
+  </figure>
+
+  <article class="project-body">
+    <p>A national picture of which tuberculosis strains are circulating in the
 Philippines, which drug-resistance mutations they carry, and where transmission
 is concentrated.</p>
+
+<h4 id="reading-the-figure">Reading the figure</h4>
+
+<p>The tree in the centre is built from genome-wide variation across all 732
+isolates, so two tips sitting close together are two patients carrying nearly
+identical bacteria. The rings around it carry the metadata for each isolate:
+lineage, with L1, the Manila strain, dominant and L2, L3 and L4 also present;
+island group, splitting Luzon, Visayas and Mindanao; drug-resistance type,
+running from sensitive through MDR to XDR; and year of collection, from 2011 to
+2019.</p>
+
+<p>The finding is in the coincidence of the rings rather than in any one of them.
+Where a red-branch cluster lines up with a solid block in the resistance ring
+<em>and</em> a single colour in the island ring, that is resistant TB being passed
+from person to person in one place, rather than resistance arising
+independently in each patient. Those two situations call for completely
+different responses, and only the genomes can tell them apart. The clusters
+that stand out this way are the prison-linked ones, and they are also where the
+novel bedaquiline resistance mutations were found.</p>
 
 <h4 id="approach">Approach</h4>
 
@@ -179,11 +353,14 @@ is concentrated.</p>
   <li>Novel bedaquiline resistance mutations found in prison-derived isolates, a direct public health concern in carceral settings</li>
 </ul>
 
-          </article>
+  </article>
 
-        </div>
+  <div class="project-back">
+    <a href="/projects/">← All projects</a>
+  </div>
 
-    
+</div>
+
       
     </div>
 
