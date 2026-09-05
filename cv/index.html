@@ -145,8 +145,75 @@
     <!-- Content -->
     <div class="container mt-5">
       
-        <!-- _layouts/cv.html -->
-        <div class="post">
+        <!-- _layouts/cv.html --><style>
+  .navbar-nav .nav-item .nav-link             { color: #ddd; }
+  .navbar-nav .nav-item .nav-link:hover       { color: #e89f8a; }
+  .navbar-nav .nav-item.active > .nav-link    { color: #fff; }
+  .navbar-nav .nav-item.active > .nav-link:hover { color: #e89f8a; }
+  .navbar-toggler .icon-bar                   { background-color: #ddd; }
+</style>
+
+
+<style>
+  body {
+    background-color: #111;
+    color: #ddd;
+  }
+
+  /* ---------- Page header ---------- */
+  .cv-dark .post-title       { color: #fff; }
+  .cv-dark .post-description { color: #bbb; }
+
+  .cv-dark .post-title a       { color: #e89f8a; }
+  .cv-dark .post-title a:hover { color: #f3b9a7; }
+
+  /* ---------- Cards ---------- */
+  .cv-dark .cv .card {
+    background-color: #1b1b1b;
+    border: 1px solid #2b2b2b;
+  }
+
+  .cv-dark .cv .card .card-title { color: #fff; }
+
+  .cv-dark .cv .card .list-group-item {
+    background-color: transparent;
+    border-color: #2b2b2b;
+    color: #c8c8c8;
+  }
+
+  /* the year pill: theme purple on white by default */
+  .cv-dark .cv .card .list-group-item .badge {
+    color: #111 !important;
+    background-color: #e89f8a !important;
+  }
+
+  .cv-dark .cv .card h6            { color: #fff; }
+  .cv-dark .cv .card h6.title      { color: #fff; }
+  .cv-dark .cv .card .items,
+  .cv-dark .cv .card .items li,
+  .cv-dark .cv .card .item,
+  .cv-dark .cv .card .subitem,
+  .cv-dark .cv .card .item-title   { color: #bdbdbd; }
+
+  .cv-dark .cv .card a {
+    color: #e89f8a;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(232, 159, 138, 0.5);
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+
+  .cv-dark .cv .card a:hover { color: #f3b9a7; }
+
+  /* ---------- Phone ---------- */
+  @media (max-width: 700px) {
+    .cv-dark .post-title { font-size: 2rem; }
+  }
+
+  html, body { max-width: 100%; overflow-x: hidden; }
+</style>
+
+        <div class="post cv-dark">
 
           <header class="post-header">
             <h1 class="post-title">CV <a href="/assets/pdf/CV_Linfeng_Wang_is.pdf" target="_blank" rel="noopener noreferrer" class="float-right"><i class="fas fa-file-pdf"></i></a>
