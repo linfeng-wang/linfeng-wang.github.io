@@ -79,6 +79,40 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600&display=swap');
 
+/* ---------- Nav on small screens ----------
+   Five items with long labels do not fit a phone width. Without this the
+   flex row shrinks each item until the text breaks mid-label: "HomeGoogle"
+   run together, and "Google Scholar" and "中文" split across two lines. */
+@media (max-width: 640px) {
+  .d-flex.justify-content-between > .navbar-nav {
+    flex-wrap: wrap;
+  }
+
+  .navbar-nav .nav-item .nav-link {
+    white-space: nowrap;      /* never break a label in half */
+    font-size: 0.92rem;
+  }
+
+  .navbar-nav .nav-item {
+    margin-right: 0.7rem !important;
+  }
+
+  .navbar-nav .nav-item:last-child {
+    margin-right: 0 !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .navbar-nav .nav-item .nav-link { font-size: 0.85rem; }
+  .navbar-nav .nav-item { margin-right: 0.5rem !important; }
+}
+
+@media (max-width: 360px) {
+  .navbar-nav .nav-item .nav-link { font-size: 0.78rem; }
+  .navbar-nav .nav-item { margin-right: 0.4rem !important; }
+  .d-flex.justify-content-between.px-4 { padding-left: 0.75rem !important; padding-right: 0.75rem !important; }
+}
+
 .card {
   background: #eaeaea;
   border: 1px solid #eaeaea;
@@ -396,7 +430,7 @@
     <footer class="fixed-bottom">
       <div class="container mt-0">
         &copy; Copyright 2026 Linfeng  Wang. Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.
-Last updated: September 05, 2026.
+Last updated: September 06, 2026.
       </div>
     </footer> -->
 
