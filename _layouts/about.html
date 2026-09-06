@@ -197,11 +197,19 @@ layout: default
     .resume-wrapper {
       flex-direction: column;
     }
-  
+
     .resume-left {
-      margin-bottom: 2em;
+      /* flex-basis is 140px for the side-by-side desktop column; once the
+         wrapper stacks, that basis becomes a HEIGHT and left ~100px of dead
+         space under the heading. Size to content instead. */
+      flex: 0 0 auto;
+      margin-bottom: 0.5em;
       padding-right: 0;
     }
+
+    /* h3 section headings carry a default bottom margin that h2 does not,
+       which made those two sections sit 16px off instead of 8px */
+    .resume-left h3 { margin-bottom: 0; }
   }
 
   
@@ -452,7 +460,6 @@ layout: default
     <h5>
       <strong>{{ t.thesis.title_bold }}</strong> {{ t.thesis.title_rest }}
     </h5>
-    <div style="margin-top: 2em;"></div>
     <div class="resume-columns">
       <div class="resume-entry">
         {%- for pr in t.thesis.projects %}
@@ -488,7 +495,6 @@ layout: default
     <h5>
       <strong>{{ t.fun_experience.title_bold }}</strong>  {{ t.fun_experience.title_rest }}
     </h5>
-    <div style="margin-top: 2em;"></div>
     <div class="resume-columns">
       {{ t.fun_experience.intro }}
       <ul>
@@ -519,7 +525,6 @@ layout: default
     <h5>
       <strong>{{ t.teaching_trips.title_bold }}</strong>  {{ t.teaching_trips.title_rest }}
     </h5>
-    <div style="margin-top: 2em;"></div>
     <div class="resume-columns">
       {{ t.teaching_trips.intro }}
       <ul>
