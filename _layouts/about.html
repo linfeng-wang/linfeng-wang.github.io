@@ -99,14 +99,22 @@ layout: default
   }
 
   /* The site container caps page content at 800px (site.max_width), so the
-     300px portrait and the 500px text block could not fit on one row and
-     wrapped into a stack. From tablet up, hold them on a single row and let
-     the text take whatever width is left, so it sits to the RIGHT of the
-     portrait instead of underneath it. */
+     300px portrait and the text block could not fit on one row and wrapped
+     into a stack. From tablet up the hero breaks out of that column into a
+     wider band: full-bleed, then padded back in so its content stops at
+     1040px. That puts the name, role, tagline and buttons to the RIGHT of
+     the portrait with room to breathe. Below 768px it stacks and centres
+     exactly as before. */
   @media (min-width: 768px) {
     .about-container {
       flex-wrap: nowrap;
       align-items: center;
+      gap: 24px;
+      max-width: none;
+      margin-left: calc(50% - 50vw);
+      margin-right: calc(50% - 50vw);
+      padding-left: max(20px, calc(50vw - 520px));
+      padding-right: max(20px, calc(50vw - 520px));
     }
 
     .profile-image {
@@ -116,6 +124,7 @@ layout: default
     .about-text {
       flex: 1 1 auto;
       min-width: 0;
+      max-width: 560px;
     }
   }
   .summary-wrapper {
