@@ -10,7 +10,7 @@ nav:
 
 hero:
   role: "Machine Learning Engineer at Biographica"
-  tagline: "PhD bridging AI and Biotech"
+  tagline: "ML Engineer building deep learning models on genomic sequence"
 
 buttons:
   about: "ABOUT ME"
@@ -21,17 +21,16 @@ buttons:
 summary:
   heading: "My Journey in AI and Healthcare"
   stats:
-    - "<strong>6+</strong> Years of experience developing cutting-edge ML models and end-to-end pipelines"
-    - "<strong>10+</strong> Years of research experience in biotechnology"
-    - "<strong>8</strong> Peer-reviewed publications, including <strong>5</strong> as first author"
+    - "<strong>6+</strong> years building ML models (MRes, PhD and industry)"
+    - "Biochemistry-trained since <strong>2016</strong>; building ML for genomics since <strong>2019</strong>"
+    - "<strong>10</strong> Peer-reviewed publications, including <strong>7</strong> as first author"
     - "(<strong>2</strong> further papers currently being peer reviewed)"
 
 resume:
   heading: "Resume"
   intro: >-
-    A <strong>self-motivated</strong> and <strong>deep researcher</strong> with a proven track record as a
-    <strong>fast learner</strong>, I thrive in <strong>translational and multidisciplinary environments</strong>
-    with strong <strong>communication</strong> skills and a commitment to <strong>teamwork</strong>.
+    I build <strong>deep learning models on genomic sequence</strong>: graph attention networks,
+    LSTMs, and now <strong>gene expression prediction</strong>, from research prototype to cloud pipeline.
   experience_heading: "Experience"
   education_heading: "Education"
   skills_heading: "Skills"
@@ -45,7 +44,7 @@ experience:
     org: "Biographica"
     dates: "Apr 2026 to Present"
   - role: "Machine Learning Consultant"
-    org: "Deep Science Venture"
+    org: "Deep Science Ventures"
     dates: "Mar 2025 to Oct 2025"
   - role: "Machine Learning Intern"
     org: "LinkGevity"
@@ -71,25 +70,33 @@ education:
     qualifier: "(First Class Honours)"
     org: "King's College London"
     dates: "Sep 2016 to Jul 2019"
-  - degree: "Science &amp; Engineering"
-    org: "International School of Geneva"
-    dates: "Summer 2012 to Summer 2016"
-  - org: "Beijing No. 4 High School"
-    dates: "Fall 2010 to Summer 2012"
+
+current_work:
+  heading: "Current work: Biographica"
+  title_bold: "Gene expression from DNA sequence:"
+  title_rest: "deep learning for crop gene-editing targets"
+  intro: >-
+    At Biographica I build deep learning models that predict gene expression from DNA sequence,
+    which we use to prioritise gene-editing targets in crops. Alongside the models I work on a
+    gene-identification pipeline that runs across tomato accessions, and we are extending the
+    same approach to yeast.
+  # TODO: add a figure for this section. Drop the image into assets/img/ and
+  # uncomment the .img-row block in _layouts/about.html, then set this alt text.
+  figure_alt: "TODO: figure for the Biographica current-work section"
 
 thesis:
   heading: "Thesis"
   title_bold: "Infectious Disease Genomics Meets AI:"
   title_rest: "Scalable Models, Interpretable Tools, and Data-Driven Diagnostics"
   projects:
+    - url: "/projects/gnn/"
+      label: "Phylogeny-guided <em>graph attention</em> for genomic selection (TB)"
+    - url: "/projects/amp/"
+      label: "<em>LSTM generative model</em> for antimicrobial peptides"
     - url: "/projects/toast/"
       label: "<em>TOAST</em>: Custom Amplicon Designer for TB Diagnostics"
     - url: "/projects/xgb/"
       label: "Clinical Outcome Prediction using Machine Learning"
-    - url: "/projects/amp/"
-      label: "TB Antimicrobial Peptide <em>Generative Model</em>"
-    - url: "/projects/gnn/"
-      label: "<em>Graph Neural Network</em> Adaptive Mutation Detection"
     - url: "/projects/gmm1/"
       label: "Dissecting Mixed Infections with ML Models"
     - url: "/projects/philippines/"

@@ -8,7 +8,7 @@ nav:
 
 hero:
   role: "机器学习工程师 · Biographica"
-  tagline: "连接人工智能与生物技术的博士研究者"
+  tagline: "构建基因组序列深度学习模型的机器学习工程师"
 
 buttons:
   about: "关于我"
@@ -19,17 +19,16 @@ buttons:
 summary:
   heading: "我在人工智能与健康领域的历程"
   stats:
-    - "<strong>6+</strong> 年前沿机器学习模型与端到端流程的开发经验"
-    - "<strong>10+</strong> 年生物技术领域的科研经验"
-    - "<strong>8</strong> 篇同行评审论文，其中 <strong>5</strong> 篇为第一作者"
+    - "<strong>6+</strong> 年机器学习模型开发经验（研究型硕士、博士与工业界）"
+    - "自 <strong>2016</strong> 年起接受生物化学训练；自 <strong>2019</strong> 年起从事基因组学的机器学习研究"
+    - "<strong>10</strong> 篇同行评审论文，其中 <strong>7</strong> 篇为第一作者"
     - "（另有 <strong>2</strong> 篇论文正在同行评审中）"
 
 resume:
   heading: "简历"
   intro: >-
-    我是一名<strong>自驱力强</strong>、<strong>钻研深入</strong>的研究者，具备出色的<strong>学习能力</strong>，
-    擅长在<strong>转化医学与跨学科环境</strong>中工作，拥有良好的<strong>沟通</strong>能力，
-    并重视<strong>团队协作</strong>。
+    我构建<strong>基于基因组序列的深度学习模型</strong>：图注意力网络、LSTM，
+    以及目前从事的<strong>基因表达预测</strong>，涵盖从研究原型到云端流程的完整链路。
   experience_heading: "工作经历"
   education_heading: "教育经历"
   skills_heading: "专业技能"
@@ -43,7 +42,7 @@ experience:
     org: "Biographica"
     dates: "2026年4月 至今"
   - role: "机器学习顾问"
-    org: "Deep Science Venture"
+    org: "Deep Science Ventures"
     dates: "2025年3月 – 2025年10月"
   - role: "机器学习实习生"
     org: "LinkGevity"
@@ -69,25 +68,31 @@ education:
     qualifier: "（一等荣誉学位）"
     org: "伦敦国王学院"
     dates: "2016年9月 – 2019年7月"
-  - degree: "科学与工程方向"
-    org: "日内瓦国际学校"
-    dates: "2012年夏 – 2016年夏"
-  - org: "北京市第四中学"
-    dates: "2010年秋 – 2012年夏"
+
+current_work:
+  heading: "当前工作：Biographica"
+  title_bold: "从 DNA 序列预测基因表达："
+  title_rest: "面向作物基因编辑靶点的深度学习"
+  intro: >-
+    在 Biographica，我构建从 DNA 序列预测基因表达的深度学习模型，用于筛选作物中优先的基因编辑靶点。
+    除模型之外，我还参与开发跨番茄品系的基因识别流程，并正在将同一套方法扩展到酵母。
+  # TODO: 为该板块补充配图。将图片放入 assets/img/，取消 _layouts/about.html
+  # 中 .img-row 区块的注释，并在此填写替代文字。
+  figure_alt: "TODO: Biographica 当前工作板块的配图"
 
 thesis:
   heading: "博士论文"
   title_bold: "当传染病基因组学遇上人工智能："
   title_rest: "可扩展的模型、可解释的工具与数据驱动的诊断方法"
   projects:
+    - url: "/projects/gnn/"
+      label: "系统发育引导的<em>图注意力模型</em>用于基因组选择（结核病）"
+    - url: "/projects/amp/"
+      label: "抗菌肽的 <em>LSTM 生成模型</em>"
     - url: "/projects/toast/"
       label: "<em>TOAST</em>：面向结核病诊断的定制扩增子设计工具"
     - url: "/projects/xgb/"
       label: "基于机器学习的临床治疗结果预测"
-    - url: "/projects/amp/"
-      label: "结核病抗菌肽<em>生成模型</em>"
-    - url: "/projects/gnn/"
-      label: "<em>图神经网络</em>驱动的适应性突变检测"
     - url: "/projects/gmm1/"
       label: "用机器学习模型解析混合感染"
     - url: "/projects/philippines/"

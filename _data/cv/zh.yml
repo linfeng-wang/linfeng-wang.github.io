@@ -26,7 +26,7 @@
         - 使用 CNN、RNN、GNN 与 Transformer 进行深度学习建模
         - 开发基因扩增子测序设计工具（Python 与 Nextflow）
     - title: 机器学习顾问
-      institution: Deep Science Venture，英国伦敦
+      institution: Deep Science Ventures，英国伦敦
       year: 2025年3月 – 2025年10月
       description:
         - 开发面向生物序列任务的 CNN、RNN 与 VAE 模型

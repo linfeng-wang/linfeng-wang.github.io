@@ -397,17 +397,11 @@ layout: default
       <h3>{{ t.resume.skills_heading }}</h3>
       <div class="resume-columns">
         <div class="resume-entry">
-          <p>Python / C++ / R<br>
-            scikit-learn / NumPy / Pandas<br>
-            Matplotlib / Seaborn / Plotly</p>
+          <p>PyTorch / JAX / TensorFlow / PyG / Hugging Face<br>
+            Python / C++ / R / scikit-learn / NumPy / Pandas</p>
 
-          <p>PyTorch / TensorFlow / PyG / JAX<br>
-            Linux / Unix / Bash / Git / Hugging Face / LangChain / Nextflow<br>
-            AWS / GCP / Azure</p>
-
-          <p>BWA-MEM / SAMtools / BCFtools / GATK<br>
-            FreeBayes / BEAST2 / Trimmomatic / PLINK2<br>
-            RAxML / FigTree / iTOL</p>
+          <p>AWS / GCP / Azure / Linux / Bash / Git / Nextflow<br>
+            BWA-MEM / SAMtools / BCFtools / GATK / PLINK2 / BEAST2</p>
         </div>
       </div>
     </div>
@@ -444,11 +438,43 @@ layout: default
     <p style="font-size: 1.1rem; color: #ccc;">
       {{ t.resume.more_in_scholar_prefix }}<a href="https://scholar.google.com/citations?user=ZUOMRG0AAAAJ&amp;hl=en" target="_blank" style="color: #e89f8a; border-bottom: 1px solid #e89f8a; text-decoration: none;">{{ t.resume.more_in_scholar_label }}</a>{{ t.resume.more_in_scholar_suffix }}
     </p>
+    <!-- TODO: assets/pdf/CV_Linfeng_Wang_is.pdf (and the /zh/ counterpart
+         CV_Linfeng_Wang_zh.pdf) still carry the old "PhD bridging AI and
+         Biotech" framing. Replace both PDFs with versions that match the
+         ML-engineer positioning on this page. -->
     <div class="btn-row">
       <a href="{{ page.cv_pdf_url | default: '/assets/pdf/CV_Linfeng_Wang_is.pdf' | relative_url }}" class="btn-outline" download>{{ t.buttons.download_cv }}</a>
     </div>
   </div> <!-- This closes .resume-right -->
 </div> <!-- This closes .resume-wrapper -->
+
+
+<div class="resume-wrapper">
+  <div class="resume-left">
+    <h2>{{ t.current_work.heading }}</h2>
+  </div>
+
+  <div class="resume-right">
+    <h5>
+      <strong>{{ t.current_work.title_bold }}</strong> {{ t.current_work.title_rest }}
+    </h5>
+    <div class="resume-columns">
+      <div class="resume-entry">
+        <p>{{ t.current_work.intro }}</p>
+      </div>
+    </div>
+
+    <!-- TODO: figure slot for the current-work section. No image exists yet, so
+         the row is commented out rather than shipping a broken image. Add the
+         file to assets/img/, uncomment this block, and set current_work.figure_alt
+         in _data/i18n/{en,zh}.yml. -->
+    {% comment %}
+    <div class="img-row img-row--single" style="margin-top: 1.5em;">
+      <img src="{{ '/assets/img/TODO-biographica.png' | relative_url }}" alt="{{ t.current_work.figure_alt }}">
+    </div>
+    {% endcomment %}
+  </div> <!-- This closes .resume-right -->
+</div>
 
 
 <div class="resume-wrapper">
