@@ -97,6 +97,27 @@ layout: default
       width: 200px;
     }
   }
+
+  /* The site container caps page content at 800px (site.max_width), so the
+     300px portrait and the 500px text block could not fit on one row and
+     wrapped into a stack. From tablet up, hold them on a single row and let
+     the text take whatever width is left, so it sits to the RIGHT of the
+     portrait instead of underneath it. */
+  @media (min-width: 768px) {
+    .about-container {
+      flex-wrap: nowrap;
+      align-items: center;
+    }
+
+    .profile-image {
+      flex: 0 0 auto;
+    }
+
+    .about-text {
+      flex: 1 1 auto;
+      min-width: 0;
+    }
+  }
   .summary-wrapper {
     background-color: #222; /* Dark grey */
     padding: 40px 20px;
