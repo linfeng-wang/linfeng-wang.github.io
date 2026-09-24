@@ -10,11 +10,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Linfeng  Wang</title>
-    <meta name="author" content="Linfeng  Wang">
-    <meta name="description" content="Machine Learning Engineer at Biographica. PhD in computational genomics, working at the intersection of AI, bioinformatics and healthcare.
-">
-    <meta name="keywords" content="machine learning, bioinformatics, computational genomics, deep learning, tuberculosis, AI">
+    <title>Linfeng Wang</title>
+    <meta name="author" content="Linfeng Wang">
+    <meta name="description" content="ML Engineer at Biographica building deep learning models on genomic sequence. PhD in ML for genomics (LSHTM).">
+    <meta name="keywords" content="machine learning, deep learning, genomics, sequence models, gene expression, bioinformatics">
 
 
     <!-- Bootstrap & MDB -->
@@ -520,7 +519,7 @@
 <strong>Linfeng</strong> <span>Wang</span>
 </h1>
     <p>Machine Learning Engineer at Biographica<br>
-    PhD bridging AI and Biotech</p>
+    ML Engineer building deep learning models on genomic sequence</p>
 
     <div class="btn-row">
       <a class="btn-outline" href="/cv/">ABOUT ME</a>
@@ -538,11 +537,11 @@
     <h3><strong>My Journey in AI and Healthcare</strong></h3>
     <ul>
       <li>
-<strong>6+</strong> Years of experience developing cutting-edge ML models and end-to-end pipelines</li>
+<strong>6+</strong> years building ML models (MRes, PhD and industry)</li>
+      <li>Biochemistry-trained since <strong>2016</strong>; building ML for genomics since <strong>2019</strong>
+</li>
       <li>
-<strong>10+</strong> Years of research experience in biotechnology</li>
-      <li>
-<strong>8</strong> Peer-reviewed publications, including <strong>5</strong> as first author</li>
+<strong>10</strong> Peer-reviewed publications, including <strong>7</strong> as first author</li>
       <li>(<strong>2</strong> further papers currently being peer reviewed)</li>
     </ul>
   </div>
@@ -555,7 +554,7 @@
 
   <div class="resume-right">
     <p>
-      A <strong>self-motivated</strong> and <strong>deep researcher</strong> with a proven track record as a <strong>fast learner</strong>, I thrive in <strong>translational and multidisciplinary environments</strong> with strong <strong>communication</strong> skills and a commitment to <strong>teamwork</strong>.
+      I build <strong>deep learning models on genomic sequence</strong>: graph attention networks, LSTMs, and now <strong>gene expression prediction</strong>, from research prototype to cloud pipeline.
     </p>
     <div class="resume-columns">
       <!-- Experience Column -->
@@ -567,7 +566,7 @@
         Apr 2026 to Present</p>
 
         <p><strong>Machine Learning Consultant</strong><br>
-        Deep Science Venture<br>
+        Deep Science Ventures<br>
         Mar 2025 to Oct 2025</p>
 
         <p><strong>Machine Learning Intern</strong><br>
@@ -599,29 +598,17 @@
 
         <p><strong>BSc Biochemistry</strong> <span class="dimmed">(First Class Honours)</span><br>King's College London<br>
         Sep 2016 to Jul 2019</p>
-
-        <p><strong>Science &amp; Engineering</strong><br>International School of Geneva<br>
-        Summer 2012 to Summer 2016</p>
-
-        <p>Beijing No. 4 High School<br>
-        Fall 2010 to Summer 2012</p>
       </div>
     </div>
     <div class="resume-entry" style="margin-top: 2em;">
       <h3>Skills</h3>
       <div class="resume-columns">
         <div class="resume-entry">
-          <p>Python / C++ / R<br>
-            scikit-learn / NumPy / Pandas<br>
-            Matplotlib / Seaborn / Plotly</p>
+          <p>PyTorch / JAX / TensorFlow / PyG / Hugging Face<br>
+            Python / C++ / R / scikit-learn / NumPy / Pandas</p>
 
-          <p>PyTorch / TensorFlow / PyG / JAX<br>
-            Linux / Unix / Bash / Git / Hugging Face / LangChain / Nextflow<br>
-            AWS / GCP / Azure</p>
-
-          <p>BWA-MEM / SAMtools / BCFtools / GATK<br>
-            FreeBayes / BEAST2 / Trimmomatic / PLINK2<br>
-            RAxML / FigTree / iTOL</p>
+          <p>AWS / GCP / Azure / Linux / Bash / Git / Nextflow<br>
+            BWA-MEM / SAMtools / BCFtools / GATK / PLINK2 / BEAST2</p>
         </div>
       </div>
     </div>
@@ -669,11 +656,39 @@
     <p style="font-size: 1.1rem; color: #ccc;">
       (More in <a href="https://scholar.google.com/citations?user=ZUOMRG0AAAAJ&amp;hl=en" target="_blank" style="color: #e89f8a; border-bottom: 1px solid #e89f8a; text-decoration: none;" rel="external nofollow noopener">Google Scholar</a>…)
     </p>
+    <!-- TODO: assets/pdf/CV_Linfeng_Wang_is.pdf (and the /zh/ counterpart
+         CV_Linfeng_Wang_zh.pdf) still carry the old "PhD bridging AI and
+         Biotech" framing. Replace both PDFs with versions that match the
+         ML-engineer positioning on this page. -->
     <div class="btn-row">
       <a href="/assets/pdf/CV_Linfeng_Wang_is.pdf" class="btn-outline" download>DOWNLOAD RESUME</a>
     </div>
   </div> <!-- This closes .resume-right -->
 </div> <!-- This closes .resume-wrapper -->
+
+
+<div class="resume-wrapper">
+  <div class="resume-left">
+    <h2>Current work: Biographica</h2>
+  </div>
+
+  <div class="resume-right">
+    <h5>
+      <strong>Gene expression from DNA sequence:</strong> deep learning for crop gene-editing targets
+    </h5>
+    <div class="resume-columns">
+      <div class="resume-entry">
+        <p>At Biographica I build deep learning models that predict gene expression from DNA sequence, which we use to prioritise gene-editing targets in crops. Alongside the models I work on a gene-identification pipeline that runs across tomato accessions, and we are extending the same approach to yeast.</p>
+      </div>
+    </div>
+
+    <!-- TODO: figure slot for the current-work section. No image exists yet, so
+         the row is commented out rather than shipping a broken image. Add the
+         file to assets/img/, uncomment this block, and set current_work.figure_alt
+         in _data/i18n/{en,zh}.yml. -->
+    
+  </div> <!-- This closes .resume-right -->
+</div>
 
 
 <div class="resume-wrapper">
@@ -687,10 +702,10 @@
     </h5>
     <div class="resume-columns">
       <div class="resume-entry">
+        <p><a href="/projects/gnn/" style="color: #e89f8a; border-bottom: 1px solid #e89f8a; text-decoration: none;">Phylogeny-guided <em>graph attention</em> for genomic selection (TB)</a></p>
+        <p><a href="/projects/amp/" style="color: #e89f8a; border-bottom: 1px solid #e89f8a; text-decoration: none;"><em>LSTM generative model</em> for antimicrobial peptides</a></p>
         <p><a href="/projects/toast/" style="color: #e89f8a; border-bottom: 1px solid #e89f8a; text-decoration: none;"><em>TOAST</em>: Custom Amplicon Designer for TB Diagnostics</a></p>
         <p><a href="/projects/xgb/" style="color: #e89f8a; border-bottom: 1px solid #e89f8a; text-decoration: none;">Clinical Outcome Prediction using Machine Learning</a></p>
-        <p><a href="/projects/amp/" style="color: #e89f8a; border-bottom: 1px solid #e89f8a; text-decoration: none;">TB Antimicrobial Peptide <em>Generative Model</em></a></p>
-        <p><a href="/projects/gnn/" style="color: #e89f8a; border-bottom: 1px solid #e89f8a; text-decoration: none;"><em>Graph Neural Network</em> Adaptive Mutation Detection</a></p>
         <p><a href="/projects/gmm1/" style="color: #e89f8a; border-bottom: 1px solid #e89f8a; text-decoration: none;">Dissecting Mixed Infections with ML Models</a></p>
         <p><a href="/projects/philippines/" style="color: #e89f8a; border-bottom: 1px solid #e89f8a; text-decoration: none;">Understanding TB transmission in the Philippines</a></p>
 
@@ -776,8 +791,8 @@
     <!-- Footer -->    <!-- 
     <footer class="fixed-bottom">
       <div class="container mt-0">
-        &copy; Copyright 2026 Linfeng  Wang. Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.
-Last updated: September 06, 2026.
+        &copy; Copyright 2026 Linfeng Wang. Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.
+Last updated: September 24, 2026.
       </div>
     </footer> -->
 
