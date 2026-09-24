@@ -289,6 +289,27 @@
       width: 200px;
     }
   }
+
+  /* The site container caps page content at 800px (site.max_width), so the
+     300px portrait and the 500px text block could not fit on one row and
+     wrapped into a stack. From tablet up, hold them on a single row and let
+     the text take whatever width is left, so it sits to the RIGHT of the
+     portrait instead of underneath it. */
+  @media (min-width: 768px) {
+    .about-container {
+      flex-wrap: nowrap;
+      align-items: center;
+    }
+
+    .profile-image {
+      flex: 0 0 auto;
+    }
+
+    .about-text {
+      flex: 1 1 auto;
+      min-width: 0;
+    }
+  }
   .summary-wrapper {
     background-color: #222; /* Dark grey */
     padding: 40px 20px;
@@ -540,7 +561,7 @@
 <strong>6+</strong> 年机器学习模型开发经验（研究型硕士、博士与工业界）</li>
       <li>自 <strong>2016</strong> 年起接受生物化学训练；自 <strong>2019</strong> 年起从事基因组学的机器学习研究</li>
       <li>
-<strong>10</strong> 篇同行评审论文，其中 <strong>7</strong> 篇为第一作者</li>
+<strong>10</strong> 篇同行评审论文，其中 <strong>5</strong> 篇为第一作者</li>
       <li>（另有 <strong>2</strong> 篇论文正在同行评审中）</li>
     </ul>
   </div>
