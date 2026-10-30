@@ -97,6 +97,7 @@
 - title: Publications
   type: list
   contents:
+    - Scaling a context-aware genomic model for condition-specific edit design in plants. bioRxiv (preprint, 2026).
     - Decoding positive selection in M. tuberculosis with phylogeny-guided graph attention models. BMC Bioinformatics (2026).
     - TOAST - A novel tool for designing targeted gene amplicons in TB genomic studies. BMC Genomics 26(1) (2025).
     - LSTM-based deep learning model for the discovery of antimicrobial peptides targeting M. tuberculosis. Bioinformatics Advances (2025).
