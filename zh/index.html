@@ -291,14 +291,22 @@
   }
 
   /* The site container caps page content at 800px (site.max_width), so the
-     300px portrait and the 500px text block could not fit on one row and
-     wrapped into a stack. From tablet up, hold them on a single row and let
-     the text take whatever width is left, so it sits to the RIGHT of the
-     portrait instead of underneath it. */
+     300px portrait and the text block could not fit on one row and wrapped
+     into a stack. From tablet up the hero breaks out of that column into a
+     wider band: full-bleed, then padded back in so its content stops at
+     1040px. That puts the name, role, tagline and buttons to the RIGHT of
+     the portrait with room to breathe. Below 768px it stacks and centres
+     exactly as before. */
   @media (min-width: 768px) {
     .about-container {
       flex-wrap: nowrap;
       align-items: center;
+      gap: 24px;
+      max-width: none;
+      margin-left: calc(50% - 50vw);
+      margin-right: calc(50% - 50vw);
+      padding-left: max(20px, calc(50vw - 520px));
+      padding-right: max(20px, calc(50vw - 520px));
     }
 
     .profile-image {
@@ -308,6 +316,7 @@
     .about-text {
       flex: 1 1 auto;
       min-width: 0;
+      max-width: 560px;
     }
   }
   .summary-wrapper {
@@ -562,7 +571,7 @@
       <li>自 <strong>2016</strong> 年起接受生物化学训练；自 <strong>2019</strong> 年起从事基因组学的机器学习研究</li>
       <li>
 <strong>10</strong> 篇同行评审论文，其中 <strong>5</strong> 篇为第一作者</li>
-      <li>（另有 <strong>2</strong> 篇论文正在同行评审中）</li>
+      <li>（另有 <strong>3</strong> 篇论文正在同行评审中）</li>
     </ul>
   </div>
 </div>
@@ -637,6 +646,8 @@
     
       <p><strong>2026</strong></p>
       <ul style="padding-left: 1.2em;">
+        <li>Antinucci P, <strong>Wang L</strong>, Moss JD, Schwartz D, Hall D. Scaling a context-aware genomic model for condition-specific edit design in plants. <em>bioRxiv</em> (preprint). <a href="https://doi.org/10.64898/2026.10.23.761389" target="_blank" rel="noopener" style="color: #e89f8a; text-decoration: none; border-bottom: 1px solid rgba(232,159,138,0.5);">doi:10.64898/2026.10.23.761389</a>
+</li>
         <li>
 <strong>Wang L</strong>, Campino S, Clark TG, Phelan JE. Decoding positive selection in <em>Mycobacterium tuberculosis</em> with phylogeny-guided graph attention models. <em>BMC Bioinformatics</em>. <a href="https://doi.org/10.1186/s12859-026-06583-0" target="_blank" rel="noopener" style="color: #e89f8a; text-decoration: none; border-bottom: 1px solid rgba(232,159,138,0.5);">doi:10.1186/s12859-026-06583-0</a>
 </li>
@@ -812,7 +823,7 @@
     <footer class="fixed-bottom">
       <div class="container mt-0">
         &copy; Copyright 2026 Linfeng Wang. Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.
-Last updated: September 24, 2026.
+Last updated: October 30, 2026.
       </div>
     </footer> -->
 
