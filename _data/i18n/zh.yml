@@ -7,6 +7,7 @@ nav:
   switch_label: "EN"
 
 hero:
+  name: "<strong>王临风</strong>"
   role: "机器学习工程师 · Biographica"
   tagline: "构建基因组序列深度学习模型的机器学习工程师"
 

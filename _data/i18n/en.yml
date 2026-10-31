@@ -9,6 +9,7 @@ nav:
   switch_label: "中文"
 
 hero:
+  name: "<strong>Linfeng</strong> <span>Wang</span>"
   role: "Machine Learning Engineer at Biographica"
   tagline: "ML Engineer building deep learning models on genomic sequence"
 
